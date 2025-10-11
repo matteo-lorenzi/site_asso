@@ -1,0 +1,38 @@
+# Fichiers et dossiers à ignorer
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*~
+
+# Logs
+*.log
+
+# Fichiers de configuration personnels
+config.local.*
+
+# Dossiers node (si JavaScript ajouté plus tard)
+node_modules/
+npm-debug.log
+
+# Build (si utilisé plus tard)
+dist/
+build/
+
+# Images de grande taille (non optimisées)
+# Décommenter si nécessaire :
+# *.psd
+# *.ai
+# *-original.*
