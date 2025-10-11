@@ -18,9 +18,13 @@ Ce document présente la feuille de route du développement du site web pour le 
 - [x] Design responsive (mobile, tablette, desktop)
 - [x] Navigation sticky fonctionnelle
 - [x] Sections principales : Hero, À propos, Faits marquants, Programme, Lieu, Témoignages, Partenaires, CTA, Footer
+- [x] Optimisation accessibilité WCAG 2.1 niveau AA
+- [x] Navigation au clavier et skip links
+- [x] Attributs ARIA et structure sémantique
+- [x] Palette de couleurs pastel harmonieuse
 
 ### Résultats
-Site statique fonctionnel avec identité visuelle cohérente.
+Site statique fonctionnel avec identité visuelle cohérente et accessibilité optimale.
 
 ---
 
