@@ -1,0 +1,13 @@
+Placez vos images d'événements ici au format 16:9 (1920x1080px recommandé)
+
+Noms de fichiers suggérés :
+- danse-traditionnelle.jpg
+- conference-musique.jpg
+- concert-ouverture.jpg
+- atelier-chant.jpg
+- exposition-instruments.jpg
+- atelier-vielle.jpg
+- bal-traditionnel.jpg
+- eveil-musical.jpg
+- concert-voix-femmes.jpg
+- concert-cloture.jpg

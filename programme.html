@@ -9,11 +9,9 @@
     />
     <title>Programme - Poitou en Scène Festival 2026</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
-    <!-- Lien d'évitement pour l'accessibilité -->
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-
     <!-- Navigation -->
     <header role="banner">
       <nav class="navbar" role="navigation" aria-label="Navigation principale">
@@ -23,10 +21,10 @@
           </div>
           <ul class="nav-menu">
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="programme.html" aria-current="page">Programme</a></li>
-            <li><a href="ateliers.html">Ateliers</a></li>
+            <li><a href="./programme.html" aria-current="page">Programme</a></li>
+            <li><a href="./ateliers.html">Ateliers</a></li>
             <li><a href="#a-propos">À propos</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -59,567 +57,342 @@
         </div>
       </section>
 
+      <!-- À venir - Timeline des 3 prochains événements -->
+      <section class="upcoming-events" aria-labelledby="upcoming-title">
+        <div class="container">
+          <h3 id="upcoming-title" class="section-title">
+            <i class="fas fa-calendar-star"></i> Prochainement
+          </h3>
+          
+          <div class="timeline">
+            <!-- Événement Timeline 1 -->
+            <article class="timeline-event">
+              <div class="timeline-marker"></div>
+              <div class="event-card">
+                <div class="event-image">
+                  <img src="images/events/danse-traditionnelle.jpg" alt="Atelier de Danse Traditionnelle" />
+                  <div class="event-badge"><i class="fas fa-users"></i> Atelier</div>
+                </div>
+                <div class="event-content">
+                  <div class="event-meta">
+                    <span class="event-date">
+                      <i class="far fa-calendar"></i> 15 Mars 2026
+                    </span>
+                    <span class="event-time">
+                      <i class="far fa-clock"></i> 14h00 - 17h00
+                    </span>
+                  </div>
+                  <h4 class="event-title">Atelier de Danse Traditionnelle</h4>
+                  <p class="event-excerpt">
+                    Initiez-vous aux danses traditionnelles du Poitou avec notre
+                    maître de danse Christophe Durand. Branle poitevin, avant-deux 
+                    et danses en chaîne.
+                  </p>
+                  <div class="event-details-grid">
+                    <div class="detail-item">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>Maison de la Culture, Poitiers</span>
+                    </div>
+                    <div class="detail-item">
+                      <i class="fas fa-ticket-alt"></i>
+                      <span>12€ / Gratuit -18 ans</span>
+                    </div>
+                  </div>
+                  <div class="event-footer">
+                    <a href="#" class="btn btn-primary btn-sm">
+                      <i class="fas fa-user-plus"></i> S'inscrire
+                    </a>
+                    <span class="places-info"><i class="fas fa-info-circle"></i> 25 places disponibles</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Événement Timeline 2 -->
+            <article class="timeline-event">
+              <div class="timeline-marker"></div>
+              <div class="event-card">
+                <div class="event-image">
+                  <img src="images/events/conference-musique.jpg" alt="Conférence : Histoire de la Musique Poitevine" />
+                  <div class="event-badge event-badge-free"><i class="fas fa-book"></i> Conférence</div>
+                </div>
+                <div class="event-content">
+                  <div class="event-meta">
+                    <span class="event-date">
+                      <i class="far fa-calendar"></i> 18 Mars 2026
+                    </span>
+                    <span class="event-time">
+                      <i class="far fa-clock"></i> 18h30 - 20h00
+                    </span>
+                  </div>
+                  <h4 class="event-title">Conférence : Histoire de la Musique Poitevine</h4>
+                  <p class="event-excerpt">
+                    Plongez dans l'histoire fascinante de la musique traditionnelle 
+                    poitevine avec Dr. Marie-Claire Fontaine. Conférence illustrée 
+                    d'extraits sonores et visuels.
+                  </p>
+                  <div class="event-details-grid">
+                    <div class="detail-item">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>Bibliothèque Universitaire</span>
+                    </div>
+                    <div class="detail-item">
+                      <i class="fas fa-gift"></i>
+                      <span>Entrée libre</span>
+                    </div>
+                  </div>
+                  <div class="event-footer">
+                    <a href="#" class="btn btn-primary btn-sm">
+                      <i class="fas fa-check"></i> Réserver
+                    </a>
+                    <span class="tag-free"><i class="fas fa-star"></i> Gratuit</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Événement Timeline 3 -->
+            <article class="timeline-event">
+              <div class="timeline-marker"></div>
+              <div class="event-card event-card-highlight">
+                <div class="event-image">
+                  <img src="images/events/concert-ouverture.jpg" alt="Concert d'Ouverture du Festival" />
+                  <div class="event-badge event-badge-highlight"><i class="fas fa-star"></i> Événement majeur</div>
+                </div>
+                <div class="event-content">
+                  <div class="event-meta">
+                    <span class="event-date">
+                      <i class="far fa-calendar"></i> 22 Mars 2026
+                    </span>
+                    <span class="event-time">
+                      <i class="far fa-clock"></i> 20h00 - 22h30
+                    </span>
+                  </div>
+                  <h4 class="event-title">Concert d'Ouverture du Festival</h4>
+                  <p class="event-excerpt">
+                    Soirée inaugurale exceptionnelle avec l'Ensemble Les Troubadours 
+                    du Poitou. Un voyage musical à travers les siècles, mêlant chants 
+                    traditionnels et instruments anciens.
+                  </p>
+                  <div class="event-details-grid">
+                    <div class="detail-item">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>Théâtre Auditorium, Poitiers</span>
+                    </div>
+                    <div class="detail-item">
+                      <i class="fas fa-ticket-alt"></i>
+                      <span>18€ plein / 12€ réduit</span>
+                    </div>
+                  </div>
+                  <div class="event-footer">
+                    <a href="#" class="btn btn-primary btn-sm">
+                      <i class="fas fa-shopping-cart"></i> Réserver des billets
+                    </a>
+                    <span class="artist-info"><i class="fas fa-music"></i> Les Troubadours du Poitou</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- Programme Mars -->
       <section class="program-section" aria-labelledby="mars-title">
         <div class="container">
-          <h3 id="mars-title" class="month-title">Mars 2026</h3>
+          <h3 id="mars-title" class="month-title">
+            <i class="far fa-calendar-alt"></i> Mars 2026
+          </h3>
 
-          <article class="event-full">
-            <div class="event-header">
-              <div class="event-date-large">
-                <span class="day">15</span>
-                <span class="month">Mars</span>
-                <span class="year">2026</span>
-              </div>
-              <div class="event-title-block">
-                <h4>Atelier de Danse Traditionnelle</h4>
-                <p class="event-category">Atelier • Tout public</p>
-              </div>
-            </div>
-            <div class="event-body">
-              <div class="event-info-grid">
-                <div class="info-item">
-                  <strong>Horaires</strong>
-                  <p>14h00 - 17h00</p>
-                </div>
-                <div class="info-item">
-                  <strong>Lieu</strong>
-                  <p>Maison de la Culture, Poitiers</p>
-                </div>
-                <div class="info-item">
-                  <strong>Tarif</strong>
-                  <p>12€ / Gratuit -18 ans</p>
-                </div>
-                <div class="info-item">
-                  <strong>Inscription</strong>
-                  <p>Obligatoire (25 places)</p>
-                </div>
-              </div>
-              <div class="event-description">
-                <p>
-                  Initiez-vous aux danses traditionnelles du Poitou avec notre
-                  maître de danse Christophe Durand. Au programme : branle
-                  poitevin, avant-deux et danses en chaîne. Ambiance conviviale
-                  et accessible à tous, même débutants.
-                </p>
-              </div>
-              <div class="event-actions">
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  aria-label="S'inscrire à l'atelier du 15 mars"
-                  >S'inscrire</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-outline"
-                  aria-label="Ajouter au calendrier"
-                  >Ajouter au calendrier</a
-                >
-              </div>
-            </div>
-          </article>
+          <div class="events-grid">
 
-          <article class="event-full">
-            <div class="event-header">
-              <div class="event-date-large">
-                <span class="day">18</span>
-                <span class="month">Mars</span>
-                <span class="year">2026</span>
+          <div class="events-grid">
+            <!-- Atelier Chant -->
+            <article class="event-compact">
+              <div class="event-image">
+                <img src="images/events/atelier-chant.jpg" alt="Atelier Chant Polyphonique" />
               </div>
-              <div class="event-title-block">
-                <h4>Conférence : Histoire de la Musique Poitevine</h4>
-                <p class="event-category">Conférence • Gratuit</p>
-              </div>
-            </div>
-            <div class="event-body">
-              <div class="event-info-grid">
-                <div class="info-item">
-                  <strong>Horaires</strong>
-                  <p>18h30 - 20h00</p>
+              <div class="event-content">
+                <div class="event-meta">
+                  <span class="event-date"><i class="far fa-calendar"></i> 25 Mars</span>
+                  <span class="event-time"><i class="far fa-clock"></i> 19h - 21h</span>
                 </div>
-                <div class="info-item">
-                  <strong>Lieu</strong>
-                  <p>Bibliothèque Universitaire, Poitiers</p>
-                </div>
-                <div class="info-item">
-                  <strong>Tarif</strong>
-                  <p>Entrée libre</p>
-                </div>
-                <div class="info-item">
-                  <strong>Intervenant</strong>
-                  <p>Dr. Marie-Claire Fontaine</p>
-                </div>
-              </div>
-              <div class="event-description">
-                <p>
-                  Plongez dans l'histoire fascinante de la musique
-                  traditionnelle poitevine, de ses origines médiévales à sa
-                  renaissance contemporaine. Conférence illustrée d'extraits
-                  sonores et visuels.
+                <h4 class="event-title">Atelier Chant Polyphonique</h4>
+                <p class="event-excerpt">
+                  Techniques de chant polyphonique traditionnel. Travail sur le souffle 
+                  et l'harmonie en petit groupe.
                 </p>
+                <div class="event-info-row">
+                  <span><i class="fas fa-map-marker-alt"></i> Conservatoire</span>
+                  <span><i class="fas fa-ticket-alt"></i> 15€</span>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline">
+                  <i class="fas fa-info-circle"></i> Détails
+                </a>
               </div>
-              <div class="event-actions">
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  aria-label="Réserver pour la conférence du 18 mars"
-                  >Réserver</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-outline"
-                  aria-label="Ajouter au calendrier"
-                  >Ajouter au calendrier</a
-                >
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="event-full event-highlight">
-            <div class="event-header">
-              <div class="event-date-large">
-                <span class="day">22</span>
-                <span class="month">Mars</span>
-                <span class="year">2026</span>
+            <!-- Exposition -->
+            <article class="event-compact">
+              <div class="event-image">
+                <img src="images/events/exposition-instruments.jpg" alt="Exposition : Instruments Anciens du Poitou" />
               </div>
-              <div class="event-title-block">
-                <h4>Concert d'Ouverture du Festival</h4>
-                <p class="event-category">Concert • Événement majeur</p>
-              </div>
-            </div>
-            <div class="event-body">
-              <div class="event-info-grid">
-                <div class="info-item">
-                  <strong>Horaires</strong>
-                  <p>20h00 - 22h30</p>
+              <div class="event-content">
+                <div class="event-meta">
+                  <span class="event-date"><i class="far fa-calendar"></i> 29 Mars - 15 Avril</span>
+                  <span class="event-time"><i class="far fa-clock"></i> 10h - 18h</span>
                 </div>
-                <div class="info-item">
-                  <strong>Lieu</strong>
-                  <p>Théâtre Auditorium, Poitiers</p>
-                </div>
-                <div class="info-item">
-                  <strong>Tarif</strong>
-                  <p>18€ plein / 12€ réduit</p>
-                </div>
-                <div class="info-item">
-                  <strong>Artistes</strong>
-                  <p>Ensemble Les Troubadours du Poitou</p>
-                </div>
-              </div>
-              <div class="event-description">
-                <p>
-                  Soirée inaugurale exceptionnelle avec l'Ensemble Les
-                  Troubadours du Poitou. Un voyage musical à travers les
-                  siècles, mêlant chants traditionnels, instruments anciens
-                  (vielle à roue, cornemuse, violon) et arrangements
-                  contemporains. Une célébration vibrante de notre patrimoine
-                  culturel.
+                <h4 class="event-title">Exposition : Instruments Anciens</h4>
+                <p class="event-excerpt">
+                  Vielles à roue, cornemuses, épinettes. Découvrez l'histoire 
+                  et les techniques de fabrication.
                 </p>
-              </div>
-              <div class="event-actions">
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  aria-label="Réserver des billets pour le concert d'ouverture"
-                  >Réserver des billets</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-outline"
-                  aria-label="Ajouter au calendrier"
-                  >Ajouter au calendrier</a
-                >
-              </div>
-            </div>
-          </article>
-
-          <article class="event-full">
-            <div class="event-header">
-              <div class="event-date-large">
-                <span class="day">25</span>
-                <span class="month">Mars</span>
-                <span class="year">2026</span>
-              </div>
-              <div class="event-title-block">
-                <h4>Atelier Chant Polyphonique</h4>
-                <p class="event-category">Atelier • Adultes</p>
-              </div>
-            </div>
-            <div class="event-body">
-              <div class="event-info-grid">
-                <div class="info-item">
-                  <strong>Horaires</strong>
-                  <p>19h00 - 21h00</p>
+                <div class="event-info-row">
+                  <span><i class="fas fa-map-marker-alt"></i> Musée Sainte-Croix</span>
+                  <span><i class="fas fa-gift"></i> Gratuit</span>
                 </div>
-                <div class="info-item">
-                  <strong>Lieu</strong>
-                  <p>Conservatoire de Poitiers</p>
-                </div>
-                <div class="info-item">
-                  <strong>Tarif</strong>
-                  <p>15€</p>
-                </div>
-                <div class="info-item">
-                  <strong>Niveau</strong>
-                  <p>Intermédiaire</p>
-                </div>
+                <a href="#" class="btn btn-sm btn-outline">
+                  <i class="fas fa-info-circle"></i> Détails
+                </a>
               </div>
-              <div class="event-description">
-                <p>
-                  Découvrez les techniques de chant polyphonique traditionnel
-                  poitevin. Travail sur le souffle, la justesse et l'harmonie en
-                  petit groupe. Notions de base en chant requises.
-                </p>
-              </div>
-              <div class="event-actions">
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  aria-label="S'inscrire à l'atelier du 25 mars"
-                  >S'inscrire</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-outline"
-                  aria-label="Ajouter au calendrier"
-                  >Ajouter au calendrier</a
-                >
-              </div>
-            </div>
-          </article>
-
-          <article class="event-full">
-            <div class="event-header">
-              <div class="event-date-large">
-                <span class="day">29</span>
-                <span class="month">Mars</span>
-                <span class="year">2026</span>
-              </div>
-              <div class="event-title-block">
-                <h4>Exposition : Instruments Anciens du Poitou</h4>
-                <p class="event-category">Exposition • Gratuit</p>
-              </div>
-            </div>
-            <div class="event-body">
-              <div class="event-info-grid">
-                <div class="info-item">
-                  <strong>Horaires</strong>
-                  <p>10h00 - 18h00</p>
-                </div>
-                <div class="info-item">
-                  <strong>Lieu</strong>
-                  <p>Musée Sainte-Croix, Poitiers</p>
-                </div>
-                <div class="info-item">
-                  <strong>Durée</strong>
-                  <p>29 mars - 15 avril</p>
-                </div>
-                <div class="info-item">
-                  <strong>Tarif</strong>
-                  <p>Entrée libre</p>
-                </div>
-              </div>
-              <div class="event-description">
-                <p>
-                  Exposition exceptionnelle d'instruments traditionnels du
-                  Poitou : vielles à roue, cornemuses, épinettes des Vosges,
-                  violons anciens. Découvrez l'histoire et les techniques de
-                  fabrication de ces instruments emblématiques. Démonstrations
-                  musicales tous les samedis à 15h.
-                </p>
-              </div>
-              <div class="event-actions">
-                <a
-                  href="#"
-                  class="btn btn-outline"
-                  aria-label="En savoir plus sur l'exposition"
-                  >En savoir plus</a
-                >
-              </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </section>
 
       <!-- Programme Avril -->
       <section class="program-section" aria-labelledby="avril-title">
         <div class="container">
-          <h3 id="avril-title" class="month-title">Avril 2026</h3>
+          <h3 id="avril-title" class="month-title">
+            <i class="far fa-calendar-alt"></i> Avril 2026
+          </h3>
 
-          <article class="event-full">
-            <div class="event-header">
-              <div class="event-date-large">
-                <span class="day">02</span>
-                <span class="month">Avril</span>
-                <span class="year">2026</span>
+          <div class="events-grid">
+            <!-- Atelier Vielle -->
+            <article class="event-compact">
+              <div class="event-image">
+                <img src="images/events/atelier-vielle.jpg" alt="Atelier Découverte de la Vielle à Roue" />
               </div>
-              <div class="event-title-block">
-                <h4>Atelier Découverte de la Vielle à Roue</h4>
-                <p class="event-category">Atelier • Débutants</p>
-              </div>
-            </div>
-            <div class="event-body">
-              <div class="event-info-grid">
-                <div class="info-item">
-                  <strong>Horaires</strong>
-                  <p>14h00 - 17h00</p>
+              <div class="event-content">
+                <div class="event-meta">
+                  <span class="event-date"><i class="far fa-calendar"></i> 02 Avril</span>
+                  <span class="event-time"><i class="far fa-clock"></i> 14h - 17h</span>
                 </div>
-                <div class="info-item">
-                  <strong>Lieu</strong>
-                  <p>École de Musique Traditionnelle, Poitiers</p>
-                </div>
-                <div class="info-item">
-                  <strong>Tarif</strong>
-                  <p>20€ (instruments fournis)</p>
-                </div>
-                <div class="info-item">
-                  <strong>Inscription</strong>
-                  <p>Obligatoire (12 places)</p>
-                </div>
-              </div>
-              <div class="event-description">
-                <p>
-                  Première approche de la vielle à roue, instrument emblématique
-                  du Poitou. Découverte de son mécanisme, de ses sonorités et
-                  premiers exercices pratiques. Instruments prêtés pour la durée
-                  de l'atelier.
+                <h4 class="event-title">Découverte de la Vielle à Roue</h4>
+                <p class="event-excerpt">
+                  Première approche de la vielle à roue. Instruments prêtés 
+                  pour la durée de l'atelier.
                 </p>
+                <div class="event-info-row">
+                  <span><i class="fas fa-map-marker-alt"></i> École de Musique</span>
+                  <span><i class="fas fa-ticket-alt"></i> 20€</span>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline">
+                  <i class="fas fa-info-circle"></i> Détails
+                </a>
               </div>
-              <div class="event-actions">
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  aria-label="S'inscrire à l'atelier du 2 avril"
-                  >S'inscrire</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-outline"
-                  aria-label="Ajouter au calendrier"
-                  >Ajouter au calendrier</a
-                >
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="event-full event-highlight">
-            <div class="event-header">
-              <div class="event-date-large">
-                <span class="day">05</span>
-                <span class="month">Avril</span>
-                <span class="year">2026</span>
+            <!-- Grand Bal -->
+            <article class="event-compact">
+              <div class="event-image">
+                <img src="images/events/bal-traditionnel.jpg" alt="Grand Bal Traditionnel" />
               </div>
-              <div class="event-title-block">
-                <h4>Grand Bal Traditionnel</h4>
-                <p class="event-category">Bal • Tout public</p>
-              </div>
-            </div>
-            <div class="event-body">
-              <div class="event-info-grid">
-                <div class="info-item">
-                  <strong>Horaires</strong>
-                  <p>19h00 - 23h00</p>
+              <div class="event-content">
+                <div class="event-meta">
+                  <span class="event-date"><i class="far fa-calendar"></i> 05 Avril</span>
+                  <span class="event-time"><i class="far fa-clock"></i> 19h - 23h</span>
                 </div>
-                <div class="info-item">
-                  <strong>Lieu</strong>
-                  <p>Place Charles de Gaulle, Poitiers</p>
-                </div>
-                <div class="info-item">
-                  <strong>Tarif</strong>
-                  <p>Gratuit</p>
-                </div>
-                <div class="info-item">
-                  <strong>Musiciens</strong>
-                  <p>Groupe Les Ménétriers</p>
-                </div>
-              </div>
-              <div class="event-description">
-                <p>
-                  Grande soirée festive en plein air ! Venez danser au son des
-                  musiques traditionnelles. Initiation aux pas de base à 19h
-                  pour les débutants. Restauration sur place. En cas de pluie,
-                  repli à la Maison de la Culture.
+                <h4 class="event-title">Grand Bal Traditionnel</h4>
+                <p class="event-excerpt">
+                  Grande soirée festive en plein air ! Initiation aux pas de base 
+                  à 19h. Restauration sur place.
                 </p>
+                <div class="event-info-row">
+                  <span><i class="fas fa-map-marker-alt"></i> Place Charles de Gaulle</span>
+                  <span><i class="fas fa-gift"></i> Gratuit</span>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline">
+                  <i class="fas fa-info-circle"></i> Détails
+                </a>
               </div>
-              <div class="event-actions">
-                <a
-                  href="#"
-                  class="btn btn-outline"
-                  aria-label="En savoir plus sur le bal du 5 avril"
-                  >En savoir plus</a
-                >
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="event-full">
-            <div class="event-header">
-              <div class="event-date-large">
-                <span class="day">12</span>
-                <span class="month">Avril</span>
-                <span class="year">2026</span>
+            <!-- Éveil Musical -->
+            <article class="event-compact">
+              <div class="event-image">
+                <img src="images/events/eveil-musical.jpg" alt="Atelier Parent-Enfant : Éveil Musical" />
               </div>
-              <div class="event-title-block">
-                <h4>Atelier Parent-Enfant : Éveil Musical</h4>
-                <p class="event-category">Atelier • Famille (4-8 ans)</p>
-              </div>
-            </div>
-            <div class="event-body">
-              <div class="event-info-grid">
-                <div class="info-item">
-                  <strong>Horaires</strong>
-                  <p>10h00 - 11h30</p>
+              <div class="event-content">
+                <div class="event-meta">
+                  <span class="event-date"><i class="far fa-calendar"></i> 12 Avril</span>
+                  <span class="event-time"><i class="far fa-clock"></i> 10h - 11h30</span>
                 </div>
-                <div class="info-item">
-                  <strong>Lieu</strong>
-                  <p>Médiathèque François Mitterrand</p>
-                </div>
-                <div class="info-item">
-                  <strong>Tarif</strong>
-                  <p>8€ le binôme</p>
-                </div>
-                <div class="info-item">
-                  <strong>Age</strong>
-                  <p>4 à 8 ans + 1 adulte</p>
-                </div>
-              </div>
-              <div class="event-description">
-                <p>
-                  Moment de partage musical entre parents et enfants. Découverte
-                  ludique des rythmes, des chants et des petits instruments
-                  traditionnels. Jeux musicaux et comptines du Poitou.
+                <h4 class="event-title">Atelier Parent-Enfant : Éveil Musical</h4>
+                <p class="event-excerpt">
+                  Moment de partage musical. Découverte ludique des rythmes 
+                  et petits instruments. 4-8 ans + 1 adulte.
                 </p>
+                <div class="event-info-row">
+                  <span><i class="fas fa-map-marker-alt"></i> Médiathèque</span>
+                  <span><i class="fas fa-ticket-alt"></i> 8€</span>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline">
+                  <i class="fas fa-info-circle"></i> Détails
+                </a>
               </div>
-              <div class="event-actions">
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  aria-label="S'inscrire à l'atelier parent-enfant"
-                  >S'inscrire</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-outline"
-                  aria-label="Ajouter au calendrier"
-                  >Ajouter au calendrier</a
-                >
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="event-full">
-            <div class="event-header">
-              <div class="event-date-large">
-                <span class="day">19</span>
-                <span class="month">Avril</span>
-                <span class="year">2026</span>
+            <!-- Concert Voix de Femmes -->
+            <article class="event-compact">
+              <div class="event-image">
+                <img src="images/events/concert-voix-femmes.jpg" alt="Concert : Voix de Femmes en Pays Poitevin" />
               </div>
-              <div class="event-title-block">
-                <h4>Concert : Voix de Femmes en Pays Poitevin</h4>
-                <p class="event-category">Concert • Tout public</p>
-              </div>
-            </div>
-            <div class="event-body">
-              <div class="event-info-grid">
-                <div class="info-item">
-                  <strong>Horaires</strong>
-                  <p>20h30 - 22h00</p>
+              <div class="event-content">
+                <div class="event-meta">
+                  <span class="event-date"><i class="far fa-calendar"></i> 19 Avril</span>
+                  <span class="event-time"><i class="far fa-clock"></i> 20h30 - 22h</span>
                 </div>
-                <div class="info-item">
-                  <strong>Lieu</strong>
-                  <p>Église Notre-Dame la Grande</p>
-                </div>
-                <div class="info-item">
-                  <strong>Tarif</strong>
-                  <p>15€ plein / 10€ réduit</p>
-                </div>
-                <div class="info-item">
-                  <strong>Artistes</strong>
-                  <p>Ensemble vocal Polyphonia</p>
-                </div>
-              </div>
-              <div class="event-description">
-                <p>
-                  Concert exceptionnel dans le cadre somptueux de l'église
-                  romane. L'ensemble Polyphonia interprète des chants
-                  traditionnels poitevins a cappella. Répertoire sacré et
-                  profane du Moyen Âge à nos jours.
+                <h4 class="event-title">Concert : Voix de Femmes en Pays Poitevin</h4>
+                <p class="event-excerpt">
+                  Concert exceptionnel dans l'église Notre-Dame. Ensemble Polyphonia 
+                  interprète des chants a cappella.
                 </p>
+                <div class="event-info-row">
+                  <span><i class="fas fa-map-marker-alt"></i> Église Notre-Dame</span>
+                  <span><i class="fas fa-ticket-alt"></i> 15€ / 10€</span>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline">
+                  <i class="fas fa-info-circle"></i> Détails
+                </a>
               </div>
-              <div class="event-actions">
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  aria-label="Réserver pour le concert du 19 avril"
-                  >Réserver</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-outline"
-                  aria-label="Ajouter au calendrier"
-                  >Ajouter au calendrier</a
-                >
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="event-full event-highlight">
-            <div class="event-header">
-              <div class="event-date-large">
-                <span class="day">26</span>
-                <span class="month">Avril</span>
-                <span class="year">2026</span>
+            <!-- Concert de Clôture -->
+            <article class="event-compact">
+              <div class="event-image">
+                <img src="images/events/concert-cloture.jpg" alt="Concert de Clôture & Bal Final" />
               </div>
-              <div class="event-title-block">
-                <h4>Concert de Clôture & Bal Final</h4>
-                <p class="event-category">Concert & Bal • Événement majeur</p>
-              </div>
-            </div>
-            <div class="event-body">
-              <div class="event-info-grid">
-                <div class="info-item">
-                  <strong>Horaires</strong>
-                  <p>19h00 - minuit</p>
+              <div class="event-content">
+                <div class="event-meta">
+                  <span class="event-date"><i class="far fa-calendar"></i> 26 Avril</span>
+                  <span class="event-time"><i class="far fa-clock"></i> 19h - Minuit</span>
                 </div>
-                <div class="info-item">
-                  <strong>Lieu</strong>
-                  <p>Parc de Blossac, Poitiers</p>
-                </div>
-                <div class="info-item">
-                  <strong>Tarif</strong>
-                  <p>Pass soirée 20€ / Gratuit -16 ans</p>
-                </div>
-                <div class="info-item">
-                  <strong>Programmation</strong>
-                  <p>4 groupes + DJs traditionnels</p>
-                </div>
-              </div>
-              <div class="event-description">
-                <p>
-                  Grande soirée de clôture du festival ! Au programme : concerts
-                  de plusieurs formations musicales, bal géant, food trucks,
-                  animations pour enfants. Une célébration collective pour
-                  terminer en beauté cette édition 2026. Ambiance festive et
-                  conviviale garantie !
+                <h4 class="event-title">Concert de Clôture & Bal Final</h4>
+                <p class="event-excerpt">
+                  Grande soirée de clôture ! Concerts, bal géant, food trucks, 
+                  animations. Une célébration collective.
                 </p>
+                <div class="event-info-row">
+                  <span><i class="fas fa-map-marker-alt"></i> Parc de Blossac</span>
+                  <span><i class="fas fa-ticket-alt"></i> 20€</span>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline">
+                  <i class="fas fa-info-circle"></i> Détails
+                </a>
               </div>
-              <div class="event-actions">
-                <a
-                  href="#"
-                  class="btn btn-primary"
-                  aria-label="Acheter le pass soirée de clôture"
-                  >Acheter le pass</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-outline"
-                  aria-label="Ajouter au calendrier"
-                  >Ajouter au calendrier</a
-                >
-              </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </section>
 
