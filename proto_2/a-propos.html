@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Découvrez l'association Poitou en Scène : notre histoire, nos valeurs, notre équipe et nos partenaires pour Poitiers 2026."
+    />
+    <meta
+      name="keywords"
+      content="association, Poitou, culture, Poitiers 2026, valeurs, équipe, partenaires"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="À Propos - Poitou en Scène" />
+    <meta
+      property="og:description"
+      content="Association artistique dédiée à la valorisation de la culture poitevine traditionnelle."
+    />
+
+    <title>À Propos - Poitou en Scène</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Structured Data - About Page -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Poitou en Scène",
+          "description": "Association artistique dédiée à la valorisation de la culture poitevine traditionnelle depuis 2010",
+          "foundingDate": "2010",
+          "numberOfEmployees": "15",
+          "knowsAbout": [
+            "Culture traditionnelle",
+            "Arts de la scène",
+            "Patrimoine poitevin"
+          ],
+          "slogan": "Transmettre, partager, célébrer notre patrimoine vivant"
+        }
+      }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/grid.css" />
+    <link rel="stylesheet" href="assets/css/utilities.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/a-propos.css" />
+  </head>
+  <body>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="header__nav" aria-label="Navigation principale">
+          <a
+            href="index.html"
+            class="header__logo"
+            aria-label="Accueil Poitou en Scène"
+          >
+            <img
+              src="assets/images/logo.svg"
+              alt="Poitou en Scène"
+              class="header__logo-img"
+            />
+          </a>
+
+          <ul class="header__menu" id="main-menu">
+            <li class="header__menu-item">
+              <a href="index.html" class="header__menu-link">Accueil</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="programme.html" class="header__menu-link">Programme</a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                href="a-propos.html"
+                class="header__menu-link header__menu-link--active"
+                aria-current="page"
+                >À Propos</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="contact.html" class="header__menu-link">Contact</a>
+            </li>
+          </ul>
+
+          <a href="#" class="btn btn--primary header__cta">Réserver</a>
+
+          <button
+            class="header__burger"
+            id="burger-btn"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="main-menu"
+          >
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="hero hero--small">
+        <div class="hero__background">
+          <img
+            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&h=600&fit=crop"
+            alt=""
+            class="hero__image"
+          />
+          <div class="hero__overlay"></div>
+        </div>
+        <div class="container">
+          <div class="hero__content text-center">
+            <h1 class="hero__title">Qui Sommes-Nous ?</h1>
+            <p class="hero__subtitle">
+              Une association au cœur de la culture poitevine
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notre Histoire -->
+      <section class="section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6">
+              <div class="story-image">
+                <img
+                  src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&h=600&fit=crop"
+                  alt="Membres de l'association réunis lors d'un événement"
+                  class="story-image__img"
+                />
+                <div class="story-image__decoration"></div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="story-content">
+                <span class="section__label">Notre Histoire</span>
+                <h2 class="section__title">Une Passion Partagée Depuis 2024</h2>
+                <p class="story-text">
+                  Née en 2024 de la volonté de passionnés de culture
+                  traditionnelle poitevine, l'association
+                  <strong>Poitou en Scène</strong> s'est donné pour mission de
+                  valoriser et transmettre le riche patrimoine artistique de
+                  notre région.
+                </p>
+                <p class="story-text">
+                  Dans le cadre de
+                  <strong
+                    >Poitiers 2026 - Capitale Européenne de la Culture</strong
+                  >, nous organisons des événements culturels mettant en lumière
+                  les trois piliers de notre identité : la danse, la musique et
+                  le chant traditionnels.
+                </p>
+                <p class="story-text">
+                  Notre festival annuel rassemble artistes locaux et public de
+                  tous âges autour d'ateliers participatifs, de concerts
+                  authentiques et d'expositions pédagogiques.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nos Valeurs -->
+      <section class="section section--cream">
+        <div class="container">
+          <div class="section__header text-center">
+            <span class="section__label">Nos Valeurs</span>
+            <h2 class="section__title">Ce Qui Nous Anime</h2>
+            <p class="section__subtitle">
+              Cinq piliers fondamentaux guident nos actions au quotidien
+            </p>
+          </div>
+
+          <div class="values-grid">
+            <!-- Valeur 1 -->
+            <div class="value-card fade-in-element">
+              <div class="value-card__icon value-card__icon--terracotta">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <use href="assets/icons/sprite.svg#users"></use>
+                </svg>
+              </div>
+              <h3 class="value-card__title">Communautaire</h3>
+              <p class="value-card__description">
+                Créer du lien social et renforcer le sentiment d'appartenance à
+                travers des événements rassembleurs qui célèbrent notre
+                patrimoine commun.
+              </p>
+            </div>
+
+            <!-- Valeur 2 -->
+            <div class="value-card fade-in-element">
+              <div class="value-card__icon value-card__icon--indigo">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <use href="assets/icons/sprite.svg#heart"></use>
+                </svg>
+              </div>
+              <h3 class="value-card__title">Inclusivité</h3>
+              <p class="value-card__description">
+                Rendre la culture accessible à tous, sans distinction d'âge,
+                d'origine ou de condition sociale. Nos tarifs solidaires et nos
+                actions ciblées le démontrent.
+              </p>
+            </div>
+
+            <!-- Valeur 3 -->
+            <div class="value-card fade-in-element">
+              <div class="value-card__icon value-card__icon--golden">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="24" cy="24" r="10"></circle>
+                  <path d="M12 12 L24 24 L36 12"></path>
+                </svg>
+              </div>
+              <h3 class="value-card__title">Partage</h3>
+              <p class="value-card__description">
+                Transmettre les savoirs et savoir-faire traditionnels aux
+                nouvelles générations dans une ambiance conviviale et
+                bienveillante.
+              </p>
+            </div>
+
+            <!-- Valeur 4 -->
+            <div class="value-card fade-in-element">
+              <div class="value-card__icon value-card__icon--terracotta">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <use href="assets/icons/sprite.svg#map-pin"></use>
+                </svg>
+              </div>
+              <h3 class="value-card__title">Proximité</h3>
+              <p class="value-card__description">
+                Ancrer nos actions dans le territoire poitevin, valoriser les
+                artistes locaux et favoriser les circuits courts culturels.
+              </p>
+            </div>
+
+            <!-- Valeur 5 -->
+            <div class="value-card fade-in-element">
+              <div class="value-card__icon value-card__icon--indigo">
+                <svg
+                  width="48"
+                  height="48"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <use href="assets/icons/sprite.svg#star"></use>
+                </svg>
+              </div>
+              <h3 class="value-card__title">Valorisation</h3>
+              <p class="value-card__description">
+                Mettre en lumière le patrimoine culturel poitevin, souvent
+                méconnu, et lui donner la reconnaissance qu'il mérite.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notre Équipe -->
+      <section class="section">
+        <div class="container">
+          <div class="section__header text-center">
+            <span class="section__label">Notre Équipe</span>
+            <h2 class="section__title">Les Artisans du Festival</h2>
+            <p class="section__subtitle">Une équipe passionnée et engagée</p>
+          </div>
+
+          <div class="team-content">
+            <div class="row">
+              <div class="col-12 col-md-8 mx-auto">
+                <p class="team-text text-center">
+                  Notre association est portée par une équipe de
+                  <strong>15 bénévoles passionnés</strong>, issus d'horizons
+                  variés mais unis par l'amour de la culture poitevine.
+                  Musiciens, danseurs, chanteurs, mais aussi organisateurs
+                  d'événements, communicants et gestionnaires, nous travaillons
+                  main dans la main toute l'année pour faire vivre notre
+                  patrimoine.
+                </p>
+                <p class="team-text text-center">
+                  Rejoints par plus de
+                  <strong>30 bénévoles ponctuels</strong> lors du festival, nous
+                  formons une communauté dynamique et accueillante, toujours
+                  prête à accueillir de nouveaux membres motivés par notre
+                  mission.
+                </p>
+              </div>
+            </div>
+
+            <!-- Chiffres clés -->
+            <div class="stats-grid">
+              <div class="stat-card fade-in-element">
+                <div class="stat-card__number">15</div>
+                <div class="stat-card__label">Bénévoles permanents</div>
+              </div>
+              <div class="stat-card fade-in-element">
+                <div class="stat-card__number">30+</div>
+                <div class="stat-card__label">Bénévoles ponctuels</div>
+              </div>
+              <div class="stat-card fade-in-element">
+                <div class="stat-card__number">2024</div>
+                <div class="stat-card__label">Année de création</div>
+              </div>
+              <div class="stat-card fade-in-element">
+                <div class="stat-card__number">3</div>
+                <div class="stat-card__label">Jours de festival</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nos Partenaires -->
+      <section class="section section--indigo">
+        <div class="container">
+          <div class="section__header text-center">
+            <span class="section__label text-golden">Nos Partenaires</span>
+            <h2 class="section__title text-cream">Ils Nous Soutiennent</h2>
+            <p class="section__subtitle text-cream">
+              Un festival rendu possible grâce à nos précieux partenaires
+            </p>
+          </div>
+
+          <div class="partners-section">
+            <!-- Partenaires institutionnels -->
+            <div class="partners-category">
+              <h3 class="partners-category__title text-golden">
+                Partenaires Institutionnels
+              </h3>
+              <div class="partners-grid">
+                <div class="partner-card">
+                  <div class="partner-card__logo">
+                    <img
+                      src="https://via.placeholder.com/200x100/1E3250/D8A24A?text=Ville+de+Poitiers"
+                      alt="Ville de Poitiers"
+                    />
+                  </div>
+                  <h4 class="partner-card__name">Ville de Poitiers</h4>
+                  <p class="partner-card__description">
+                    Soutien financier et logistique, mise à disposition des
+                    salles municipales
+                  </p>
+                </div>
+
+                <div class="partner-card">
+                  <div class="partner-card__logo">
+                    <img
+                      src="https://via.placeholder.com/200x100/1E3250/D8A24A?text=R%C3%A9gion+Nouvelle-Aquitaine"
+                      alt="Région Nouvelle-Aquitaine"
+                    />
+                  </div>
+                  <h4 class="partner-card__name">Région Nouvelle-Aquitaine</h4>
+                  <p class="partner-card__description">
+                    Subvention culturelle dans le cadre de Poitiers 2026
+                  </p>
+                </div>
+
+                <div class="partner-card">
+                  <div class="partner-card__logo">
+                    <img
+                      src="https://via.placeholder.com/200x100/1E3250/D8A24A?text=Minist%C3%A8re+Culture"
+                      alt="Ministère de la Culture"
+                    />
+                  </div>
+                  <h4 class="partner-card__name">Ministère de la Culture</h4>
+                  <p class="partner-card__description">
+                    Financement dans le cadre de la valorisation du patrimoine
+                    immatériel
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Partenaires culturels -->
+            <div class="partners-category">
+              <h3 class="partners-category__title text-golden">
+                Partenaires Culturels
+              </h3>
+              <div class="partners-grid">
+                <div class="partner-card">
+                  <div class="partner-card__logo">
+                    <img
+                      src="https://via.placeholder.com/200x100/1E3250/D8A24A?text=Conservatoire"
+                      alt="Conservatoire"
+                    />
+                  </div>
+                  <h4 class="partner-card__name">Conservatoire de Poitiers</h4>
+                  <p class="partner-card__description">
+                    Mise à disposition d'instruments et intervention de
+                    professeurs
+                  </p>
+                </div>
+
+                <div class="partner-card">
+                  <div class="partner-card__logo">
+                    <img
+                      src="https://via.placeholder.com/200x100/1E3250/D8A24A?text=Mus%C3%A9e+Poitou"
+                      alt="Musée Sainte-Croix"
+                    />
+                  </div>
+                  <h4 class="partner-card__name">Musée Sainte-Croix</h4>
+                  <p class="partner-card__description">
+                    Prêt d'instruments anciens pour l'exposition
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Partenaires privés -->
+            <div class="partners-category">
+              <h3 class="partners-category__title text-golden">
+                Partenaires Privés
+              </h3>
+              <div class="partners-grid">
+                <div class="partner-card">
+                  <div class="partner-card__logo">
+                    <img
+                      src="https://via.placeholder.com/200x100/1E3250/D8A24A?text=Boulangerie+Locale"
+                      alt="Boulangerie Locale"
+                    />
+                  </div>
+                  <h4 class="partner-card__name">Boulangerie Artisanale</h4>
+                  <p class="partner-card__description">
+                    Fourniture de Broyé du Poitou et Tourteau fromager
+                  </p>
+                </div>
+
+                <div class="partner-card">
+                  <div class="partner-card__logo">
+                    <img
+                      src="https://via.placeholder.com/200x100/1E3250/D8A24A?text=M%C3%A9c%C3%A8ne+Local"
+                      alt="Mécène Local"
+                    />
+                  </div>
+                  <h4 class="partner-card__name">Entreprises Locales</h4>
+                  <p class="partner-card__description">
+                    Mécénat et soutien logistique
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Devenir Partenaire -->
+          <div class="partner-cta text-center">
+            <h3 class="h3 text-cream mb-3">Vous Souhaitez Nous Soutenir ?</h3>
+            <p class="text-cream mb-4">
+              Rejoignez nos partenaires et participez à la valorisation de la
+              culture poitevine
+            </p>
+            <a href="contact.html" class="btn btn--golden btn--lg"
+              >Devenir Partenaire</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Info -->
+      <section class="section section--cream">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-8 mx-auto text-center">
+              <h2 class="section__title">Restons en Contact</h2>
+              <p class="section__subtitle mb-5">
+                Une question ? Une suggestion ? N'hésitez pas à nous contacter
+              </p>
+
+              <div class="contact-info-grid">
+                <div class="contact-info-item">
+                  <div class="contact-info-item__icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                  </div>
+                  <h4 class="contact-info-item__title">Adresse</h4>
+                  <p class="contact-info-item__text">
+                    36 rue Victor Hugo<br />86000 Poitiers
+                  </p>
+                </div>
+
+                <div class="contact-info-item">
+                  <div class="contact-info-item__icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <use href="assets/icons/sprite.svg#mail"></use>
+                    </svg>
+                  </div>
+                  <h4 class="contact-info-item__title">Email</h4>
+                  <p class="contact-info-item__text">
+                    <a
+                      href="mailto:contact@poitou-en-scene.fr"
+                      class="contact-info-item__link"
+                    >
+                      contact@poitou-en-scene.fr
+                    </a>
+                  </p>
+                </div>
+
+                <div class="contact-info-item">
+                  <div class="contact-info-item__icon">
+                    <svg
+                      width="32"
+                      height="32"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="16" cy="16" r="12"></circle>
+                      <path d="M16 8v8l4 4"></path>
+                    </svg>
+                  </div>
+                  <h4 class="contact-info-item__title">Horaires</h4>
+                  <p class="contact-info-item__text">
+                    Lun - Ven : 9h - 17h<br />Sam : 10h - 16h
+                  </p>
+                </div>
+              </div>
+
+              <a href="contact.html" class="btn btn--primary btn--lg mt-5"
+                >Nous Contacter</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <h3 class="footer__title">Poitou en Scène</h3>
+              <p class="footer__text">
+                Association artistique dédiée à la valorisation de la culture
+                poitevine.
+              </p>
+              <p class="footer__text">
+                <strong>Poitiers 2026</strong><br />Capitale Européenne de la
+                Culture
+              </p>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <h3 class="footer__title">Liens rapides</h3>
+              <ul class="footer__links">
+                <li><a href="index.html" class="footer__link">Accueil</a></li>
+                <li>
+                  <a href="programme.html" class="footer__link">Programme</a>
+                </li>
+                <li>
+                  <a href="a-propos.html" class="footer__link">À Propos</a>
+                </li>
+                <li><a href="contact.html" class="footer__link">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <h3 class="footer__title">Contact</h3>
+              <address class="footer__address">
+                <p class="footer__text">
+                  36 rue Victor Hugo<br />86000 Poitiers
+                </p>
+                <p class="footer__text">
+                  <a
+                    href="mailto:contact@poitou-en-scene.fr"
+                    class="footer__link"
+                    >contact@poitou-en-scene.fr</a
+                  >
+                </p>
+              </address>
+              <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <svg width="24" height="24" fill="currentColor">
+                    <use href="assets/icons/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <svg width="24" height="24" fill="currentColor">
+                    <use href="assets/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            &copy; 2025 Association Poitou en Scène - Tous droits réservés
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/lazy-loading.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/a-propos.js"></script>
+  </body>
+</html>

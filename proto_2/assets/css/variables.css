@@ -1,0 +1,273 @@
+/* ============================================
+   VARIABLES CSS - Poitou en Scène
+   Design System complet
+   ============================================ */
+
+:root {
+  /* ========== COULEURS ========== */
+
+  /* Couleurs primaires */
+  --color-terracotta: #8c3b2f;
+  --color-terracotta-rgb: 140, 59, 47;
+
+  /* Couleurs secondaires */
+  --color-indigo: #1e3250;
+  --color-indigo-rgb: 30, 50, 80;
+
+  /* Couleurs d'accent */
+  --color-golden: #d8a24a;
+  --color-golden-rgb: 216, 162, 74;
+
+  /* Couleurs neutres */
+  --color-cream: #f6efe6;
+  --color-cream-rgb: 246, 239, 230;
+  --color-slate: #59606a;
+  --color-slate-rgb: 89, 96, 106;
+
+  /* Couleurs utilitaires */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-success: #2d7a4f;
+  --color-warning: #d97706;
+  --color-error: #b91c1c;
+
+  /* Couleurs de texte */
+  --text-primary: var(--color-slate);
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --text-on-dark: var(--color-cream);
+  --text-on-terracotta: var(--color-white);
+  --text-on-indigo: var(--color-cream);
+
+  /* Couleurs de fond */
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-cream);
+  --bg-dark: var(--color-indigo);
+  --bg-accent: var(--color-terracotta);
+
+  /* ========== TYPOGRAPHIE ========== */
+
+  /* Familles de polices */
+  --font-primary: "Playfair Display", Georgia, serif;
+  --font-secondary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+
+  /* Tailles de police - Desktop */
+  --font-size-h1: 48px;
+  --font-size-h2: 32px;
+  --font-size-h3: 22px;
+  --font-size-h4: 18px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+  --font-size-caption: 12px;
+
+  /* Tailles de police - Mobile (seront redéfinies dans media queries) */
+  --font-size-h1-mobile: 32px;
+  --font-size-h2-mobile: 24px;
+  --font-size-h3-mobile: 18px;
+
+  /* Poids de police */
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+
+  /* Hauteur de ligne */
+  --line-height-tight: 1.2;
+  --line-height-heading: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Espacement des lettres */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+  --letter-spacing-wider: 0.05em;
+
+  /* ========== ESPACEMENTS ========== */
+
+  /* Système d'espacement basé sur 8px */
+  --spacing-1: 8px; /* 1 unité */
+  --spacing-2: 16px; /* 2 unités */
+  --spacing-3: 24px; /* 3 unités */
+  --spacing-4: 32px; /* 4 unités */
+  --spacing-5: 40px; /* 5 unités */
+  --spacing-6: 48px; /* 6 unités */
+  --spacing-8: 64px; /* 8 unités */
+  --spacing-10: 80px; /* 10 unités */
+  --spacing-12: 96px; /* 12 unités */
+  --spacing-16: 128px; /* 16 unités */
+
+  /* Espacements spécifiques */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* ========== BREAKPOINTS ========== */
+
+  /* Valeurs de breakpoints (pour référence en JS) */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1200px;
+
+  /* ========== CONTENEURS ========== */
+
+  /* Largeurs maximales */
+  --container-mobile: 100%;
+  --container-tablet: 720px;
+  --container-desktop: 1140px;
+  --container-max: 1400px;
+
+  /* Gutters */
+  --gutter-mobile: 12px;
+  --gutter-tablet: 16px;
+  --gutter-desktop: 24px;
+
+  /* ========== GRILLE ========== */
+
+  /* Colonnes */
+  --grid-columns: 12;
+  --grid-gap: var(--gutter-desktop);
+
+  /* ========== BORDER RADIUS ========== */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ========== OMBRES ========== */
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+  /* ========== TRANSITIONS ========== */
+
+  /* Durées */
+  --transition-fast: 160ms;
+  --transition-normal: 240ms;
+  --transition-slow: 320ms;
+
+  /* Easings */
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ========== Z-INDEX ========== */
+
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-header: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-tooltip: 600;
+
+  /* ========== DIMENSIONS ========== */
+
+  /* Header */
+  --header-height-mobile: 64px;
+  --header-height-desktop: 72px;
+
+  /* Footer */
+  --footer-min-height: 300px;
+
+  /* Boutons */
+  --button-height-sm: 36px;
+  --button-height-md: 44px;
+  --button-height-lg: 52px;
+
+  /* Inputs */
+  --input-height: 44px;
+
+  /* ========== BORDURES ========== */
+
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+  --border-width-accent: 6px; /* Pour Golden Thread accent border */
+
+  --border-color-light: rgba(0, 0, 0, 0.1);
+  --border-color-medium: rgba(0, 0, 0, 0.2);
+  --border-color-dark: rgba(0, 0, 0, 0.3);
+
+  /* ========== OPACITÉS ========== */
+
+  --opacity-disabled: 0.5;
+  --opacity-overlay: 0.16; /* Pour hero overlay */
+  --opacity-hover: 0.9;
+
+  /* ========== ICÔNES ========== */
+
+  --icon-size-sm: 16px;
+  --icon-size-md: 24px;
+  --icon-size-lg: 32px;
+  --icon-size-xl: 48px;
+  --icon-stroke-width: 2.5px;
+
+  /* ========== AUTRES ========== */
+
+  /* Parallax */
+  --parallax-max: 20px;
+
+  /* Ratios de contraste (pour référence) */
+  --contrast-ratio-text: 4.5; /* WCAG AA */
+  --contrast-ratio-large: 3; /* WCAG AA pour grands textes */
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE VARIABLES
+   ============================================ */
+
+/* Tablette (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  :root {
+    --grid-gap: var(--gutter-tablet);
+    --font-size-h1: 40px;
+    --font-size-h2: 28px;
+  }
+}
+
+/* Mobile (<768px) */
+@media (max-width: 767px) {
+  :root {
+    --grid-gap: var(--gutter-mobile);
+    --font-size-h1: var(--font-size-h1-mobile);
+    --font-size-h2: var(--font-size-h2-mobile);
+    --font-size-h3: var(--font-size-h3-mobile);
+    --header-height: var(--header-height-mobile);
+
+    /* Espacements réduits sur mobile */
+    --spacing-3: 16px;
+    --spacing-4: 24px;
+    --spacing-6: 32px;
+    --spacing-8: 48px;
+  }
+}
+
+/* ============================================
+   DARK MODE (pour future implémentation)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  /* Optionnel : variables pour mode sombre */
+  /* À implémenter si nécessaire en V2 */
+}
+
+/* ============================================
+   PRINT STYLES VARIABLES
+   ============================================ */
+
+@media print {
+  :root {
+    /* Ajuster les tailles pour l'impression */
+    --font-size-body: 11pt;
+    --font-size-h1: 24pt;
+    --font-size-h2: 18pt;
+    --font-size-h3: 14pt;
+  }
+}

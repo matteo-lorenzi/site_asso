@@ -1,0 +1,21 @@
+# Robots.txt pour Poitou en Scène
+# Permet l'indexation complète du site par tous les moteurs de recherche
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://poitou-en-scene.fr/sitemap.xml
+
+# Bloquer les fichiers système (si nécessaire)
+Disallow: /assets/fonts/
+Disallow: /*.json$
+
+# Autoriser explicitement les ressources importantes
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+Allow: /assets/icons/
+
+# Crawl-delay pour éviter surcharge serveur
+Crawl-delay: 1

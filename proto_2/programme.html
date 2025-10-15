@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Programme complet du festival Poitou en Scène 2026 : ateliers, concerts, spectacles et expositions."
+    />
+    <meta
+      name="keywords"
+      content="programme, festival, ateliers, concerts, danse, musique, chant, Poitiers"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Programme - Poitou en Scène Festival 2026"
+    />
+    <meta
+      property="og:description"
+      content="Découvrez le programme complet : ateliers de danse, musique et chant, concerts et expositions."
+    />
+
+    <title>Programme du Festival - Poitou en Scène 2026</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Structured Data - Event -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Festival",
+        "name": "Poitou en Scène 2026",
+        "description": "Festival des arts de la scène à Poitiers : théâtre, danse et musique traditionnelle",
+        "startDate": "2026-06-19",
+        "endDate": "2026-06-21",
+        "location": {
+          "@type": "Place",
+          "name": "Centre culturel de Poitiers",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12 Rue du Théâtre",
+            "addressLocality": "Poitiers",
+            "postalCode": "86000",
+            "addressCountry": "FR"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Poitou en Scène",
+          "url": "https://poitou-en-scene.fr"
+        },
+        "performer": [
+          {
+            "@type": "PerformingGroup",
+            "name": "Compagnie de Danse Traditionnelle"
+          },
+          {
+            "@type": "PerformingGroup",
+            "name": "Ensemble Musical Poitevin"
+          }
+        ],
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/grid.css" />
+    <link rel="stylesheet" href="assets/css/utilities.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/programme.css" />
+  </head>
+  <body>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="header__nav" aria-label="Navigation principale">
+          <a
+            href="index.html"
+            class="header__logo"
+            aria-label="Accueil Poitou en Scène"
+          >
+            <img
+              src="assets/images/logo.svg"
+              alt="Poitou en Scène"
+              class="header__logo-img"
+            />
+          </a>
+
+          <ul class="header__menu" id="main-menu">
+            <li class="header__menu-item">
+              <a href="index.html" class="header__menu-link">Accueil</a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                href="programme.html"
+                class="header__menu-link header__menu-link--active"
+                aria-current="page"
+                >Programme</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="a-propos.html" class="header__menu-link">À Propos</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="contact.html" class="header__menu-link">Contact</a>
+            </li>
+          </ul>
+
+          <a href="#" class="btn btn--primary header__cta">Réserver</a>
+
+          <button
+            class="header__burger"
+            id="burger-btn"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="main-menu"
+          >
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="hero hero--small">
+        <div class="hero__background">
+          <img
+            src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1920&h=600&fit=crop"
+            alt=""
+            class="hero__image"
+          />
+          <div class="hero__overlay"></div>
+        </div>
+        <div class="container">
+          <div class="hero__content text-center">
+            <h1 class="hero__title">Programme du Festival</h1>
+            <p class="hero__subtitle">3 jours de culture poitevine • 2026</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calendrier interactif -->
+      <section class="section">
+        <div class="container">
+          <div class="section__header text-center">
+            <h2 class="section__title">Calendrier du Festival</h2>
+            <p class="section__subtitle">
+              Sélectionnez un jour pour voir le programme détaillé
+            </p>
+          </div>
+
+          <!-- Onglets jours -->
+          <div class="calendar-tabs">
+            <button
+              class="calendar-tab calendar-tab--active"
+              data-day="vendredi"
+              aria-selected="true"
+              role="tab"
+            >
+              <span class="calendar-tab__day">Vendredi</span>
+              <span class="calendar-tab__date">Jour 1</span>
+            </button>
+            <button
+              class="calendar-tab"
+              data-day="samedi"
+              aria-selected="false"
+              role="tab"
+            >
+              <span class="calendar-tab__day">Samedi</span>
+              <span class="calendar-tab__date">Jour 2</span>
+            </button>
+            <button
+              class="calendar-tab"
+              data-day="dimanche"
+              aria-selected="false"
+              role="tab"
+            >
+              <span class="calendar-tab__day">Dimanche</span>
+              <span class="calendar-tab__date">Jour 3</span>
+            </button>
+          </div>
+
+          <!-- Filtres par discipline -->
+          <div class="filters">
+            <div class="filters__label">Filtrer par discipline :</div>
+            <div class="filters__group">
+              <button class="filter-btn filter-btn--active" data-filter="tous">
+                Tous
+              </button>
+              <button class="filter-btn filter-btn--danse" data-filter="danse">
+                <span class="filter-btn__icon">🎭</span> Danse
+              </button>
+              <button
+                class="filter-btn filter-btn--musique"
+                data-filter="musique"
+              >
+                <span class="filter-btn__icon">🎵</span> Musique
+              </button>
+              <button class="filter-btn filter-btn--chant" data-filter="chant">
+                <span class="filter-btn__icon">🎤</span> Chant
+              </button>
+            </div>
+          </div>
+
+          <!-- Timeline événements - Vendredi -->
+          <div
+            class="timeline timeline--active"
+            id="timeline-vendredi"
+            role="tabpanel"
+          >
+            <div class="timeline__header">
+              <h3 class="timeline__title">Vendredi - Ouverture du Festival</h3>
+            </div>
+
+            <!-- Événement 1 -->
+            <div class="timeline-event" data-discipline="musique">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                14:00 - 15:30
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">
+                    Atelier Musique Traditionnelle
+                  </h4>
+                  <span class="badge badge--indigo">Musique</span>
+                </div>
+                <p class="timeline-event__description">
+                  Découverte des instruments anciens du Poitou : vielle à roue,
+                  cornemuse et bombarde.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Salle des Fêtes
+                  </span>
+                  <span class="timeline-event__age">Adultes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Événement 2 -->
+            <div class="timeline-event" data-discipline="danse">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                16:00 - 17:00
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">
+                    Initiation Danse Poitevine
+                  </h4>
+                  <span class="badge badge--terracotta">Danse</span>
+                </div>
+                <p class="timeline-event__description">
+                  Apprenez les pas de base des danses traditionnelles de la
+                  région.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Grande Scène
+                  </span>
+                  <span class="timeline-event__age">Tout public</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Événement 3 -->
+            <div class="timeline-event" data-discipline="musique">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                18:30 - 19:30
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">
+                    Concert d'Ouverture - Ciac Boum
+                  </h4>
+                  <span class="badge badge--golden">Concert</span>
+                </div>
+                <p class="timeline-event__description">
+                  Le groupe Ciac Boum ouvre le festival avec un répertoire
+                  traditionnel festif.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Grande Scène
+                  </span>
+                  <span class="timeline-event__age">Tout public</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Événement 4 -->
+            <div class="timeline-event" data-discipline="chant">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                20:00 - 21:00
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">
+                    Veillée Chants Traditionnels
+                  </h4>
+                  <span class="badge badge--golden">Chant</span>
+                </div>
+                <p class="timeline-event__description">
+                  Soirée conviviale autour des chants populaires poitevins.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Chapiteau
+                  </span>
+                  <span class="timeline-event__age">Tout public</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline événements - Samedi -->
+          <div class="timeline" id="timeline-samedi" role="tabpanel">
+            <div class="timeline__header">
+              <h3 class="timeline__title">Samedi - Journée Complète</h3>
+            </div>
+
+            <!-- Événements Samedi -->
+            <div class="timeline-event" data-discipline="danse">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                10:00 - 11:30
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">Atelier Danse Enfants</h4>
+                  <span class="badge badge--terracotta">Danse</span>
+                </div>
+                <p class="timeline-event__description">
+                  Atelier ludique pour initier les plus jeunes aux danses
+                  traditionnelles.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Salle des Fêtes
+                  </span>
+                  <span class="timeline-event__age">6-12 ans</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-event" data-discipline="musique">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                11:00 - 13:00
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">
+                    Visite de l'Exposition Instruments Anciens
+                  </h4>
+                  <span class="badge badge--indigo">Exposition</span>
+                </div>
+                <p class="timeline-event__description">
+                  Découverte guidée des instruments traditionnels du Poitou avec
+                  démonstrations.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Hall d'Exposition
+                  </span>
+                  <span class="timeline-event__age">Tout public</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-event" data-discipline="musique">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                14:30 - 16:00
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">
+                    Concert - Les Amis du Vieux Poitou
+                  </h4>
+                  <span class="badge badge--golden">Concert</span>
+                </div>
+                <p class="timeline-event__description">
+                  Ensemble vocal et instrumental présentant le répertoire
+                  traditionnel poitevin.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Grande Scène
+                  </span>
+                  <span class="timeline-event__age">Tout public</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-event" data-discipline="danse">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                16:30 - 18:00
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">Bal Traditionnel</h4>
+                  <span class="badge badge--terracotta">Danse</span>
+                </div>
+                <p class="timeline-event__description">
+                  Grand bal ouvert à tous avec orchestre live et initiation aux
+                  danses.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Grande Scène
+                  </span>
+                  <span class="timeline-event__age">Tout public</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-event" data-discipline="musique">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                20:00 - 22:00
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">
+                    Concert - Groupe Catalpa
+                  </h4>
+                  <span class="badge badge--golden">Concert</span>
+                </div>
+                <p class="timeline-event__description">
+                  Musique traditionnelle revisitée dans un style contemporain.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Grande Scène
+                  </span>
+                  <span class="timeline-event__age">Adultes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline événements - Dimanche -->
+          <div class="timeline" id="timeline-dimanche" role="tabpanel">
+            <div class="timeline__header">
+              <h3 class="timeline__title">Dimanche - Clôture du Festival</h3>
+            </div>
+
+            <div class="timeline-event" data-discipline="chant">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                10:00 - 11:30
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">
+                    Atelier Chant Polyphonique
+                  </h4>
+                  <span class="badge badge--golden">Chant</span>
+                </div>
+                <p class="timeline-event__description">
+                  Découverte et pratique des chants polyphoniques traditionnels.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Salle des Fêtes
+                  </span>
+                  <span class="timeline-event__age">Adultes</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-event" data-discipline="danse">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                11:30 - 13:00
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">Spectacle de Danse</h4>
+                  <span class="badge badge--terracotta">Danse</span>
+                </div>
+                <p class="timeline-event__description">
+                  Représentation par une troupe locale de danses traditionnelles
+                  poitevines.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Grande Scène
+                  </span>
+                  <span class="timeline-event__age">Tout public</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-event" data-discipline="musique">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                15:00 - 16:30
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">
+                    Concert de Clôture - Groupe Chaï
+                  </h4>
+                  <span class="badge badge--golden">Concert</span>
+                </div>
+                <p class="timeline-event__description">
+                  Concert final mêlant tradition et modernité pour clore le
+                  festival en beauté.
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Grande Scène
+                  </span>
+                  <span class="timeline-event__age">Tout public</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-event" data-discipline="danse">
+              <div class="timeline-event__time">
+                <svg width="20" height="20" class="timeline-event__icon">
+                  <use href="assets/icons/sprite.svg#clock"></use>
+                </svg>
+                17:00 - 18:30
+              </div>
+              <div class="timeline-event__content">
+                <div class="timeline-event__header">
+                  <h4 class="timeline-event__title">Grand Bal Final</h4>
+                  <span class="badge badge--terracotta">Danse</span>
+                </div>
+                <p class="timeline-event__description">
+                  Bal de clôture festif pour terminer le festival tous ensemble
+                  !
+                </p>
+                <div class="timeline-event__meta">
+                  <span class="timeline-event__location">
+                    <svg width="16" height="16">
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                    Grande Scène
+                  </span>
+                  <span class="timeline-event__age">Tout public</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Ateliers -->
+      <section class="section section--cream">
+        <div class="container">
+          <div class="section__header text-center">
+            <h2 class="section__title">Ateliers & Formations</h2>
+            <p class="section__subtitle">
+              Participez à nos ateliers thématiques par tranche d'âge
+            </p>
+          </div>
+
+          <!-- Filtres âge -->
+          <div class="age-filters">
+            <button class="age-filter age-filter--active" data-age="tous">
+              Tous les âges
+            </button>
+            <button class="age-filter" data-age="enfants">6-12 ans</button>
+            <button class="age-filter" data-age="ados">13-17 ans</button>
+            <button class="age-filter" data-age="adultes">18-35 ans</button>
+            <button class="age-filter" data-age="seniors">35+ ans</button>
+          </div>
+
+          <!-- Grille ateliers -->
+          <div class="workshops-grid">
+            <!-- Atelier 1 -->
+            <div
+              class="workshop-card"
+              data-age="enfants"
+              data-discipline="danse"
+            >
+              <div class="workshop-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=400&h=300&fit=crop"
+                  alt="Atelier danse enfants"
+                />
+                <span class="badge badge--terracotta workshop-card__badge"
+                  >Danse</span
+                >
+              </div>
+              <div class="workshop-card__content">
+                <h3 class="workshop-card__title">Danse Ludique Enfants</h3>
+                <p class="workshop-card__age">6-12 ans</p>
+                <p class="workshop-card__description">
+                  Initiation aux pas de base à travers des jeux et activités
+                  ludiques.
+                </p>
+                <div class="workshop-card__footer">
+                  <span class="workshop-card__duration">1h30</span>
+                  <a href="#" class="btn btn--sm btn--primary">S'inscrire</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Atelier 2 -->
+            <div
+              class="workshop-card"
+              data-age="adultes"
+              data-discipline="musique"
+            >
+              <div class="workshop-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=400&h=300&fit=crop"
+                  alt="Atelier musique"
+                />
+                <span class="badge badge--indigo workshop-card__badge"
+                  >Musique</span
+                >
+              </div>
+              <div class="workshop-card__content">
+                <h3 class="workshop-card__title">Vielle à Roue</h3>
+                <p class="workshop-card__age">Adultes</p>
+                <p class="workshop-card__description">
+                  Découverte et pratique de la vielle à roue, instrument
+                  emblématique.
+                </p>
+                <div class="workshop-card__footer">
+                  <span class="workshop-card__duration">2h</span>
+                  <a href="#" class="btn btn--sm btn--primary">S'inscrire</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Atelier 3 -->
+            <div
+              class="workshop-card"
+              data-age="seniors"
+              data-discipline="chant"
+            >
+              <div class="workshop-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=300&fit=crop"
+                  alt="Atelier chant"
+                />
+                <span class="badge badge--golden workshop-card__badge"
+                  >Chant</span
+                >
+              </div>
+              <div class="workshop-card__content">
+                <h3 class="workshop-card__title">Chants Traditionnels</h3>
+                <p class="workshop-card__age">Adultes 35+</p>
+                <p class="workshop-card__description">
+                  Redécouvrez les chants populaires de notre région.
+                </p>
+                <div class="workshop-card__footer">
+                  <span class="workshop-card__duration">1h30</span>
+                  <a href="#" class="btn btn--sm btn--primary">S'inscrire</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Atelier 4 -->
+            <div class="workshop-card" data-age="ados" data-discipline="danse">
+              <div class="workshop-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?w=400&h=300&fit=crop"
+                  alt="Atelier danse ados"
+                />
+                <span class="badge badge--terracotta workshop-card__badge"
+                  >Danse</span
+                >
+              </div>
+              <div class="workshop-card__content">
+                <h3 class="workshop-card__title">Danse Moderne-Trad</h3>
+                <p class="workshop-card__age">13-17 ans</p>
+                <p class="workshop-card__description">
+                  Fusion entre danses traditionnelles et mouvements
+                  contemporains.
+                </p>
+                <div class="workshop-card__footer">
+                  <span class="workshop-card__duration">1h30</span>
+                  <a href="#" class="btn btn--sm btn--primary">S'inscrire</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Atelier 5 -->
+            <div
+              class="workshop-card"
+              data-age="adultes"
+              data-discipline="musique"
+            >
+              <div class="workshop-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1460036521480-ff49c08c2781?w=400&h=300&fit=crop"
+                  alt="Atelier cornemuse"
+                />
+                <span class="badge badge--indigo workshop-card__badge"
+                  >Musique</span
+                >
+              </div>
+              <div class="workshop-card__content">
+                <h3 class="workshop-card__title">Cornemuse & Bombarde</h3>
+                <p class="workshop-card__age">Adultes</p>
+                <p class="workshop-card__description">
+                  Initiation aux instruments à vent traditionnels du Poitou.
+                </p>
+                <div class="workshop-card__footer">
+                  <span class="workshop-card__duration">2h</span>
+                  <a href="#" class="btn btn--sm btn--primary">S'inscrire</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Atelier 6 -->
+            <div
+              class="workshop-card"
+              data-age="enfants"
+              data-discipline="chant"
+            >
+              <div class="workshop-card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop"
+                  alt="Atelier chant enfants"
+                />
+                <span class="badge badge--golden workshop-card__badge"
+                  >Chant</span
+                >
+              </div>
+              <div class="workshop-card__content">
+                <h3 class="workshop-card__title">Comptines Poitevines</h3>
+                <p class="workshop-card__age">6-12 ans</p>
+                <p class="workshop-card__description">
+                  Apprentissage ludique des comptines traditionnelles en patois.
+                </p>
+                <div class="workshop-card__footer">
+                  <span class="workshop-card__duration">1h</span>
+                  <a href="#" class="btn btn--sm btn--primary">S'inscrire</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Informations pratiques -->
+      <section class="section section--indigo">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h2 class="h2 text-cream mb-3">Informations Pratiques</h2>
+              <div class="info-block">
+                <h3 class="h4 text-golden mb-2">Tarifs</h3>
+                <ul class="info-list text-cream">
+                  <li>Gratuit pour les -18 ans et +75 ans</li>
+                  <li>5€ pour les 18-32 ans (offre étudiante)</li>
+                  <li>10€ pour les 32-75 ans</li>
+                  <li>Pass 3 jours : 20€</li>
+                </ul>
+              </div>
+
+              <div class="info-block mt-4">
+                <h3 class="h4 text-golden mb-2">Accessibilité</h3>
+                <p class="text-cream">
+                  Places assises disponibles pour toutes les représentations.
+                  Accès PMR sur tous les sites.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="info-block">
+                <h3 class="h4 text-golden mb-2">Buvette & Restauration</h3>
+                <p class="text-cream">
+                  Produits locaux disponibles toute la journée :
+                </p>
+                <ul class="info-list text-cream">
+                  <li>Broyé du Poitou</li>
+                  <li>Tourteau fromager</li>
+                  <li>Chabichou (fromage de chèvre)</li>
+                  <li>Boissons locales</li>
+                </ul>
+              </div>
+
+              <div class="info-block mt-4">
+                <h3 class="h4 text-golden mb-2">Lieu</h3>
+                <p class="text-cream">36 rue Victor Hugo<br />86000 Poitiers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <h3 class="footer__title">Poitou en Scène</h3>
+              <p class="footer__text">
+                Association artistique dédiée à la valorisation de la culture
+                poitevine.
+              </p>
+              <p class="footer__text">
+                <strong>Poitiers 2026</strong><br />Capitale Européenne de la
+                Culture
+              </p>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <h3 class="footer__title">Liens rapides</h3>
+              <ul class="footer__links">
+                <li><a href="index.html" class="footer__link">Accueil</a></li>
+                <li>
+                  <a href="programme.html" class="footer__link">Programme</a>
+                </li>
+                <li>
+                  <a href="a-propos.html" class="footer__link">À Propos</a>
+                </li>
+                <li><a href="contact.html" class="footer__link">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <h3 class="footer__title">Contact</h3>
+              <address class="footer__address">
+                <p class="footer__text">
+                  36 rue Victor Hugo<br />86000 Poitiers
+                </p>
+                <p class="footer__text">
+                  <a
+                    href="mailto:contact@poitou-en-scene.fr"
+                    class="footer__link"
+                    >contact@poitou-en-scene.fr</a
+                  >
+                </p>
+              </address>
+              <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <svg width="24" height="24" fill="currentColor">
+                    <use href="assets/icons/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <svg width="24" height="24" fill="currentColor">
+                    <use href="assets/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            &copy; 2025 Association Poitou en Scène - Tous droits réservés
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/lazy-loading.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/programme.js"></script>
+  </body>
+</html>

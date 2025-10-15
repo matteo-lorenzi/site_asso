@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="gradientFavicon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8C3B2F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D8A24A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Arrière-plan -->
+  <rect width="32" height="32" rx="6" fill="#1E3250"/>
+  
+  <!-- Initiales PeS stylisées -->
+  <g fill="url(#gradientFavicon)">
+    <!-- P -->
+    <path d="M 7 8 L 7 24 L 9 24 L 9 17 L 13 17 C 15 17 16 15.5 16 13.5 C 16 11.5 15 10 13 10 L 7 10 L 7 8 Z M 9 12 L 12.5 12 C 13.5 12 14 12.7 14 13.5 C 14 14.3 13.5 15 12.5 15 L 9 15 Z"/>
+    
+    <!-- S -->
+    <path d="M 19 11 C 19 9.5 20 8.5 22 8.5 C 23.5 8.5 24.5 9 25 10 L 26.5 8.8 C 25.5 7.5 24 7 22 7 C 19 7 17.5 8.5 17.5 11 C 17.5 15 25 13.5 25 16.5 C 25 17.5 24 18.5 22 18.5 C 20 18.5 19 17.5 18.5 16.2 L 17 17.5 C 17.8 19.2 19.5 20 22 20 C 24.5 20 26.5 18.8 26.5 16.5 C 26.5 12.2 19 14 19 11 Z"/>
+  </g>
+  
+  <!-- Accent décoratif -->
+  <circle cx="28" cy="4" r="1.5" fill="#D8A24A" opacity="0.8"/>
+</svg>

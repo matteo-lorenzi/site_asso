@@ -1,0 +1,459 @@
+/* ============================================
+   COMPONENTS CSS - Poitou en Scène
+   Composants réutilisables
+   ============================================ */
+
+/* ========== BUTTONS ========== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-3);
+  height: var(--button-height-md);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  border: var(--border-width-medium) solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast) var(--ease-out);
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 2px;
+}
+
+.btn:active {
+  transform: translateY(-1px) scale(1.01);
+}
+
+/* Bouton primaire (Terracotta) */
+.btn--primary {
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background-color: #a14738;
+  color: var(--color-white);
+}
+
+/* Bouton secondaire (Outlined Indigo) */
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-indigo);
+  border-color: var(--color-indigo);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-indigo);
+  color: var(--color-cream);
+}
+
+/* Bouton golden */
+.btn--golden {
+  background-color: var(--color-golden);
+  color: var(--color-indigo);
+}
+
+.btn--golden:hover {
+  background-color: #c08f39;
+  color: var(--color-indigo);
+}
+
+/* Tailles de boutons */
+.btn--sm {
+  height: var(--button-height-sm);
+  padding: 0 var(--spacing-2);
+  font-size: var(--font-size-small);
+  min-width: 100px;
+}
+
+.btn--lg {
+  height: var(--button-height-lg);
+  padding: 0 var(--spacing-4);
+  font-size: 18px;
+  min-width: 160px;
+}
+
+/* Bouton full width */
+.btn--block {
+  width: 100%;
+}
+
+/* ========== BADGES ========== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.badge--terracotta {
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+}
+
+.badge--indigo {
+  background-color: var(--color-indigo);
+  color: var(--color-cream);
+}
+
+.badge--golden {
+  background-color: var(--color-golden);
+  color: var(--color-indigo);
+}
+
+.badge--cream {
+  background-color: var(--color-cream);
+  color: var(--color-indigo);
+}
+
+/* ========== CARDS ========== */
+
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: all var(--transition-normal) var(--ease-out);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.card__content {
+  padding: var(--spacing-3);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-indigo);
+  margin-bottom: var(--spacing-2);
+  line-height: var(--line-height-heading);
+}
+
+.card__excerpt {
+  font-size: var(--font-size-body);
+  color: var(--text-secondary);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-3);
+  flex-grow: 1;
+}
+
+.card__footer {
+  padding-top: var(--spacing-2);
+  border-top: 1px solid var(--border-color-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========== DISCIPLINE CARDS ========== */
+
+.discipline-card {
+  padding: var(--spacing-4);
+  text-align: center;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal) var(--ease-out);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discipline-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.discipline-card__icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-3);
+  border-radius: var(--radius-full);
+}
+
+.discipline-card__icon--danse {
+  background-color: rgba(var(--color-terracotta-rgb), 0.1);
+  color: var(--color-terracotta);
+}
+
+.discipline-card__icon--musique {
+  background-color: rgba(var(--color-indigo-rgb), 0.1);
+  color: var(--color-indigo);
+}
+
+.discipline-card__icon--chant {
+  background-color: rgba(var(--color-golden-rgb), 0.1);
+  color: var(--color-golden);
+}
+
+.discipline-card__title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-indigo);
+  margin-bottom: var(--spacing-2);
+}
+
+.discipline-card__description {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-3);
+  flex-grow: 1;
+}
+
+/* ========== SECTIONS ========== */
+
+.section {
+  padding: var(--spacing-8) 0;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: var(--spacing-6) 0;
+  }
+}
+
+.section--cream {
+  background-color: var(--color-cream);
+}
+
+.section--indigo {
+  background-color: var(--color-indigo);
+}
+
+.section--terracotta {
+  background-color: var(--color-terracotta);
+}
+
+.section__header {
+  margin-bottom: var(--spacing-6);
+}
+
+.section__title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-indigo);
+  margin-bottom: var(--spacing-2);
+}
+
+.section__subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-regular);
+}
+
+/* ========== TEXT CONTENT ========== */
+
+.text-content {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-primary);
+}
+
+.text-content p {
+  margin-bottom: var(--spacing-3);
+}
+
+.text-content p:last-child {
+  margin-bottom: 0;
+}
+
+.text-content strong {
+  color: var(--color-terracotta);
+}
+
+/* ========== SPONSORS ========== */
+
+.sponsors__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-4);
+  align-items: center;
+  justify-items: center;
+}
+
+@media (max-width: 767px) {
+  .sponsors__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-3);
+  }
+}
+
+.sponsor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2);
+  width: 100%;
+  height: 100px;
+}
+
+.sponsor-logo img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all var(--transition-normal) var(--ease-out);
+}
+
+.sponsor-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Placeholder pour logos */
+.sponsor-logo__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background-color: var(--color-white);
+  border: 2px dashed var(--border-color-light);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-small);
+  color: var(--text-light);
+  text-align: center;
+  padding: var(--spacing-sm);
+}
+
+/* ========== FORMS ========== */
+
+.form-group {
+  margin-bottom: var(--spacing-3);
+}
+
+.form-label {
+  display: block;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-indigo);
+}
+
+.form-label--required::after {
+  content: " *";
+  color: var(--color-error);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  height: var(--input-height);
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-body);
+  color: var(--text-primary);
+  background-color: var(--color-white);
+  border: var(--border-width-thin) solid var(--border-color-medium);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast) var(--ease-out);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  padding-top: var(--spacing-md);
+  height: auto;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 0;
+  border-color: var(--color-terracotta);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-light);
+}
+
+.form-error {
+  color: var(--color-error);
+  font-size: var(--font-size-small);
+  margin-top: var(--spacing-xs);
+  display: block;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* ========== AUTRES COMPOSANTS ========== */
+
+/* Divider */
+.divider {
+  height: 1px;
+  background-color: var(--border-color-light);
+  margin: var(--spacing-4) 0;
+}
+
+.divider--golden {
+  height: 2px;
+  background-color: var(--color-golden);
+}
+
+/* Accent border (Golden Thread) */
+.accent-border {
+  position: relative;
+}
+
+.accent-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: var(--border-width-accent) solid var(--color-golden);
+  border-radius: inherit;
+  pointer-events: none;
+}

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contactez l'association Poitou en Scène. Posez vos questions ou rejoignez-nous comme bénévole."
+    />
+    <meta
+      name="keywords"
+      content="contact, bénévolat, association, Poitou en Scène, Poitiers"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contact - Poitou en Scène" />
+    <meta
+      property="og:description"
+      content="Contactez-nous ou devenez bénévole pour le festival Poitou en Scène 2026."
+    />
+
+    <title>Contact - Poitou en Scène</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Structured Data - ContactPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Poitou en Scène",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33-5-49-XX-XX-XX",
+            "contactType": "Customer Service",
+            "email": "contact@poitou-en-scene.fr",
+            "availableLanguage": ["fr"],
+            "areaServed": "FR"
+          }
+        }
+      }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/grid.css" />
+    <link rel="stylesheet" href="assets/css/utilities.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+  </head>
+  <body>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container">
+        <nav class="header__nav" aria-label="Navigation principale">
+          <a
+            href="index.html"
+            class="header__logo"
+            aria-label="Accueil Poitou en Scène"
+          >
+            <img
+              src="assets/images/logo.svg"
+              alt="Poitou en Scène"
+              class="header__logo-img"
+            />
+          </a>
+
+          <ul class="header__menu" id="main-menu">
+            <li class="header__menu-item">
+              <a href="index.html" class="header__menu-link">Accueil</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="programme.html" class="header__menu-link">Programme</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="a-propos.html" class="header__menu-link">À Propos</a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                href="contact.html"
+                class="header__menu-link header__menu-link--active"
+                aria-current="page"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <a href="#" class="btn btn--primary header__cta">Réserver</a>
+
+          <button
+            class="header__burger"
+            id="burger-btn"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="main-menu"
+          >
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="hero hero--small">
+        <div class="hero__background">
+          <img
+            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=600&fit=crop"
+            alt=""
+            class="hero__image"
+          />
+          <div class="hero__overlay"></div>
+        </div>
+        <div class="container">
+          <div class="hero__content text-center">
+            <h1 class="hero__title">Contactez-Nous</h1>
+            <p class="hero__subtitle">Nous sommes à votre écoute</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form & Info -->
+      <section class="section">
+        <div class="container">
+          <div class="row">
+            <!-- Contact Info -->
+            <div class="col-12 col-lg-4">
+              <div class="contact-sidebar">
+                <h2 class="contact-sidebar__title">Informations de Contact</h2>
+
+                <div class="contact-info-block">
+                  <div class="contact-info-block__icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <use href="assets/icons/sprite.svg#map-pin"></use>
+                    </svg>
+                  </div>
+                  <div class="contact-info-block__content">
+                    <h3 class="contact-info-block__title">Adresse</h3>
+                    <p class="contact-info-block__text">
+                      36 rue Victor Hugo<br />86000 Poitiers<br />France
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-info-block">
+                  <div class="contact-info-block__icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <use href="assets/icons/sprite.svg#mail"></use>
+                    </svg>
+                  </div>
+                  <div class="contact-info-block__content">
+                    <h3 class="contact-info-block__title">Email</h3>
+                    <p class="contact-info-block__text">
+                      <a
+                        href="mailto:contact@poitou-en-scene.fr"
+                        class="contact-link"
+                      >
+                        contact@poitou-en-scene.fr
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-info-block">
+                  <div class="contact-info-block__icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <use href="assets/icons/sprite.svg#phone"></use>
+                    </svg>
+                  </div>
+                  <div class="contact-info-block__content">
+                    <h3 class="contact-info-block__title">Téléphone</h3>
+                    <p class="contact-info-block__text">
+                      <a href="tel:+33549123456" class="contact-link">
+                        +33 5 49 12 34 56
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-info-block">
+                  <div class="contact-info-block__icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M12 6v6l4 2"></path>
+                    </svg>
+                  </div>
+                  <div class="contact-info-block__content">
+                    <h3 class="contact-info-block__title">Horaires</h3>
+                    <p class="contact-info-block__text">
+                      Lundi - Vendredi<br />9h00 - 17h00<br /><br />
+                      Samedi<br />10h00 - 16h00
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="contact-social">
+                  <h3 class="contact-social__title">Suivez-nous</h3>
+                  <div class="contact-social__links">
+                    <a
+                      href="#"
+                      class="contact-social__link"
+                      aria-label="Facebook"
+                    >
+                      <svg width="24" height="24" fill="currentColor">
+                        <use href="assets/icons/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="#"
+                      class="contact-social__link"
+                      aria-label="Instagram"
+                    >
+                      <svg width="24" height="24" fill="currentColor">
+                        <use href="assets/icons/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-12 col-lg-8">
+              <div class="contact-form-wrapper">
+                <h2 class="contact-form__title">Envoyez-nous un Message</h2>
+                <p class="contact-form__subtitle">
+                  Remplissez le formulaire ci-dessous et nous vous répondrons
+                  dans les plus brefs délais.
+                </p>
+
+                <form class="contact-form" id="contact-form" novalidate>
+                  <div class="row">
+                    <!-- Prénom -->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="prenom" class="form-label">
+                          Prénom <span class="required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="prenom"
+                          name="prenom"
+                          class="form-input"
+                          required
+                          aria-required="true"
+                          placeholder="Votre prénom"
+                        />
+                        <span class="form-error" id="error-prenom"></span>
+                      </div>
+                    </div>
+
+                    <!-- Nom -->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="nom" class="form-label">
+                          Nom <span class="required">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="nom"
+                          name="nom"
+                          class="form-input"
+                          required
+                          aria-required="true"
+                          placeholder="Votre nom"
+                        />
+                        <span class="form-error" id="error-nom"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <!-- Email -->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="email" class="form-label">
+                          Email <span class="required">*</span>
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          class="form-input"
+                          required
+                          aria-required="true"
+                          placeholder="votre.email@exemple.fr"
+                        />
+                        <span class="form-error" id="error-email"></span>
+                      </div>
+                    </div>
+
+                    <!-- Téléphone -->
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <label for="telephone" class="form-label">
+                          Téléphone
+                        </label>
+                        <input
+                          type="tel"
+                          id="telephone"
+                          name="telephone"
+                          class="form-input"
+                          placeholder="06 12 34 56 78"
+                        />
+                        <span class="form-error" id="error-telephone"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Sujet -->
+                  <div class="form-group">
+                    <label for="sujet" class="form-label">
+                      Sujet <span class="required">*</span>
+                    </label>
+                    <select
+                      id="sujet"
+                      name="sujet"
+                      class="form-select"
+                      required
+                      aria-required="true"
+                    >
+                      <option value="">Sélectionnez un sujet</option>
+                      <option value="information">Demande d'information</option>
+                      <option value="reservation">Réservation</option>
+                      <option value="partenariat">
+                        Proposition de partenariat
+                      </option>
+                      <option value="benevole">Devenir bénévole</option>
+                      <option value="autre">Autre</option>
+                    </select>
+                    <span class="form-error" id="error-sujet"></span>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="form-group">
+                    <label for="message" class="form-label">
+                      Message <span class="required">*</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form-textarea"
+                      rows="6"
+                      required
+                      aria-required="true"
+                      placeholder="Écrivez votre message ici..."
+                    ></textarea>
+                    <span class="form-error" id="error-message"></span>
+                  </div>
+
+                  <!-- Checkbox Bénévole -->
+                  <div class="form-group">
+                    <div class="form-checkbox">
+                      <input
+                        type="checkbox"
+                        id="benevole"
+                        name="benevole"
+                        class="form-checkbox-input"
+                      />
+                      <label for="benevole" class="form-checkbox-label">
+                        Je souhaite devenir bénévole pour le festival
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- RGPD -->
+                  <div class="form-group">
+                    <div class="form-checkbox">
+                      <input
+                        type="checkbox"
+                        id="rgpd"
+                        name="rgpd"
+                        class="form-checkbox-input"
+                        required
+                        aria-required="true"
+                      />
+                      <label for="rgpd" class="form-checkbox-label">
+                        J'accepte que mes données soient utilisées pour répondre
+                        à ma demande <span class="required">*</span>
+                      </label>
+                    </div>
+                    <span class="form-error" id="error-rgpd"></span>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="form-actions">
+                    <button type="submit" class="btn btn--primary btn--lg">
+                      <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        style="margin-right: 8px"
+                      >
+                        <use href="assets/icons/sprite.svg#mail"></use>
+                      </svg>
+                      Envoyer le Message
+                    </button>
+                  </div>
+
+                  <!-- Success/Error Messages -->
+                  <div
+                    class="form-message form-message--success"
+                    id="success-message"
+                    style="display: none"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <use href="assets/icons/sprite.svg#check"></use>
+                    </svg>
+                    <p>
+                      Votre message a été envoyé avec succès ! Nous vous
+                      répondrons dans les plus brefs délais.
+                    </p>
+                  </div>
+
+                  <div
+                    class="form-message form-message--error"
+                    id="error-message"
+                    style="display: none"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <p>Une erreur est survenue. Veuillez réessayer.</p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map Section -->
+      <section class="map-section">
+        <div class="map-container">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=0.3287887573242188%2C46.57820057419226%2C0.3563308715820312%2C46.59223821975094&amp;layer=mapnik&amp;marker=46.58522067129281%2C0.34256072044372566"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            title="Carte de localisation de Poitou en Scène"
+            aria-label="Carte interactive montrant l'emplacement de l'association à Poitiers"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- Devenir Bénévole Section -->
+      <section class="section section--cream">
+        <div class="container">
+          <div class="section__header text-center">
+            <span class="section__label">Rejoignez-nous</span>
+            <h2 class="section__title">Devenez Bénévole</h2>
+            <p class="section__subtitle">
+              Rejoignez notre équipe et participez à la valorisation de la
+              culture poitevine
+            </p>
+          </div>
+
+          <div class="volunteer-content">
+            <div class="row">
+              <div class="col-12 col-md-8 mx-auto">
+                <p class="volunteer-text text-center">
+                  Nous sommes toujours à la recherche de personnes motivées pour
+                  rejoindre notre équipe de bénévoles. Que vous ayez quelques
+                  heures à donner pendant le festival ou que vous souhaitiez
+                  vous engager tout au long de l'année, votre aide sera
+                  précieuse !
+                </p>
+              </div>
+            </div>
+
+            <!-- Missions Bénévoles -->
+            <div class="volunteer-grid">
+              <div class="volunteer-card">
+                <div class="volunteer-card__icon">
+                  <svg
+                    width="40"
+                    height="40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <use href="assets/icons/sprite.svg#users"></use>
+                  </svg>
+                </div>
+                <h3 class="volunteer-card__title">Accueil & Information</h3>
+                <p class="volunteer-card__description">
+                  Accueillir les visiteurs, répondre à leurs questions et les
+                  orienter pendant le festival.
+                </p>
+              </div>
+
+              <div class="volunteer-card">
+                <div class="volunteer-card__icon">
+                  <svg
+                    width="40"
+                    height="40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <use href="assets/icons/sprite.svg#music"></use>
+                  </svg>
+                </div>
+                <h3 class="volunteer-card__title">Animation Ateliers</h3>
+                <p class="volunteer-card__description">
+                  Assister les animateurs lors des ateliers de danse, musique et
+                  chant.
+                </p>
+              </div>
+
+              <div class="volunteer-card">
+                <div class="volunteer-card__icon">
+                  <svg
+                    width="40"
+                    height="40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="20" cy="20" r="8"></circle>
+                    <line x1="20" y1="4" x2="20" y2="12"></line>
+                    <line x1="20" y1="28" x2="20" y2="36"></line>
+                    <line x1="4" y1="20" x2="12" y2="20"></line>
+                    <line x1="28" y1="20" x2="36" y2="20"></line>
+                  </svg>
+                </div>
+                <h3 class="volunteer-card__title">Logistique</h3>
+                <p class="volunteer-card__description">
+                  Participer à l'installation, la gestion du matériel et le
+                  rangement des espaces.
+                </p>
+              </div>
+
+              <div class="volunteer-card">
+                <div class="volunteer-card__icon">
+                  <svg
+                    width="40"
+                    height="40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="4" y="4" width="32" height="32" rx="2"></rect>
+                    <circle cx="14" cy="14" r="2"></circle>
+                    <path d="M32 24L24 16L8 32"></path>
+                  </svg>
+                </div>
+                <h3 class="volunteer-card__title">Communication</h3>
+                <p class="volunteer-card__description">
+                  Prendre des photos, gérer les réseaux sociaux et promouvoir
+                  l'événement.
+                </p>
+              </div>
+
+              <div class="volunteer-card">
+                <div class="volunteer-card__icon">
+                  <svg
+                    width="40"
+                    height="40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 12h32M8 6h24a4 4 0 014 4v20a4 4 0 01-4 4H8a4 4 0 01-4-4V10a4 4 0 014-4z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="volunteer-card__title">Buvette & Restauration</h3>
+                <p class="volunteer-card__description">
+                  Servir à la buvette et proposer les produits locaux aux
+                  visiteurs.
+                </p>
+              </div>
+
+              <div class="volunteer-card">
+                <div class="volunteer-card__icon">
+                  <svg
+                    width="40"
+                    height="40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <use href="assets/icons/sprite.svg#star"></use>
+                  </svg>
+                </div>
+                <h3 class="volunteer-card__title">Autres Missions</h3>
+                <p class="volunteer-card__description">
+                  Selon vos compétences et disponibilités, d'autres missions
+                  peuvent être proposées.
+                </p>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="volunteer-cta text-center">
+              <p class="volunteer-cta__text">
+                Intéressé(e) ? Cochez la case "Je souhaite devenir bénévole"
+                dans le formulaire ci-dessus ou contactez-nous directement !
+              </p>
+              <a href="#contact-form" class="btn btn--terracotta btn--lg">
+                Postuler Maintenant
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <h3 class="footer__title">Poitou en Scène</h3>
+              <p class="footer__text">
+                Association artistique dédiée à la valorisation de la culture
+                poitevine.
+              </p>
+              <p class="footer__text">
+                <strong>Poitiers 2026</strong><br />Capitale Européenne de la
+                Culture
+              </p>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <h3 class="footer__title">Liens rapides</h3>
+              <ul class="footer__links">
+                <li><a href="index.html" class="footer__link">Accueil</a></li>
+                <li>
+                  <a href="programme.html" class="footer__link">Programme</a>
+                </li>
+                <li>
+                  <a href="a-propos.html" class="footer__link">À Propos</a>
+                </li>
+                <li><a href="contact.html" class="footer__link">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <h3 class="footer__title">Contact</h3>
+              <address class="footer__address">
+                <p class="footer__text">
+                  36 rue Victor Hugo<br />86000 Poitiers
+                </p>
+                <p class="footer__text">
+                  <a
+                    href="mailto:contact@poitou-en-scene.fr"
+                    class="footer__link"
+                    >contact@poitou-en-scene.fr</a
+                  >
+                </p>
+              </address>
+              <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <svg width="24" height="24" fill="currentColor">
+                    <use href="assets/icons/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <svg width="24" height="24" fill="currentColor">
+                    <use href="assets/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            &copy; 2025 Association Poitou en Scène - Tous droits réservés
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/lazy-loading.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact.js"></script>
+  </body>
+</html>

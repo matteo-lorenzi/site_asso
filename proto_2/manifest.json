@@ -1,0 +1,47 @@
+{
+  "name": "Poitou en Scène - Festival des Arts de la Scène",
+  "short_name": "Poitou en Scène",
+  "description": "Festival des arts de la scène à Poitiers - Théâtre, danse et musique pour célébrer Poitiers 2026",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6EFE6",
+  "theme_color": "#8C3B2F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/icons/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["entertainment", "lifestyle", "music"],
+  "lang": "fr",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/assets/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/assets/images/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
