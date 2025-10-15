@@ -47,3 +47,9 @@ ehthumbs_vista.db
 *.bak
 *.backup
 *~
+
+# Documentation
+docs/
+
+# Reports
+lighthouse-reports/
