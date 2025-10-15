@@ -64,6 +64,7 @@
 
 .calendar-tab--active {
   color: var(--color-terracotta);
+  background: rgba(var(--color-terracotta-rgb), 0.1);
 }
 
 .calendar-tab--active::after {

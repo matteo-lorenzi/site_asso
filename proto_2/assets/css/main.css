@@ -13,7 +13,14 @@
   background-color: var(--color-indigo);
   box-shadow: var(--shadow-md);
   z-index: var(--z-header);
-  transition: transform var(--transition-normal) var(--ease-out);
+  transition: all var(--transition-normal) var(--ease-out);
+}
+
+/* État scrollé - plus d'ombre pour indiquer la position fixe */
+.header.is-scrolled {
+  box-shadow: var(--shadow-xl);
+  background-color: rgba(30, 50, 80, 0.98);
+  backdrop-filter: blur(8px);
 }
 
 .header__nav {
@@ -257,7 +264,7 @@
 
 .hero__date {
   font-size: 18px;
-  color: var(--color-slate);
+  color: var(--color-cream);
   margin-bottom: var(--spacing-4);
   font-weight: var(--font-weight-medium);
 }
@@ -374,12 +381,37 @@
     padding-top: var(--spacing-6);
   }
 
-  .footer__content .row > [class*="col-"] {
-    margin-bottom: var(--spacing-4);
+  .footer__title {
+    font-size: var(--font-size-small);
+    margin-bottom: var(--spacing-2);
   }
 
-  .footer__content .row > [class*="col-"]:last-child {
-    margin-bottom: 0;
+  .footer__text {
+    font-size: var(--font-size-small);
+    margin-bottom: var(--spacing-1);
+  }
+
+  .footer__links li {
+    margin-bottom: var(--spacing-1);
+  }
+
+  .footer__link {
+    font-size: var(--font-size-small);
+  }
+
+  .footer__social {
+    gap: var(--spacing-1);
+    margin-top: var(--spacing-2);
+  }
+
+  .footer__social-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer__social-link svg {
+    width: 16px;
+    height: 16px;
   }
 }
 

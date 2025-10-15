@@ -126,41 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ====================================
-  // Parallax Effect on Story Image
+  // Parallax Effect on Story Image - DÉSACTIVÉ
   // ====================================
 
-  const storyImage = document.querySelector(".story-image__img");
-
-  if (storyImage) {
-    let ticking = false;
-
-    function updateParallax() {
-      const scrolled = window.pageYOffset;
-      const imageTop = storyImage.getBoundingClientRect().top + scrolled;
-      const imageHeight = storyImage.offsetHeight;
-      const windowHeight = window.innerHeight;
-
-      // Only apply parallax when image is in viewport
-      if (
-        scrolled + windowHeight > imageTop &&
-        scrolled < imageTop + imageHeight
-      ) {
-        const yPos = (scrolled - imageTop) * 0.3;
-        storyImage.style.transform = `translateY(${yPos}px)`;
-      }
-
-      ticking = false;
-    }
-
-    function requestParallax() {
-      if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-      }
-    }
-
-    window.addEventListener("scroll", requestParallax);
-  }
+  // L'effet parallax a été remplacé par un positionnement CSS statique
 
   // ====================================
   // Partner Cards Hover Effect Enhancement

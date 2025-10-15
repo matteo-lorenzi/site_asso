@@ -50,7 +50,7 @@
 
 /* Bouton secondaire (Outlined Indigo) */
 .btn--secondary {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.4);
   color: var(--color-indigo);
   border-color: var(--color-indigo);
 }
@@ -181,6 +181,21 @@
 
 /* ========== DISCIPLINE CARDS ========== */
 
+/* Conteneur des disciplines - disposition responsive */
+.disciplines-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+/* Sur tablette et plus grand : disposition horizontale */
+@media (min-width: 768px) {
+  .disciplines-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
 .discipline-card {
   padding: var(--spacing-4);
   text-align: center;
@@ -188,10 +203,10 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   transition: all var(--transition-normal) var(--ease-out);
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 
 .discipline-card:hover {
@@ -277,6 +292,12 @@
   font-size: 18px;
   color: var(--text-secondary);
   font-weight: var(--font-weight-regular);
+}
+
+/* Sous-titres sur fond sombre - meilleure visibilité */
+.section--indigo .section__subtitle {
+  opacity: 0.95;
+  font-weight: var(--font-weight-medium);
 }
 
 /* ========== TEXT CONTENT ========== */

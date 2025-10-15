@@ -28,6 +28,7 @@
 .story-image {
   position: relative;
   margin-bottom: var(--spacing-4);
+  margin-top: -40px; /* Fait dépasser l'image vers le haut */
 }
 
 .story-image__img {

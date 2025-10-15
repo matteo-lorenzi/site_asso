@@ -67,19 +67,18 @@
   // ========== SCROLL HEADER ==========
 
   /**
-   * Gère l'apparition/disparition du header au scroll
+   * Ajoute une classe au header quand on scroll pour améliorer la visibilité
    */
   function handleScroll() {
     const currentScrollY = window.scrollY;
 
     if (!header) return;
 
-    // Si on scroll vers le bas et qu'on est pas tout en haut
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      header.style.transform = "translateY(-100%)";
+    // Ajouter classe "is-scrolled" quand on scroll de plus de 50px
+    if (currentScrollY > 50) {
+      header.classList.add("is-scrolled");
     } else {
-      // Si on scroll vers le haut ou qu'on est en haut
-      header.style.transform = "translateY(0)";
+      header.classList.remove("is-scrolled");
     }
 
     lastScrollY = currentScrollY;
@@ -265,28 +264,12 @@
     });
   });
 
-  // ========== UTILITAIRES ==========
-
-  /**
-   * Log de bienvenue dans la console
-   */
-  console.log(
-    "%c🎭 Poitou en Scène",
-    "font-size: 24px; font-weight: bold; color: #8C3B2F;"
-  );
-  console.log(
-    "%cPoitiers Capitale Européenne de la Culture 2026",
-    "font-size: 14px; color: #1E3250;"
-  );
-
   // ========== INITIALISATION ==========
 
   /**
    * Init au chargement de la page
    */
   function init() {
-    console.log("✅ Site initialisé");
-
     // Ajouter classe pour indiquer que JS est chargé
     document.documentElement.classList.add("js-loaded");
   }
