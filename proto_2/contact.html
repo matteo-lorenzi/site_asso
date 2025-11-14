@@ -136,66 +136,74 @@
     <!-- Main content -->
     <main id="main-content">
       <!-- Hero -->
-      <section class="hero hero--small">
+      <section class="hero hero--small" aria-labelledby="page-title">
         <div class="hero__background">
           <img
             src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=600&fit=crop"
             alt=""
+            role="presentation"
             class="hero__image"
           />
-          <div class="hero__overlay"></div>
+          <div class="hero__overlay" aria-hidden="true"></div>
         </div>
         <div class="container">
           <div class="hero__content text-center">
-            <h1 class="hero__title">Contactez-Nous</h1>
+            <h1 class="hero__title" id="page-title">Contactez-Nous</h1>
             <p class="hero__subtitle">Nous sommes à votre écoute</p>
           </div>
         </div>
       </section>
 
       <!-- Contact Form & Info -->
-      <section class="section">
+      <section class="section" aria-labelledby="contact-section-title">
         <div class="container">
+          <h2 class="sr-only" id="contact-section-title">
+            Informations de contact et formulaire
+          </h2>
           <div class="row">
             <!-- Contact Info -->
             <div class="col-12 col-lg-4">
               <div class="contact-sidebar">
-                <h2 class="contact-sidebar__title">Informations de Contact</h2>
+                <h3 class="contact-sidebar__title">Informations de Contact</h3>
 
-                <div class="contact-info-block">
-                  <div class="contact-info-block__icon">
+                <article class="contact-info-block">
+                  <div class="contact-info-block__icon" aria-hidden="true">
                     <svg
                       width="24"
                       height="24"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
+                      aria-hidden="true"
+                      focusable="false"
                     >
                       <use href="assets/icons/sprite.svg#map-pin"></use>
                     </svg>
                   </div>
                   <div class="contact-info-block__content">
-                    <h3 class="contact-info-block__title">Adresse</h3>
+                    <h4 class="contact-info-block__title">Adresse</h4>
                     <p class="contact-info-block__text">
                       36 rue Victor Hugo<br />86000 Poitiers<br />France
                     </p>
                   </div>
-                </div>
+                </article>
 
-                <div class="contact-info-block">
-                  <div class="contact-info-block__icon">
+                <article class="contact-info-block">
+                  <div class="contact-info-block__icon" aria-hidden="true">
                     <svg
                       width="24"
                       height="24"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
+                      aria-hidden="true"
+                      focusable="false"
                     >
                       <use href="assets/icons/sprite.svg#mail"></use>
                     </svg>
                   </div>
                   <div class="contact-info-block__content">
-                    <h3 class="contact-info-block__title">Email</h3>
+                    <h4 class="contact-info-block__title">Email</h4>
                     <p class="contact-info-block__text">
                       <a
                         href="mailto:contact@poitou-en-scene.fr"
@@ -205,75 +213,94 @@
                       </a>
                     </p>
                   </div>
-                </div>
+                </article>
 
-                <div class="contact-info-block">
-                  <div class="contact-info-block__icon">
+                <article class="contact-info-block">
+                  <div class="contact-info-block__icon" aria-hidden="true">
                     <svg
                       width="24"
                       height="24"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
+                      aria-hidden="true"
+                      focusable="false"
                     >
                       <use href="assets/icons/sprite.svg#phone"></use>
                     </svg>
                   </div>
                   <div class="contact-info-block__content">
-                    <h3 class="contact-info-block__title">Téléphone</h3>
+                    <h4 class="contact-info-block__title">Téléphone</h4>
                     <p class="contact-info-block__text">
                       <a href="tel:+33549123456" class="contact-link">
                         +33 5 49 12 34 56
                       </a>
                     </p>
                   </div>
-                </div>
+                </article>
 
-                <div class="contact-info-block">
-                  <div class="contact-info-block__icon">
+                <article class="contact-info-block">
+                  <div class="contact-info-block__icon" aria-hidden="true">
                     <svg
                       width="24"
                       height="24"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
+                      aria-hidden="true"
+                      focusable="false"
                     >
                       <circle cx="12" cy="12" r="10"></circle>
                       <path d="M12 6v6l4 2"></path>
                     </svg>
                   </div>
                   <div class="contact-info-block__content">
-                    <h3 class="contact-info-block__title">Horaires</h3>
+                    <h4 class="contact-info-block__title">Horaires</h4>
                     <p class="contact-info-block__text">
                       Lundi - Vendredi<br />9h00 - 17h00<br /><br />
                       Samedi<br />10h00 - 16h00
                     </p>
                   </div>
-                </div>
+                </article>
 
                 <!-- Social Media -->
                 <div class="contact-social">
-                  <h3 class="contact-social__title">Suivez-nous</h3>
-                  <div class="contact-social__links">
+                  <h4 class="contact-social__title">Suivez-nous</h4>
+                  <nav
+                    class="contact-social__links"
+                    aria-label="Liens réseaux sociaux"
+                  >
                     <a
                       href="#"
                       class="contact-social__link"
-                      aria-label="Facebook"
+                      aria-label="Suivez-nous sur Facebook"
                     >
-                      <svg width="24" height="24" fill="currentColor">
+                      <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
                         <use href="assets/icons/sprite.svg#facebook"></use>
                       </svg>
                     </a>
                     <a
                       href="#"
                       class="contact-social__link"
-                      aria-label="Instagram"
+                      aria-label="Suivez-nous sur Instagram"
                     >
-                      <svg width="24" height="24" fill="currentColor">
+                      <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
                         <use href="assets/icons/sprite.svg#instagram"></use>
                       </svg>
                     </a>
-                  </div>
+                  </nav>
                 </div>
               </div>
             </div>
@@ -281,13 +308,21 @@
             <!-- Contact Form -->
             <div class="col-12 col-lg-8">
               <div class="contact-form-wrapper">
-                <h2 class="contact-form__title">Envoyez-nous un Message</h2>
+                <h3 class="contact-form__title">Envoyez-nous un Message</h3>
                 <p class="contact-form__subtitle">
                   Remplissez le formulaire ci-dessous et nous vous répondrons
                   dans les plus brefs délais.
                 </p>
 
-                <form class="contact-form" id="contact-form" novalidate>
+                <form
+                  class="contact-form"
+                  id="contact-form"
+                  novalidate
+                  aria-labelledby="contact-form-title"
+                >
+                  <h4 id="contact-form-title" class="sr-only">
+                    Formulaire de contact
+                  </h4>
                   <div class="row">
                     <!-- Prénom -->
                     <div class="col-12 col-md-6">
@@ -422,7 +457,7 @@
                     </div>
                   </div>
 
-                  <!-- RGPD -->
+                  <!-- Checkbox RGPD -->
                   <div class="form-group">
                     <div class="form-checkbox">
                       <input
@@ -432,13 +467,19 @@
                         class="form-checkbox-input"
                         required
                         aria-required="true"
+                        aria-describedby="error-rgpd"
                       />
                       <label for="rgpd" class="form-checkbox-label">
                         J'accepte que mes données soient utilisées pour répondre
-                        à ma demande <span class="required">*</span>
+                        à ma demande
+                        <span class="required" aria-label="obligatoire">*</span>
                       </label>
                     </div>
-                    <span class="form-error" id="error-rgpd"></span>
+                    <span
+                      class="form-error"
+                      id="error-rgpd"
+                      aria-live="polite"
+                    ></span>
                   </div>
 
                   <!-- Submit Button -->
@@ -451,10 +492,12 @@
                         stroke="currentColor"
                         stroke-width="2"
                         style="margin-right: 8px"
+                        aria-hidden="true"
+                        focusable="false"
                       >
                         <use href="assets/icons/sprite.svg#mail"></use>
                       </svg>
-                      Envoyer le Message
+                      <span>Envoyer le Message</span>
                     </button>
                   </div>
 
@@ -463,6 +506,8 @@
                     class="form-message form-message--success"
                     id="success-message"
                     style="display: none"
+                    role="alert"
+                    aria-live="polite"
                   >
                     <svg
                       width="24"
@@ -470,6 +515,8 @@
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
+                      aria-hidden="true"
+                      focusable="false"
                     >
                       <use href="assets/icons/sprite.svg#check"></use>
                     </svg>
@@ -481,8 +528,10 @@
 
                   <div
                     class="form-message form-message--error"
-                    id="error-message"
+                    id="error-message-global"
                     style="display: none"
+                    role="alert"
+                    aria-live="assertive"
                   >
                     <svg
                       width="24"
@@ -490,6 +539,8 @@
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
+                      aria-hidden="true"
+                      focusable="false"
                     >
                       <circle cx="12" cy="12" r="10"></circle>
                       <line x1="12" y1="8" x2="12" y2="12"></line>
@@ -505,7 +556,8 @@
       </section>
 
       <!-- Map Section -->
-      <section class="map-section">
+      <section class="map-section" aria-labelledby="map-title">
+        <h2 id="map-title" class="sr-only">Localisation sur la carte</h2>
         <div class="map-container">
           <iframe
             src="https://www.openstreetmap.org/export/embed.html?bbox=0.3287887573242188%2C46.57820057419226%2C0.3563308715820312%2C46.59223821975094&amp;layer=mapnik&amp;marker=46.58522067129281%2C0.34256072044372566"
@@ -514,18 +566,20 @@
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
-            title="Carte de localisation de Poitou en Scène"
-            aria-label="Carte interactive montrant l'emplacement de l'association à Poitiers"
+            title="Carte de localisation de Poitou en Scène à Poitiers"
+            aria-label="Carte interactive montrant l'emplacement de l'association à Poitiers, 36 rue Victor Hugo"
           ></iframe>
         </div>
       </section>
 
       <!-- Devenir Bénévole Section -->
-      <section class="section section--cream">
+      <section class="section section--cream" aria-labelledby="volunteer-title">
         <div class="container">
           <div class="section__header text-center">
             <span class="section__label">Rejoignez-nous</span>
-            <h2 class="section__title">Devenez Bénévole</h2>
+            <h2 class="section__title" id="volunteer-title">
+              Devenez Bénévole
+            </h2>
             <p class="section__subtitle">
               Rejoignez notre équipe et participez à la valorisation de la
               culture poitevine
@@ -547,14 +601,16 @@
 
             <!-- Missions Bénévoles -->
             <div class="volunteer-grid">
-              <div class="volunteer-card">
-                <div class="volunteer-card__icon">
+              <article class="volunteer-card">
+                <div class="volunteer-card__icon" aria-hidden="true">
                   <svg
                     width="40"
                     height="40"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <use href="assets/icons/sprite.svg#users"></use>
                   </svg>
@@ -564,16 +620,18 @@
                   Accueillir les visiteurs, répondre à leurs questions et les
                   orienter pendant le festival.
                 </p>
-              </div>
+              </article>
 
-              <div class="volunteer-card">
-                <div class="volunteer-card__icon">
+              <article class="volunteer-card">
+                <div class="volunteer-card__icon" aria-hidden="true">
                   <svg
                     width="40"
                     height="40"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <use href="assets/icons/sprite.svg#music"></use>
                   </svg>
@@ -583,16 +641,18 @@
                   Assister les animateurs lors des ateliers de danse, musique et
                   chant.
                 </p>
-              </div>
+              </article>
 
-              <div class="volunteer-card">
-                <div class="volunteer-card__icon">
+              <article class="volunteer-card">
+                <div class="volunteer-card__icon" aria-hidden="true">
                   <svg
                     width="40"
                     height="40"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <circle cx="20" cy="20" r="8"></circle>
                     <line x1="20" y1="4" x2="20" y2="12"></line>
@@ -606,16 +666,18 @@
                   Participer à l'installation, la gestion du matériel et le
                   rangement des espaces.
                 </p>
-              </div>
+              </article>
 
-              <div class="volunteer-card">
-                <div class="volunteer-card__icon">
+              <article class="volunteer-card">
+                <div class="volunteer-card__icon" aria-hidden="true">
                   <svg
                     width="40"
                     height="40"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <rect x="4" y="4" width="32" height="32" rx="2"></rect>
                     <circle cx="14" cy="14" r="2"></circle>
@@ -627,16 +689,18 @@
                   Prendre des photos, gérer les réseaux sociaux et promouvoir
                   l'événement.
                 </p>
-              </div>
+              </article>
 
-              <div class="volunteer-card">
-                <div class="volunteer-card__icon">
+              <article class="volunteer-card">
+                <div class="volunteer-card__icon" aria-hidden="true">
                   <svg
                     width="40"
                     height="40"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <path
                       d="M4 12h32M8 6h24a4 4 0 014 4v20a4 4 0 01-4 4H8a4 4 0 01-4-4V10a4 4 0 014-4z"
@@ -648,16 +712,18 @@
                   Servir à la buvette et proposer les produits locaux aux
                   visiteurs.
                 </p>
-              </div>
+              </article>
 
-              <div class="volunteer-card">
-                <div class="volunteer-card__icon">
+              <article class="volunteer-card">
+                <div class="volunteer-card__icon" aria-hidden="true">
                   <svg
                     width="40"
                     height="40"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
+                    aria-hidden="true"
+                    focusable="false"
                   >
                     <use href="assets/icons/sprite.svg#star"></use>
                   </svg>
@@ -667,7 +733,7 @@
                   Selon vos compétences et disponibilités, d'autres missions
                   peuvent être proposées.
                 </p>
-              </div>
+              </article>
             </div>
 
             <!-- CTA -->
@@ -686,7 +752,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer__content">
           <div class="row">
@@ -704,16 +770,20 @@
 
             <div class="col-sm-4 col-md-4">
               <h3 class="footer__title">Liens rapides</h3>
-              <ul class="footer__links">
-                <li><a href="index.html" class="footer__link">Accueil</a></li>
-                <li>
-                  <a href="programme.html" class="footer__link">Programme</a>
-                </li>
-                <li>
-                  <a href="a-propos.html" class="footer__link">À Propos</a>
-                </li>
-                <li><a href="contact.html" class="footer__link">Contact</a></li>
-              </ul>
+              <nav aria-label="Liens rapides du pied de page">
+                <ul class="footer__links">
+                  <li><a href="index.html" class="footer__link">Accueil</a></li>
+                  <li>
+                    <a href="programme.html" class="footer__link">Programme</a>
+                  </li>
+                  <li>
+                    <a href="a-propos.html" class="footer__link">À Propos</a>
+                  </li>
+                  <li>
+                    <a href="contact.html" class="footer__link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
 
             <div class="col-sm-4 col-md-4">
@@ -730,14 +800,38 @@
                   >
                 </p>
               </address>
-              <div class="footer__social">
-                <a href="#" class="footer__social-link" aria-label="Facebook">
-                  <svg width="24" height="24" fill="currentColor">
+              <div
+                class="footer__social"
+                role="navigation"
+                aria-label="Liens réseaux sociaux"
+              >
+                <a
+                  href="#"
+                  class="footer__social-link"
+                  aria-label="Suivez-nous sur Facebook"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
                     <use href="assets/icons/sprite.svg#facebook"></use>
                   </svg>
                 </a>
-                <a href="#" class="footer__social-link" aria-label="Instagram">
-                  <svg width="24" height="24" fill="currentColor">
+                <a
+                  href="#"
+                  class="footer__social-link"
+                  aria-label="Suivez-nous sur Instagram"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
                     <use href="assets/icons/sprite.svg#instagram"></use>
                   </svg>
                 </a>

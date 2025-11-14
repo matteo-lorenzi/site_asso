@@ -1,171 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poitou en Scène - Sélection de prototype</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3250 0%, #8c3b2f 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1e3250 0%, #8c3b2f 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
 
-        .container {
-            max-width: 900px;
-            width: 100%;
-        }
+      .container {
+        max-width: 900px;
+        width: 100%;
+      }
 
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-            color: #f6efe6;
-        }
+      header {
+        text-align: center;
+        margin-bottom: 60px;
+        color: #f6efe6;
+      }
 
-        h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        margin-bottom: 16px;
+        font-weight: 700;
+      }
 
-        .subtitle {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            opacity: 0.9;
-        }
+      .subtitle {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        opacity: 0.9;
+      }
 
+      .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        margin-bottom: 40px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 16px;
+        padding: 40px 32px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      .card-number {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      .card:nth-child(1) .card-number {
+        background: linear-gradient(135deg, #d8a24a, #c08f39);
+      }
+
+      .card:nth-child(2) .card-number {
+        background: linear-gradient(135deg, #8c3b2f, #a14738);
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1e3250;
+        margin-bottom: 12px;
+      }
+
+      .card-description {
+        color: #59606a;
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+
+      .card-badge {
+        display: inline-block;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+
+      .card:nth-child(1) .card-badge {
+        background: rgba(216, 162, 74, 0.15);
+        color: #d8a24a;
+      }
+
+      .card:nth-child(2) .card-badge {
+        background: rgba(140, 59, 47, 0.15);
+        color: #8c3b2f;
+      }
+
+      footer {
+        text-align: center;
+        color: #f6efe6;
+        opacity: 0.8;
+        font-size: 0.875rem;
+      }
+
+      @media (max-width: 640px) {
         .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-            margin-bottom: 40px;
+          gap: 24px;
         }
 
         .card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px 32px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
+          padding: 32px 24px;
         }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .card-number {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            border-radius: 50%;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .card:nth-child(1) .card-number {
-            background: linear-gradient(135deg, #d8a24a, #c08f39);
-        }
-
-        .card:nth-child(2) .card-number {
-            background: linear-gradient(135deg, #8c3b2f, #a14738);
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e3250;
-            margin-bottom: 12px;
-        }
-
-        .card-description {
-            color: #59606a;
-            line-height: 1.6;
-            margin-bottom: 24px;
-        }
-
-        .card-badge {
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
-
-        .card:nth-child(1) .card-badge {
-            background: rgba(216, 162, 74, 0.15);
-            color: #d8a24a;
-        }
-
-        .card:nth-child(2) .card-badge {
-            background: rgba(140, 59, 47, 0.15);
-            color: #8c3b2f;
-        }
-
-        footer {
-            text-align: center;
-            color: #f6efe6;
-            opacity: 0.8;
-            font-size: 0.875rem;
-        }
-
-        @media (max-width: 640px) {
-            .cards-container {
-                gap: 24px;
-            }
-
-            .card {
-                padding: 32px 24px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Poitou en Scène</h1>
-            <p class="subtitle">Choisissez le prototype à consulter</p>
-        </header>
+      <header>
+        <h1>Poitou en Scène</h1>
+        <p class="subtitle">Choisissez le prototype à consulter</p>
+      </header>
 
-        <div class="cards-container">
-            <a href="proto_1/index.html" class="card">
-                <div class="card-number">1</div>
-                <h2 class="card-title">Prototype 1</h2>
-                <p class="card-description">
-                    Première version du site avec design initial et fonctionnalités de base
-                </p>
-                <span class="card-badge">Version initiale</span>
-            </a>
+      <div class="cards-container">
+        <a href="proto_1/index.html" class="card">
+          <div class="card-number">1</div>
+          <h2 class="card-title">Prototype 1</h2>
+          <p class="card-description">
+            Première version du site avec design initial et fonctionnalités de
+            base
+          </p>
+          <span class="card-badge">Version initiale</span>
+        </a>
 
-            <a href="proto_2/index.html" class="card">
-                <div class="card-number">2</div>
-                <h2 class="card-title">Prototype 2</h2>
-                <p class="card-description">
-                    Version améliorée avec design optimisé, meilleure accessibilité et fonctionnalités avancées
-                </p>
-                <span class="card-badge">Version actuelle</span>
-            </a>
-        </div>
+        <a href="proto_2/index.html" class="card">
+          <div class="card-number">2</div>
+          <h2 class="card-title">Prototype 2</h2>
+          <p class="card-description">
+            Version améliorée avec design optimisé, meilleure accessibilité et
+            fonctionnalités avancées
+          </p>
+          <span class="card-badge">Version actuelle</span>
+        </a>
+      </div>
 
-        <footer>
-            <p>&copy; 2025 Association Poitou en Scène - Poitiers 2026</p>
-        </footer>
+      <footer>
+        <p>&copy; 2025 Association Poitou en Scène - Poitiers 2026</p>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

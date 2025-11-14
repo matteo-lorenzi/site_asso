@@ -179,22 +179,28 @@
     <!-- Main content -->
     <main id="main-content">
       <!-- Hero Section -->
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="hero__background">
           <img
             src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1920&h=1080&fit=crop"
             alt=""
+            role="presentation"
             class="hero__image"
             loading="eager"
           />
-          <div class="hero__overlay"></div>
+          <div class="hero__overlay" aria-hidden="true"></div>
         </div>
         <div class="container">
           <div class="hero__content">
-            <h1 class="hero__title">Poitou en Scène</h1>
+            <h1 class="hero__title" id="hero-title">Poitou en Scène</h1>
             <p class="hero__subtitle">Festival de Culture Poitevine 2026</p>
             <p class="hero__date">
-              Un week-end d'exception • Vendredi - Dimanche
+              <span aria-hidden="true"
+                >Un week-end d'exception • Vendredi - Dimanche</span
+              >
+              <span class="sr-only"
+                >Un week-end d'exception du Vendredi au Dimanche</span
+              >
             </p>
             <div class="hero__cta-stack">
               <a href="programme.html" class="btn btn--primary btn--lg"
@@ -209,10 +215,12 @@
       </section>
 
       <!-- Section À propos courte -->
-      <section class="section section--cream">
+      <section class="section section--cream" aria-labelledby="about-title">
         <div class="container">
           <div class="section__header text-center">
-            <h2 class="section__title">Valoriser le patrimoine poitevin</h2>
+            <h2 class="section__title" id="about-title">
+              Valoriser le patrimoine poitevin
+            </h2>
             <p class="section__subtitle">
               Une association dédiée à la culture locale
             </p>
@@ -246,24 +254,31 @@
       </section>
 
       <!-- Section 3 disciplines -->
-      <section class="section">
+      <section class="section" aria-labelledby="disciplines-title">
         <div class="container">
           <div class="section__header text-center">
-            <h2 class="section__title">Nos disciplines</h2>
+            <h2 class="section__title" id="disciplines-title">
+              Nos disciplines
+            </h2>
             <p class="section__subtitle">
               Danse, Musique et Chant traditionnels
             </p>
           </div>
 
           <div class="disciplines-container">
-            <div class="discipline-card">
-              <div class="discipline-card__icon discipline-card__icon--danse">
+            <article class="discipline-card">
+              <div
+                class="discipline-card__icon discipline-card__icon--danse"
+                aria-hidden="true"
+              >
                 <svg
                   width="64"
                   height="64"
                   viewBox="0 0 64 64"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <circle
                     cx="32"
@@ -285,17 +300,26 @@
                 Cours en groupe selon des tranches d'âges définies, reprenant
                 différents styles en fonction des époques.
               </p>
-              <span class="badge badge--terracotta">Ateliers disponibles</span>
-            </div>
+              <span
+                class="badge badge--terracotta"
+                aria-label="Ateliers de danse disponibles"
+                >Ateliers disponibles</span
+              >
+            </article>
 
-            <div class="discipline-card">
-              <div class="discipline-card__icon discipline-card__icon--musique">
+            <article class="discipline-card">
+              <div
+                class="discipline-card__icon discipline-card__icon--musique"
+                aria-hidden="true"
+              >
                 <svg
                   width="64"
                   height="64"
                   viewBox="0 0 64 64"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     d="M24 48 Q24 52 28 52 Q32 52 32 48 L32 12 M44 40 Q44 44 48 44 Q52 44 52 40 L52 8 L32 12"
@@ -310,17 +334,26 @@
                 Cours en groupe ou particulier, mélange entre instruments
                 anciens et modernes du Poitou.
               </p>
-              <span class="badge badge--indigo">Ateliers disponibles</span>
-            </div>
+              <span
+                class="badge badge--indigo"
+                aria-label="Ateliers de musique disponibles"
+                >Ateliers disponibles</span
+              >
+            </article>
 
-            <div class="discipline-card">
-              <div class="discipline-card__icon discipline-card__icon--chant">
+            <article class="discipline-card">
+              <div
+                class="discipline-card__icon discipline-card__icon--chant"
+                aria-hidden="true"
+              >
                 <svg
                   width="64"
                   height="64"
                   viewBox="0 0 64 64"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <ellipse
                     cx="32"
@@ -353,17 +386,23 @@
                 Cours en groupe ou particulier pour remettre au goût du jour les
                 anciens chants de la région.
               </p>
-              <span class="badge badge--golden">Ateliers disponibles</span>
-            </div>
+              <span
+                class="badge badge--golden"
+                aria-label="Ateliers de chant disponibles"
+                >Ateliers disponibles</span
+              >
+            </article>
           </div>
         </div>
       </section>
 
       <!-- Section événements à venir (placeholder) -->
-      <section class="section section--indigo">
+      <section class="section section--indigo" aria-labelledby="events-title">
         <div class="container">
           <div class="section__header text-center">
-            <h2 class="section__title text-cream">Événements à venir</h2>
+            <h2 class="section__title text-cream" id="events-title">
+              Événements à venir
+            </h2>
             <p class="section__subtitle text-cream">
               Concerts, ateliers et spectacles
             </p>
@@ -381,10 +420,12 @@
       </section>
 
       <!-- Section Sponsors -->
-      <section class="section section--cream">
+      <section class="section section--cream" aria-labelledby="sponsors-title">
         <div class="container">
           <div class="section__header text-center">
-            <h2 class="section__title">Ils nous soutiennent</h2>
+            <h2 class="section__title" id="sponsors-title">
+              Ils nous soutiennent
+            </h2>
             <p class="section__subtitle">
               Commandité par la Fondation du Patrimoine Pictavien
             </p>
@@ -394,33 +435,67 @@
             <div class="sponsors__grid">
               <!-- Placeholders pour logos sponsors -->
               <div class="sponsor-logo">
-                <div class="sponsor-logo__placeholder">
+                <div
+                  class="sponsor-logo__placeholder"
+                  role="img"
+                  aria-label="Logo Fondation du Patrimoine Pictavien"
+                >
                   Fondation du Patrimoine Pictavien
                 </div>
               </div>
               <div class="sponsor-logo">
-                <div class="sponsor-logo__placeholder">Ville de Poitiers</div>
+                <div
+                  class="sponsor-logo__placeholder"
+                  role="img"
+                  aria-label="Logo Ville de Poitiers"
+                >
+                  Ville de Poitiers
+                </div>
               </div>
               <div class="sponsor-logo">
-                <div class="sponsor-logo__placeholder">Grand Poitiers</div>
+                <div
+                  class="sponsor-logo__placeholder"
+                  role="img"
+                  aria-label="Logo Grand Poitiers"
+                >
+                  Grand Poitiers
+                </div>
               </div>
               <div class="sponsor-logo">
-                <div class="sponsor-logo__placeholder">
+                <div
+                  class="sponsor-logo__placeholder"
+                  role="img"
+                  aria-label="Logo Département de la Vienne"
+                >
                   Département de la Vienne
                 </div>
               </div>
               <div class="sponsor-logo">
-                <div class="sponsor-logo__placeholder">
+                <div
+                  class="sponsor-logo__placeholder"
+                  role="img"
+                  aria-label="Logo Région Nouvelle-Aquitaine"
+                >
                   Région Nouvelle-Aquitaine
                 </div>
               </div>
               <div class="sponsor-logo">
-                <div class="sponsor-logo__placeholder">
+                <div
+                  class="sponsor-logo__placeholder"
+                  role="img"
+                  aria-label="Logo Ministère de la Culture"
+                >
                   Ministère de la Culture
                 </div>
               </div>
               <div class="sponsor-logo">
-                <div class="sponsor-logo__placeholder">Union Européenne</div>
+                <div
+                  class="sponsor-logo__placeholder"
+                  role="img"
+                  aria-label="Logo Union Européenne"
+                >
+                  Union Européenne
+                </div>
               </div>
             </div>
           </div>
@@ -429,7 +504,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer__content">
           <div class="row">
@@ -449,16 +524,20 @@
             <!-- Colonne 2 : Liens rapides -->
             <div class="col-sm-4 col-md-4">
               <h3 class="footer__title">Liens rapides</h3>
-              <ul class="footer__links">
-                <li><a href="index.html" class="footer__link">Accueil</a></li>
-                <li>
-                  <a href="programme.html" class="footer__link">Programme</a>
-                </li>
-                <li>
-                  <a href="a-propos.html" class="footer__link">À Propos</a>
-                </li>
-                <li><a href="contact.html" class="footer__link">Contact</a></li>
-              </ul>
+              <nav aria-label="Liens rapides du pied de page">
+                <ul class="footer__links">
+                  <li><a href="index.html" class="footer__link">Accueil</a></li>
+                  <li>
+                    <a href="programme.html" class="footer__link">Programme</a>
+                  </li>
+                  <li>
+                    <a href="a-propos.html" class="footer__link">À Propos</a>
+                  </li>
+                  <li>
+                    <a href="contact.html" class="footer__link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
 
             <!-- Colonne 3 : Contact -->
@@ -476,14 +555,38 @@
                   >
                 </p>
               </address>
-              <div class="footer__social">
-                <a href="#" class="footer__social-link" aria-label="Facebook">
-                  <svg width="24" height="24" fill="currentColor">
+              <div
+                class="footer__social"
+                role="navigation"
+                aria-label="Liens réseaux sociaux"
+              >
+                <a
+                  href="#"
+                  class="footer__social-link"
+                  aria-label="Suivez-nous sur Facebook"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
                     <use href="assets/icons/sprite.svg#facebook"></use>
                   </svg>
                 </a>
-                <a href="#" class="footer__social-link" aria-label="Instagram">
-                  <svg width="24" height="24" fill="currentColor">
+                <a
+                  href="#"
+                  class="footer__social-link"
+                  aria-label="Suivez-nous sur Instagram"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
                     <use href="assets/icons/sprite.svg#instagram"></use>
                   </svg>
                 </a>

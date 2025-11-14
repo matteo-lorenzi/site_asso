@@ -159,40 +159,46 @@
     <!-- Main content -->
     <main id="main-content">
       <!-- Hero -->
-      <section class="hero hero--small">
+      <section class="hero hero--small" aria-labelledby="page-title">
         <div class="hero__background">
           <img
             src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=1920&h=600&fit=crop"
             alt=""
+            role="presentation"
             class="hero__image"
           />
-          <div class="hero__overlay"></div>
+          <div class="hero__overlay" aria-hidden="true"></div>
         </div>
         <div class="container">
           <div class="hero__content text-center">
-            <h1 class="hero__title">Programme du Festival</h1>
-            <p class="hero__subtitle">3 jours de culture poitevine • 2026</p>
+            <h1 class="hero__title" id="page-title">Programme du Festival</h1>
+            <p class="hero__subtitle">
+              <span aria-hidden="true">3 jours de culture poitevine • 2026</span>
+              <span class="sr-only">3 jours de culture poitevine en 2026</span>
+            </p>
           </div>
         </div>
       </section>
 
       <!-- Calendrier interactif -->
-      <section class="section">
+      <section class="section" aria-labelledby="calendar-title">
         <div class="container">
           <div class="section__header text-center">
-            <h2 class="section__title">Calendrier du Festival</h2>
+            <h2 class="section__title" id="calendar-title">Calendrier du Festival</h2>
             <p class="section__subtitle">
               Sélectionnez un jour pour voir le programme détaillé
             </p>
           </div>
 
           <!-- Onglets jours -->
-          <div class="calendar-tabs">
+          <div class="calendar-tabs" role="tablist" aria-label="Sélection du jour">
             <button
               class="calendar-tab calendar-tab--active"
               data-day="vendredi"
               aria-selected="true"
               role="tab"
+              id="tab-vendredi"
+              aria-controls="timeline-vendredi"
             >
               <span class="calendar-tab__day">Vendredi</span>
               <span class="calendar-tab__date">Jour 1</span>
@@ -202,6 +208,8 @@
               data-day="samedi"
               aria-selected="false"
               role="tab"
+              id="tab-samedi"
+              aria-controls="timeline-samedi"
             >
               <span class="calendar-tab__day">Samedi</span>
               <span class="calendar-tab__date">Jour 2</span>
@@ -211,6 +219,8 @@
               data-day="dimanche"
               aria-selected="false"
               role="tab"
+              id="tab-dimanche"
+              aria-controls="timeline-dimanche"
             >
               <span class="calendar-tab__day">Dimanche</span>
               <span class="calendar-tab__date">Jour 3</span>
@@ -218,23 +228,25 @@
           </div>
 
           <!-- Filtres par discipline -->
-          <div class="filters">
-            <div class="filters__label">Filtrer par discipline :</div>
-            <div class="filters__group">
-              <button class="filter-btn filter-btn--active" data-filter="tous">
+          <div class="filters" role="group" aria-label="Filtrer les événements par discipline">
+            <div class="filters__label" id="filters-label">Filtrer par discipline :</div>
+            <div class="filters__group" role="radiogroup" aria-labelledby="filters-label">
+              <button class="filter-btn filter-btn--active" data-filter="tous" role="radio" aria-checked="true">
                 Tous
               </button>
-              <button class="filter-btn filter-btn--danse" data-filter="danse">
-                <span class="filter-btn__icon">🎭</span> Danse
+              <button class="filter-btn filter-btn--danse" data-filter="danse" role="radio" aria-checked="false">
+                <span class="filter-btn__icon" aria-hidden="true">🎭</span> Danse
               </button>
               <button
                 class="filter-btn filter-btn--musique"
                 data-filter="musique"
+                role="radio"
+                aria-checked="false"
               >
-                <span class="filter-btn__icon">🎵</span> Musique
+                <span class="filter-btn__icon" aria-hidden="true">🎵</span> Musique
               </button>
-              <button class="filter-btn filter-btn--chant" data-filter="chant">
-                <span class="filter-btn__icon">🎤</span> Chant
+              <button class="filter-btn filter-btn--chant" data-filter="chant" role="radio" aria-checked="false">
+                <span class="filter-btn__icon" aria-hidden="true">🎤</span> Chant
               </button>
             </div>
           </div>
@@ -244,18 +256,19 @@
             class="timeline timeline--active"
             id="timeline-vendredi"
             role="tabpanel"
+            aria-labelledby="tab-vendredi"
           >
             <div class="timeline__header">
               <h3 class="timeline__title">Vendredi - Ouverture du Festival</h3>
             </div>
 
             <!-- Événement 1 -->
-            <div class="timeline-event" data-discipline="musique">
+            <article class="timeline-event" data-discipline="musique">
               <div class="timeline-event__time">
-                <svg width="20" height="20" class="timeline-event__icon">
+                <svg width="20" height="20" class="timeline-event__icon" aria-hidden="true" focusable="false">
                   <use href="assets/icons/sprite.svg#clock"></use>
                 </svg>
-                14:00 - 15:30
+                <time datetime="14:00">14:00 - 15:30</time>
               </div>
               <div class="timeline-event__content">
                 <div class="timeline-event__header">
@@ -270,7 +283,7 @@
                 </p>
                 <div class="timeline-event__meta">
                   <span class="timeline-event__location">
-                    <svg width="16" height="16">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false">
                       <use href="assets/icons/sprite.svg#map-pin"></use>
                     </svg>
                     Salle des Fêtes
@@ -278,15 +291,15 @@
                   <span class="timeline-event__age">Adultes</span>
                 </div>
               </div>
-            </div>
+            </article>
 
             <!-- Événement 2 -->
-            <div class="timeline-event" data-discipline="danse">
+            <article class="timeline-event" data-discipline="danse">
               <div class="timeline-event__time">
-                <svg width="20" height="20" class="timeline-event__icon">
+                <svg width="20" height="20" class="timeline-event__icon" aria-hidden="true" focusable="false">
                   <use href="assets/icons/sprite.svg#clock"></use>
                 </svg>
-                16:00 - 17:00
+                <time datetime="16:00">16:00 - 17:00</time>
               </div>
               <div class="timeline-event__content">
                 <div class="timeline-event__header">
@@ -893,7 +906,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer__content">
           <div class="row">
@@ -911,16 +924,18 @@
 
             <div class="col-sm-4 col-md-4">
               <h3 class="footer__title">Liens rapides</h3>
-              <ul class="footer__links">
-                <li><a href="index.html" class="footer__link">Accueil</a></li>
-                <li>
-                  <a href="programme.html" class="footer__link">Programme</a>
-                </li>
-                <li>
-                  <a href="a-propos.html" class="footer__link">À Propos</a>
-                </li>
-                <li><a href="contact.html" class="footer__link">Contact</a></li>
-              </ul>
+              <nav aria-label="Liens rapides du pied de page">
+                <ul class="footer__links">
+                  <li><a href="index.html" class="footer__link">Accueil</a></li>
+                  <li>
+                    <a href="programme.html" class="footer__link">Programme</a>
+                  </li>
+                  <li>
+                    <a href="a-propos.html" class="footer__link">À Propos</a>
+                  </li>
+                  <li><a href="contact.html" class="footer__link">Contact</a></li>
+                </ul>
+              </nav>
             </div>
 
             <div class="col-sm-4 col-md-4">
@@ -937,14 +952,14 @@
                   >
                 </p>
               </address>
-              <div class="footer__social">
-                <a href="#" class="footer__social-link" aria-label="Facebook">
-                  <svg width="24" height="24" fill="currentColor">
+              <div class="footer__social" role="navigation" aria-label="Liens réseaux sociaux">
+                <a href="#" class="footer__social-link" aria-label="Suivez-nous sur Facebook">
+                  <svg width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
                     <use href="assets/icons/sprite.svg#facebook"></use>
                   </svg>
                 </a>
-                <a href="#" class="footer__social-link" aria-label="Instagram">
-                  <svg width="24" height="24" fill="currentColor">
+                <a href="#" class="footer__social-link" aria-label="Suivez-nous sur Instagram">
+                  <svg width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
                     <use href="assets/icons/sprite.svg#instagram"></use>
                   </svg>
                 </a>

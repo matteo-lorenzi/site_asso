@@ -137,18 +137,19 @@
     <!-- Main content -->
     <main id="main-content">
       <!-- Hero -->
-      <section class="hero hero--small">
+      <section class="hero hero--small" aria-labelledby="page-title">
         <div class="hero__background">
           <img
             src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&h=600&fit=crop"
             alt=""
+            role="presentation"
             class="hero__image"
           />
-          <div class="hero__overlay"></div>
+          <div class="hero__overlay" aria-hidden="true"></div>
         </div>
         <div class="container">
           <div class="hero__content text-center">
-            <h1 class="hero__title">Qui Sommes-Nous ?</h1>
+            <h1 class="hero__title" id="page-title">Qui Sommes-Nous ?</h1>
             <p class="hero__subtitle">
               Une association au cœur de la culture poitevine
             </p>
@@ -157,7 +158,7 @@
       </section>
 
       <!-- Notre Histoire -->
-      <section class="section">
+      <section class="section" aria-labelledby="history-title">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-12 col-md-6">
@@ -167,13 +168,15 @@
                   alt="Membres de l'association réunis lors d'un événement"
                   class="story-image__img"
                 />
-                <div class="story-image__decoration"></div>
+                <div class="story-image__decoration" aria-hidden="true"></div>
               </div>
             </div>
             <div class="col-12 col-md-6">
               <div class="story-content">
                 <span class="section__label">Notre Histoire</span>
-                <h2 class="section__title">Une Passion Partagée Depuis 2024</h2>
+                <h2 class="section__title" id="history-title">
+                  Une Passion Partagée Depuis 2024
+                </h2>
                 <p class="story-text">
                   Née en 2024 de la volonté de passionnés de culture
                   traditionnelle poitevine, l'association
@@ -201,11 +204,11 @@
       </section>
 
       <!-- Nos Valeurs -->
-      <section class="section section--cream">
+      <section class="section section--cream" aria-labelledby="values-title">
         <div class="container">
           <div class="section__header text-center">
             <span class="section__label">Nos Valeurs</span>
-            <h2 class="section__title">Ce Qui Nous Anime</h2>
+            <h2 class="section__title" id="values-title">Ce Qui Nous Anime</h2>
             <p class="section__subtitle">
               Cinq piliers fondamentaux guident nos actions au quotidien
             </p>
@@ -213,14 +216,19 @@
 
           <div class="values-grid">
             <!-- Valeur 1 -->
-            <div class="value-card fade-in-element">
-              <div class="value-card__icon value-card__icon--terracotta">
+            <article class="value-card fade-in-element">
+              <div
+                class="value-card__icon value-card__icon--terracotta"
+                aria-hidden="true"
+              >
                 <svg
                   width="48"
                   height="48"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <use href="assets/icons/sprite.svg#users"></use>
                 </svg>
@@ -231,17 +239,22 @@
                 travers des événements rassembleurs qui célèbrent notre
                 patrimoine commun.
               </p>
-            </div>
+            </article>
 
             <!-- Valeur 2 -->
-            <div class="value-card fade-in-element">
-              <div class="value-card__icon value-card__icon--indigo">
+            <article class="value-card fade-in-element">
+              <div
+                class="value-card__icon value-card__icon--indigo"
+                aria-hidden="true"
+              >
                 <svg
                   width="48"
                   height="48"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <use href="assets/icons/sprite.svg#heart"></use>
                 </svg>
@@ -252,17 +265,22 @@
                 d'origine ou de condition sociale. Nos tarifs solidaires et nos
                 actions ciblées le démontrent.
               </p>
-            </div>
+            </article>
 
             <!-- Valeur 3 -->
-            <div class="value-card fade-in-element">
-              <div class="value-card__icon value-card__icon--golden">
+            <article class="value-card fade-in-element">
+              <div
+                class="value-card__icon value-card__icon--golden"
+                aria-hidden="true"
+              >
                 <svg
                   width="48"
                   height="48"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <circle cx="24" cy="24" r="10"></circle>
                   <path d="M12 12 L24 24 L36 12"></path>
@@ -274,17 +292,22 @@
                 nouvelles générations dans une ambiance conviviale et
                 bienveillante.
               </p>
-            </div>
+            </article>
 
             <!-- Valeur 4 -->
-            <div class="value-card fade-in-element">
-              <div class="value-card__icon value-card__icon--terracotta">
+            <article class="value-card fade-in-element">
+              <div
+                class="value-card__icon value-card__icon--terracotta"
+                aria-hidden="true"
+              >
                 <svg
                   width="48"
                   height="48"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <use href="assets/icons/sprite.svg#map-pin"></use>
                 </svg>
@@ -294,17 +317,22 @@
                 Ancrer nos actions dans le territoire poitevin, valoriser les
                 artistes locaux et favoriser les circuits courts culturels.
               </p>
-            </div>
+            </article>
 
             <!-- Valeur 5 -->
-            <div class="value-card fade-in-element">
-              <div class="value-card__icon value-card__icon--indigo">
+            <article class="value-card fade-in-element">
+              <div
+                class="value-card__icon value-card__icon--indigo"
+                aria-hidden="true"
+              >
                 <svg
                   width="48"
                   height="48"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <use href="assets/icons/sprite.svg#star"></use>
                 </svg>
@@ -314,17 +342,19 @@
                 Mettre en lumière le patrimoine culturel poitevin, souvent
                 méconnu, et lui donner la reconnaissance qu'il mérite.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
       <!-- Notre Équipe -->
-      <section class="section">
+      <section class="section" aria-labelledby="team-title">
         <div class="container">
           <div class="section__header text-center">
             <span class="section__label">Notre Équipe</span>
-            <h2 class="section__title">Les Artisans du Festival</h2>
+            <h2 class="section__title" id="team-title">
+              Les Artisans du Festival
+            </h2>
             <p class="section__subtitle">Une équipe passionnée et engagée</p>
           </div>
 
@@ -351,21 +381,42 @@
             </div>
 
             <!-- Chiffres clés -->
-            <div class="stats-grid">
-              <div class="stat-card fade-in-element">
-                <div class="stat-card__number">15</div>
+            <div
+              class="stats-grid"
+              role="list"
+              aria-label="Statistiques de l'association"
+            >
+              <div class="stat-card fade-in-element" role="listitem">
+                <div
+                  class="stat-card__number"
+                  aria-label="15 bénévoles permanents"
+                >
+                  15
+                </div>
                 <div class="stat-card__label">Bénévoles permanents</div>
               </div>
-              <div class="stat-card fade-in-element">
-                <div class="stat-card__number">30+</div>
+              <div class="stat-card fade-in-element" role="listitem">
+                <div
+                  class="stat-card__number"
+                  aria-label="Plus de 30 bénévoles ponctuels"
+                >
+                  30+
+                </div>
                 <div class="stat-card__label">Bénévoles ponctuels</div>
               </div>
-              <div class="stat-card fade-in-element">
-                <div class="stat-card__number">2024</div>
+              <div class="stat-card fade-in-element" role="listitem">
+                <div
+                  class="stat-card__number"
+                  aria-label="Année de création : 2024"
+                >
+                  2024
+                </div>
                 <div class="stat-card__label">Année de création</div>
               </div>
-              <div class="stat-card fade-in-element">
-                <div class="stat-card__number">3</div>
+              <div class="stat-card fade-in-element" role="listitem">
+                <div class="stat-card__number" aria-label="3 jours de festival">
+                  3
+                </div>
                 <div class="stat-card__label">Jours de festival</div>
               </div>
             </div>
@@ -374,11 +425,13 @@
       </section>
 
       <!-- Nos Partenaires -->
-      <section class="section section--indigo">
+      <section class="section section--indigo" aria-labelledby="partners-title">
         <div class="container">
           <div class="section__header text-center">
             <span class="section__label text-golden">Nos Partenaires</span>
-            <h2 class="section__title text-cream">Ils Nous Soutiennent</h2>
+            <h2 class="section__title text-cream" id="partners-title">
+              Ils Nous Soutiennent
+            </h2>
             <p class="section__subtitle text-cream">
               Un festival rendu possible grâce à nos précieux partenaires
             </p>
@@ -391,11 +444,11 @@
                 Partenaires Institutionnels
               </h3>
               <div class="partners-grid">
-                <div class="partner-card">
+                <article class="partner-card">
                   <div class="partner-card__logo">
                     <img
                       src="./assets/images/logo_Poitiers.svg"
-                      alt="Ville de Poitiers"
+                      alt="Logo Ville de Poitiers"
                     />
                   </div>
                   <h4 class="partner-card__name">Ville de Poitiers</h4>
@@ -403,26 +456,26 @@
                     Soutien financier et logistique, mise à disposition des
                     salles municipales
                   </p>
-                </div>
+                </article>
 
-                <div class="partner-card">
+                <article class="partner-card">
                   <div class="partner-card__logo">
                     <img
                       src="./assets/images/logo_NouvelleAquitaine.png"
-                      alt="Région Nouvelle-Aquitaine"
+                      alt="Logo Région Nouvelle-Aquitaine"
                     />
                   </div>
                   <h4 class="partner-card__name">Région Nouvelle-Aquitaine</h4>
                   <p class="partner-card__description">
                     Subvention culturelle dans le cadre de Poitiers 2026
                   </p>
-                </div>
+                </article>
 
-                <div class="partner-card">
+                <article class="partner-card">
                   <div class="partner-card__logo">
                     <img
                       src="./assets/images/logo_ministere-de-la-culture.png"
-                      alt="Ministère de la Culture"
+                      alt="Logo Ministère de la Culture"
                     />
                   </div>
                   <h4 class="partner-card__name">Ministère de la Culture</h4>
@@ -430,7 +483,7 @@
                     Financement dans le cadre de la valorisation du patrimoine
                     immatériel
                   </p>
-                </div>
+                </article>
               </div>
             </div>
 
@@ -440,11 +493,11 @@
                 Partenaires Culturels
               </h3>
               <div class="partners-grid">
-                <div class="partner-card">
+                <article class="partner-card">
                   <div class="partner-card__logo">
                     <img
                       src="./assets/images/logo_conservatoire.png"
-                      alt="Conservatoire"
+                      alt="Logo Conservatoire de Poitiers"
                     />
                   </div>
                   <h4 class="partner-card__name">Conservatoire de Poitiers</h4>
@@ -452,20 +505,20 @@
                     Mise à disposition d'instruments et intervention de
                     professeurs
                   </p>
-                </div>
+                </article>
 
-                <div class="partner-card">
+                <article class="partner-card">
                   <div class="partner-card__logo">
                     <img
                       src="./assets/images/logo_museee-sainte-croix.png"
-                      alt="Musée Sainte-Croix"
+                      alt="Logo Musée Sainte-Croix"
                     />
                   </div>
                   <h4 class="partner-card__name">Musée Sainte-Croix</h4>
                   <p class="partner-card__description">
                     Prêt d'instruments anciens pour l'exposition
                   </p>
-                </div>
+                </article>
               </div>
             </div>
 
@@ -475,31 +528,31 @@
                 Partenaires Privés
               </h3>
               <div class="partners-grid">
-                <div class="partner-card">
+                <article class="partner-card">
                   <div class="partner-card__logo">
                     <img
                       src="./assets/images/logo_paranthèse_sucre.jpg"
-                      alt="Boulangerie Locale"
+                      alt="Logo Boulangerie Artisanale"
                     />
                   </div>
                   <h4 class="partner-card__name">Boulangerie Artisanale</h4>
                   <p class="partner-card__description">
                     Fourniture de Broyé du Poitou et Tourteau fromager
                   </p>
-                </div>
+                </article>
 
-                <div class="partner-card">
+                <article class="partner-card">
                   <div class="partner-card__logo">
                     <img
                       src="./assets/images/logo_fondation_du_patrimoine.png"
-                      alt="Mécène Local"
+                      alt="Logo Entreprises Locales"
                     />
                   </div>
                   <h4 class="partner-card__name">Entreprises Locales</h4>
                   <p class="partner-card__description">
                     Mécénat et soutien logistique
                   </p>
-                </div>
+                </article>
               </div>
             </div>
           </div>
@@ -519,24 +572,31 @@
       </section>
 
       <!-- Contact Info -->
-      <section class="section section--cream">
+      <section
+        class="section section--cream"
+        aria-labelledby="contact-info-title"
+      >
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-8 mx-auto text-center">
-              <h2 class="section__title">Restons en Contact</h2>
+              <h2 class="section__title" id="contact-info-title">
+                Restons en Contact
+              </h2>
               <p class="section__subtitle mb-5">
                 Une question ? Une suggestion ? N'hésitez pas à nous contacter
               </p>
 
               <div class="contact-info-grid">
-                <div class="contact-info-item">
-                  <div class="contact-info-item__icon">
+                <article class="contact-info-item">
+                  <div class="contact-info-item__icon" aria-hidden="true">
                     <svg
                       width="32"
                       height="32"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
+                      aria-hidden="true"
+                      focusable="false"
                     >
                       <use href="assets/icons/sprite.svg#map-pin"></use>
                     </svg>
@@ -545,16 +605,18 @@
                   <p class="contact-info-item__text">
                     36 rue Victor Hugo<br />86000 Poitiers
                   </p>
-                </div>
+                </article>
 
-                <div class="contact-info-item">
-                  <div class="contact-info-item__icon">
+                <article class="contact-info-item">
+                  <div class="contact-info-item__icon" aria-hidden="true">
                     <svg
                       width="32"
                       height="32"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
+                      aria-hidden="true"
+                      focusable="false"
                     >
                       <use href="assets/icons/sprite.svg#mail"></use>
                     </svg>
@@ -568,16 +630,18 @@
                       contact@poitou-en-scene.fr
                     </a>
                   </p>
-                </div>
+                </article>
 
-                <div class="contact-info-item">
-                  <div class="contact-info-item__icon">
+                <article class="contact-info-item">
+                  <div class="contact-info-item__icon" aria-hidden="true">
                     <svg
                       width="32"
                       height="32"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
+                      aria-hidden="true"
+                      focusable="false"
                     >
                       <circle cx="16" cy="16" r="12"></circle>
                       <path d="M16 8v8l4 4"></path>
@@ -587,7 +651,7 @@
                   <p class="contact-info-item__text">
                     Lun - Ven : 9h - 17h<br />Sam : 10h - 16h
                   </p>
-                </div>
+                </article>
               </div>
 
               <a href="contact.html" class="btn btn--primary btn--lg mt-5"
@@ -600,7 +664,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer__content">
           <div class="row">
@@ -618,16 +682,20 @@
 
             <div class="col-sm-4 col-md-4">
               <h3 class="footer__title">Liens rapides</h3>
-              <ul class="footer__links">
-                <li><a href="index.html" class="footer__link">Accueil</a></li>
-                <li>
-                  <a href="programme.html" class="footer__link">Programme</a>
-                </li>
-                <li>
-                  <a href="a-propos.html" class="footer__link">À Propos</a>
-                </li>
-                <li><a href="contact.html" class="footer__link">Contact</a></li>
-              </ul>
+              <nav aria-label="Liens rapides du pied de page">
+                <ul class="footer__links">
+                  <li><a href="index.html" class="footer__link">Accueil</a></li>
+                  <li>
+                    <a href="programme.html" class="footer__link">Programme</a>
+                  </li>
+                  <li>
+                    <a href="a-propos.html" class="footer__link">À Propos</a>
+                  </li>
+                  <li>
+                    <a href="contact.html" class="footer__link">Contact</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
 
             <div class="col-sm-4 col-md-4">
@@ -644,14 +712,38 @@
                   >
                 </p>
               </address>
-              <div class="footer__social">
-                <a href="#" class="footer__social-link" aria-label="Facebook">
-                  <svg width="24" height="24" fill="currentColor">
+              <div
+                class="footer__social"
+                role="navigation"
+                aria-label="Liens réseaux sociaux"
+              >
+                <a
+                  href="#"
+                  class="footer__social-link"
+                  aria-label="Suivez-nous sur Facebook"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
                     <use href="assets/icons/sprite.svg#facebook"></use>
                   </svg>
                 </a>
-                <a href="#" class="footer__social-link" aria-label="Instagram">
-                  <svg width="24" height="24" fill="currentColor">
+                <a
+                  href="#"
+                  class="footer__social-link"
+                  aria-label="Suivez-nous sur Instagram"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
                     <use href="assets/icons/sprite.svg#instagram"></use>
                   </svg>
                 </a>
