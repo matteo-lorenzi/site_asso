@@ -39,23 +39,150 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
 
-    <!-- Structured Data - ContactPage -->
+    <!-- Structured Data - ContactPage & Organization -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Poitou en Scène",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+33-5-49-XX-XX-XX",
-            "contactType": "Customer Service",
+        "@graph": [
+          {
+            "@type": "ContactPage",
+            "@id": "https://poitou-en-scene.fr/contact",
+            "url": "https://poitou-en-scene.fr/contact",
+            "name": "Contact - Poitou en Scène",
+            "description": "Contactez l'association Poitou en Scène pour toute question ou pour devenir bénévole",
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Accueil",
+                  "item": "https://poitou-en-scene.fr"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Contact",
+                  "item": "https://poitou-en-scene.fr/contact"
+                }
+              ]
+            },
+            "mainEntity": {
+              "@id": "https://poitou-en-scene.fr/#organization"
+            },
+            "inLanguage": "fr"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://poitou-en-scene.fr/#organization",
+            "name": "Association Poitou en Scène",
+            "alternateName": "Poitou en Scène",
+            "url": "https://poitou-en-scene.fr",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://poitou-en-scene.fr/images/logo.svg"
+            },
+            "description": "Association artistique dédiée à la valorisation de la culture poitevine traditionnelle",
             "email": "contact@poitou-en-scene.fr",
-            "availableLanguage": ["fr"],
-            "areaServed": "FR"
+            "telephone": "+33-5-49-XX-XX-XX",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "36 rue Victor Hugo",
+              "addressLocality": "Poitiers",
+              "postalCode": "86000",
+              "addressRegion": "Nouvelle-Aquitaine",
+              "addressCountry": "FR"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 46.5802,
+              "longitude": 0.3404
+            },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "telephone": "+33-5-49-XX-XX-XX",
+                "email": "contact@poitou-en-scene.fr",
+                "availableLanguage": ["French"],
+                "areaServed": "FR",
+                "hoursAvailable": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "09:00",
+                  "closes": "17:00"
+                }
+              },
+              {
+                "@type": "ContactPoint",
+                "contactType": "Volunteer Recruitment",
+                "email": "benevoles@poitou-en-scene.fr",
+                "availableLanguage": ["French"],
+                "areaServed": "FR"
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/poitouenscene",
+              "https://www.instagram.com/poitouenscene"
+            ],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "17:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://poitou-en-scene.fr/contact#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Comment devenir bénévole ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Vous pouvez devenir bénévole en remplissant le formulaire de contact sur cette page ou en nous envoyant un email à benevoles@poitou-en-scene.fr. Nous recherchons des personnes motivées pour nous aider dans l'organisation du festival."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Le festival est-il gratuit ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Oui, l'ensemble des activités du festival Poitou en Scène est gratuit et accessible à tous. Certains ateliers nécessitent une inscription préalable."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quels sont les horaires d'ouverture du secrétariat ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Notre secrétariat est ouvert du lundi au vendredi de 9h à 17h, et le samedi de 10h à 16h. Vous pouvez nous contacter par email à tout moment."
+                }
+              }
+            ]
           }
-        }
+        ]
       }
     </script>
 

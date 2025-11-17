@@ -39,24 +39,225 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
 
-    <!-- Structured Data - About Page -->
+    <!-- Structured Data - AboutPage & Organization -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "AboutPage",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Poitou en Scène",
-          "description": "Association artistique dédiée à la valorisation de la culture poitevine traditionnelle depuis 2010",
-          "foundingDate": "2010",
-          "numberOfEmployees": "15",
-          "knowsAbout": [
-            "Culture traditionnelle",
-            "Arts de la scène",
-            "Patrimoine poitevin"
-          ],
-          "slogan": "Transmettre, partager, célébrer notre patrimoine vivant"
-        }
+        "@graph": [
+          {
+            "@type": "AboutPage",
+            "@id": "https://poitou-en-scene.fr/a-propos",
+            "url": "https://poitou-en-scene.fr/a-propos",
+            "name": "À Propos - Poitou en Scène",
+            "description": "Découvrez l'association Poitou en Scène : notre histoire, nos valeurs, notre équipe et nos partenaires",
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Accueil",
+                  "item": "https://poitou-en-scene.fr"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "À Propos",
+                  "item": "https://poitou-en-scene.fr/a-propos"
+                }
+              ]
+            },
+            "mainEntity": {
+              "@id": "https://poitou-en-scene.fr/#organization"
+            },
+            "inLanguage": "fr"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://poitou-en-scene.fr/#organization",
+            "name": "Association Poitou en Scène",
+            "alternateName": "Poitou en Scène",
+            "legalName": "Association Poitou en Scène",
+            "url": "https://poitou-en-scene.fr",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://poitou-en-scene.fr/images/logo.svg",
+              "width": 250,
+              "height": 100
+            },
+            "description": "Association artistique dédiée à la valorisation de la culture poitevine traditionnelle depuis 2024",
+            "foundingDate": "2024",
+            "foundingLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Poitiers",
+                "addressRegion": "Nouvelle-Aquitaine",
+                "addressCountry": "FR"
+              }
+            },
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "value": 15,
+              "description": "Bénévoles permanents"
+            },
+            "knowsAbout": [
+              "Culture traditionnelle",
+              "Arts de la scène",
+              "Patrimoine poitevin",
+              "Danse folklorique",
+              "Musique traditionnelle",
+              "Chant traditionnel"
+            ],
+            "slogan": "Transmettre, partager, célébrer notre patrimoine vivant",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "36 rue Victor Hugo",
+              "addressLocality": "Poitiers",
+              "postalCode": "86000",
+              "addressRegion": "Nouvelle-Aquitaine",
+              "addressCountry": "FR"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 46.5802,
+              "longitude": 0.3404
+            },
+            "email": "contact@poitou-en-scene.fr",
+            "telephone": "+33-5-49-XX-XX-XX",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "Customer Service",
+              "telephone": "+33-5-49-XX-XX-XX",
+              "email": "contact@poitou-en-scene.fr",
+              "availableLanguage": ["French"],
+              "areaServed": "FR"
+            },
+            "sameAs": [
+              "https://www.facebook.com/poitouenscene",
+              "https://www.instagram.com/poitouenscene"
+            ],
+            "memberOf": {
+              "@type": "Project",
+              "name": "Poitiers 2026 - Capitale Européenne de la Culture",
+              "url": "https://poitiers2026.fr"
+            },
+            "seeks": {
+              "@type": "Demand",
+              "name": "Bénévoles",
+              "description": "Nous recherchons des bénévoles motivés pour nous aider dans l'organisation du festival"
+            }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://poitou-en-scene.fr/a-propos#values",
+            "name": "Valeurs de l'association",
+            "description": "Les cinq piliers fondamentaux qui guident nos actions",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Thing",
+                  "name": "Communautaire",
+                  "description": "Créer du lien social et renforcer le sentiment d'appartenance à travers des événements rassembleurs qui célèbrent notre patrimoine commun"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Thing",
+                  "name": "Inclusivité",
+                  "description": "Rendre la culture accessible à tous, sans distinction d'âge, d'origine ou de condition sociale"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "Thing",
+                  "name": "Partage",
+                  "description": "Transmettre les savoirs et savoir-faire traditionnels aux nouvelles générations dans une ambiance conviviale et bienveillante"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "Thing",
+                  "name": "Proximité",
+                  "description": "Ancrer nos actions dans le territoire poitevin, valoriser les artistes locaux et favoriser les circuits courts culturels"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": "Thing",
+                  "name": "Valorisation",
+                  "description": "Mettre en lumière le patrimoine culturel poitevin, souvent méconnu, et lui donner la reconnaissance qu'il mérite"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://poitou-en-scene.fr/a-propos#partners",
+            "name": "Partenaires de l'association",
+            "description": "Nos précieux partenaires institutionnels, culturels et privés",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "Organization",
+                  "name": "Ville de Poitiers",
+                  "description": "Soutien financier et logistique, mise à disposition des salles municipales",
+                  "url": "https://www.poitiers.fr"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "Organization",
+                  "name": "Région Nouvelle-Aquitaine",
+                  "description": "Subvention culturelle dans le cadre de Poitiers 2026",
+                  "url": "https://www.nouvelle-aquitaine.fr"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "GovernmentOrganization",
+                  "name": "Ministère de la Culture",
+                  "description": "Financement dans le cadre de la valorisation du patrimoine immatériel",
+                  "url": "https://www.culture.gouv.fr"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "EducationalOrganization",
+                  "name": "Conservatoire de Poitiers",
+                  "description": "Mise à disposition d'instruments et intervention de professeurs"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": "Museum",
+                  "name": "Musée Sainte-Croix",
+                  "description": "Prêt d'instruments anciens pour l'exposition"
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
 

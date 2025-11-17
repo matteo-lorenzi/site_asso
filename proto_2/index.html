@@ -64,33 +64,185 @@
       content="black-translucent"
     />
 
-    <!-- Structured Data - Organization -->
+    <!-- Structured Data - Organization & Event -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Poitou en Scène",
-        "url": "https://poitou-en-scene.fr",
-        "logo": "https://poitou-en-scene.fr/images/logo.svg",
-        "description": "Festival des arts de la scène à Poitiers - Théâtre, danse et musique pour célébrer Poitiers 2026",
-        "sameAs": [
-          "https://www.facebook.com/poitouenscene",
-          "https://www.instagram.com/poitouenscene"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "12 Rue du Théâtre",
-          "addressLocality": "Poitiers",
-          "postalCode": "86000",
-          "addressCountry": "FR"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+33-5-49-XX-XX-XX",
-          "contactType": "Customer Service",
-          "email": "contact@poitou-en-scene.fr",
-          "availableLanguage": ["fr"]
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://poitou-en-scene.fr/#organization",
+            "name": "Association Poitou en Scène",
+            "alternateName": "Poitou en Scène",
+            "url": "https://poitou-en-scene.fr",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://poitou-en-scene.fr/images/logo.svg",
+              "width": 250,
+              "height": 100
+            },
+            "description": "Association artistique dédiée à la valorisation de la culture poitevine traditionnelle depuis 2024",
+            "foundingDate": "2024",
+            "numberOfEmployees": {
+              "@type": "QuantitativeValue",
+              "value": 15
+            },
+            "slogan": "Transmettre, partager, célébrer notre patrimoine vivant",
+            "knowsAbout": [
+              "Culture traditionnelle",
+              "Arts de la scène",
+              "Patrimoine poitevin",
+              "Danse folklorique",
+              "Musique traditionnelle",
+              "Chant traditionnel"
+            ],
+            "sameAs": [
+              "https://www.facebook.com/poitouenscene",
+              "https://www.instagram.com/poitouenscene"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "36 rue Victor Hugo",
+              "addressLocality": "Poitiers",
+              "postalCode": "86000",
+              "addressRegion": "Nouvelle-Aquitaine",
+              "addressCountry": "FR"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 46.5802,
+              "longitude": 0.3404
+            },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+33-5-49-XX-XX-XX",
+                "contactType": "Customer Service",
+                "email": "contact@poitou-en-scene.fr",
+                "availableLanguage": ["French"],
+                "areaServed": "FR",
+                "hoursAvailable": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "09:00",
+                  "closes": "17:00"
+                }
+              }
+            ],
+            "memberOf": {
+              "@type": "Project",
+              "name": "Poitiers 2026 - Capitale Européenne de la Culture"
+            }
+          },
+          {
+            "@type": "Festival",
+            "@id": "https://poitou-en-scene.fr/#festival",
+            "name": "Festival Poitou en Scène 2026",
+            "alternateName": "Poitou en Scène Festival",
+            "description": "Festival de musique, danse et chant traditionnels poitevins. Trois jours d'ateliers participatifs, concerts authentiques et expositions pédagogiques.",
+            "startDate": "2026-06-19T10:00:00+02:00",
+            "endDate": "2026-06-21T22:00:00+02:00",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "location": {
+              "@type": "Place",
+              "name": "Centre Culturel de Poitiers",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "36 rue Victor Hugo",
+                "addressLocality": "Poitiers",
+                "postalCode": "86000",
+                "addressRegion": "Nouvelle-Aquitaine",
+                "addressCountry": "FR"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 46.5802,
+                "longitude": 0.3404
+              }
+            },
+            "organizer": {
+              "@id": "https://poitou-en-scene.fr/#organization"
+            },
+            "image": ["https://poitou-en-scene.fr/images/og-image.jpg"],
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Pass 3 jours",
+                "price": "0",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2025-11-01T00:00:00+01:00",
+                "url": "https://poitou-en-scene.fr/#reservation"
+              },
+              {
+                "@type": "Offer",
+                "name": "Tarif solidaire",
+                "description": "Tarif réduit pour étudiants, demandeurs d'emploi et familles nombreuses",
+                "price": "0",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock"
+              }
+            ],
+            "performer": [
+              {
+                "@type": "PerformingGroup",
+                "name": "Compagnie de Danse Traditionnelle Poitevine"
+              },
+              {
+                "@type": "PerformingGroup",
+                "name": "Ensemble Musical du Poitou"
+              },
+              {
+                "@type": "MusicGroup",
+                "name": "Chœur Traditionnel de Poitiers"
+              }
+            ],
+            "subEvent": [
+              {
+                "@type": "Event",
+                "name": "Ateliers de danse traditionnelle",
+                "description": "Initiations et perfectionnements aux danses poitevines",
+                "startDate": "2026-06-19T14:00:00+02:00",
+                "endDate": "2026-06-19T18:00:00+02:00"
+              },
+              {
+                "@type": "Event",
+                "name": "Ateliers de musique",
+                "description": "Découverte des instruments traditionnels",
+                "startDate": "2026-06-20T10:00:00+02:00",
+                "endDate": "2026-06-20T12:00:00+02:00"
+              },
+              {
+                "@type": "MusicEvent",
+                "name": "Concert de clôture",
+                "description": "Grand concert final avec tous les artistes",
+                "startDate": "2026-06-21T20:00:00+02:00",
+                "endDate": "2026-06-21T22:00:00+02:00"
+              }
+            ],
+            "inLanguage": "fr",
+            "isAccessibleForFree": true,
+            "keywords": "festival, culture poitevine, danse traditionnelle, musique folk, Poitiers 2026"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://poitou-en-scene.fr/#website",
+            "url": "https://poitou-en-scene.fr",
+            "name": "Poitou en Scène",
+            "description": "Site officiel du festival Poitou en Scène",
+            "publisher": {
+              "@id": "https://poitou-en-scene.fr/#organization"
+            },
+            "inLanguage": "fr"
+          }
+        ]
       }
     </script>
     <link
