@@ -153,16 +153,19 @@
 .filter-btn--danse.filter-btn--active {
   background: var(--color-terracotta);
   border-color: var(--color-terracotta);
+  color: var(--color-white);
 }
 
 .filter-btn--musique.filter-btn--active {
   background: var(--color-indigo);
   border-color: var(--color-indigo);
+  color: var(--color-white);
 }
 
 .filter-btn--chant.filter-btn--active {
   background: var(--color-golden);
   border-color: var(--color-golden);
+  color: var(--color-white);
 }
 
 .filter-btn__icon {
