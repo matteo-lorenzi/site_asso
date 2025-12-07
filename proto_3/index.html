@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festival Poitou En Scène - Néo-Folklore</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP for Parallax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&family=Playfair+Display:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      :root {
+        --ink-black: #1a1a1a;
+        --poitou-red: #c14c43;
+        --off-white: #f9f7f2;
+        --gradient-start: #f6d365;
+        --gradient-end: #fda085;
+      }
+
+      /* --- Global Texture & Typography --- */
+      body {
+        background-color: var(--gradient-start);
+        background-image: linear-gradient(
+          180deg,
+          var(--gradient-start) 0%,
+          var(--gradient-end) 100%
+        );
+        color: var(--ink-black);
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+
+      /* Noise Overlay (Le Grain) */
+      .noise-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.07;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      h1,
+      h2,
+      h3,
+      .font-display {
+        font-family: "Anton", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .font-serif-accent {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* --- Halftone Effect (La Trame) --- */
+      .halftone-wrapper {
+        position: relative;
+        overflow: hidden;
+        filter: contrast(120%) grayscale(100%);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      /* The Dot Pattern Overlay */
+      .halftone-wrapper::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(
+          circle,
+          var(--ink-black) 25%,
+          transparent 26%
+        );
+        background-size: 6px 6px;
+        opacity: 0.3;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+
+      /* Hover Effect: Full Color */
+      .card-hover:hover .halftone-wrapper {
+        filter: contrast(100%) grayscale(0%);
+      }
+      .card-hover:hover .halftone-wrapper::after {
+        opacity: 0;
+      }
+
+      /* --- UI Elements --- */
+      .btn-brut {
+        background-color: var(--poitou-red);
+        color: white;
+        border: 2px solid var(--ink-black);
+        box-shadow: 4px 4px 0px 0px var(--ink-black);
+        transition: all 0.2s ease;
+      }
+
+      .btn-brut:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px 0px var(--ink-black);
+      }
+
+      .border-brut {
+        border: 3px solid var(--ink-black);
+      }
+
+      /* Marquee Animation */
+      .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .marquee-content {
+        display: inline-block;
+        animation: marquee 20s linear infinite;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--gradient-end);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--ink-black);
+        border: 2px solid var(--gradient-end);
+      }
+
+      /* Collage Floating Elements */
+      .floating-element {
+        position: absolute;
+        z-index: 0;
+        pointer-events: none;
+        filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.2));
+      }
+
+      /* Menu Overlay */
+      .menu-overlay {
+        clip-path: circle(0% at 100% 0);
+        transition: clip-path 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+      }
+      .menu-overlay.active {
+        clip-path: circle(150% at 100% 0);
+      }
+
+      .nav-link:hover {
+        color: var(--poitou-red);
+        font-style: italic; /* Slight disruption */
+      }
+
+      /* View Switching Classes */
+      .view-section {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .view-section.active {
+        display: block;
+        opacity: 1;
+      }
+
+      /* Filter Styles */
+      .filter-btn.active {
+        background-color: #f9f7f2;
+        color: var(--poitou-red);
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-black selection:text-[#FDA085]">
+    <!-- Noise Texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <!-- Modified: Removed mix-blend-difference and noise layers. Added ID for JS color control -->
+    <nav
+      id="main-nav"
+      class="fixed top-0 w-full z-50 transition-colors duration-300 text-[#c14c43]"
+    >
+      <!-- Background Layer: Clean glass effect without noise -->
+      <div
+        class="absolute inset-0 bg-[#F9F7F2] opacity-0 transition-opacity duration-300"
+        id="nav-bg"
+      ></div>
+
+      <!-- Content Layer -->
+      <div class="relative px-6 py-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+          <button
+            onclick="switchView('home')"
+            class="font-display text-2xl tracking-widest border-2 border-current px-2 py-1 rotate-1 hover:bg-current hover:text-white transition-colors"
+          >
+            POITOU
+          </button>
+          <button
+            id="menu-btn"
+            class="group flex flex-col gap-1.5 cursor-pointer z-50"
+          >
+            <span
+              class="w-8 h-1 bg-current transition-transform group-hover:rotate-3"
+            ></span>
+            <span
+              class="w-8 h-1 bg-current transition-transform group-hover:-rotate-3"
+            ></span>
+            <span
+              class="w-8 h-1 bg-current transition-transform group-hover:translate-x-1"
+            ></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Full Screen Menu -->
+    <div
+      id="menu-overlay"
+      class="menu-overlay fixed inset-0 bg-[#1A1A1A] z-40 flex items-center justify-center"
+    >
+      <div class="text-center flex flex-col gap-4 md:gap-8">
+        <a
+          href="#"
+          onclick="switchView('programme'); toggleMenu()"
+          class="nav-link font-display text-[12vw] md:text-[7vw] leading-none text-[#F9F7F2] transition-colors"
+          >PROGRAMME</a
+        >
+        <a
+          href="#"
+          onclick="switchView('programme'); toggleMenu()"
+          class="nav-link font-display text-[12vw] md:text-[7vw] leading-none text-[#F9F7F2] transition-colors"
+          >ARTISTES</a
+        >
+        <a
+          href="#"
+          class="nav-link font-display text-[12vw] md:text-[7vw] leading-none text-[#F9F7F2] transition-colors"
+          >INFOS</a
+        >
+        <a
+          href="#"
+          class="nav-link font-display text-[12vw] md:text-[7vw] leading-none text-[#F9F7F2] transition-colors"
+          >BILLETTERIE</a
+        >
+      </div>
+    </div>
+
+    <!-- HOME VIEW -->
+    <main id="home-view" class="view-section active">
+      <!-- Hero Section -->
+      <header
+        class="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-12 overflow-hidden"
+      >
+        <!-- Collage Background Elements (Parallax) -->
+        <img
+          src="https://images.unsplash.com/photo-1514533450685-4493e01d1fdc?q=80&w=500&auto=format&fit=crop"
+          class="floating-element parallax top-[15%] left-[5%] w-48 h-64 object-cover grayscale opacity-60 rotate-[-12deg] border-4 border-black"
+          data-speed="0.2"
+          alt="Texture"
+        />
+
+        <div
+          class="floating-element parallax top-[20%] right-[10%] w-32 h-32 bg-[#c14c43] rounded-full mix-blend-multiply opacity-80"
+          data-speed="0.5"
+        ></div>
+
+        <!-- Main Content -->
+        <div class="relative z-10 text-center max-w-7xl mx-auto px-4">
+          <!-- Removed the "Néo-Folklore & Collage" banner element -->
+
+          <h1
+            class="text-[15vw] md:text-[12vw] leading-[0.85] text-[#1A1A1A] mb-6 relative"
+          >
+            <span
+              class="block hover:text-[#F9F7F2] hover:stroke-black transition-colors duration-300"
+              style="-webkit-text-stroke: 3px #1a1a1a"
+              >FESTIVAL</span
+            >
+            <span
+              class="block text-[#F9F7F2] relative"
+              style="
+                text-shadow: 4px 4px 0px #1a1a1a;
+                -webkit-text-stroke: 2px #1a1a1a;
+              "
+            >
+              POITOU
+            </span>
+            <span class="block">EN SCÈNE</span>
+          </h1>
+
+          <div
+            class="flex flex-col md:flex-row items-center justify-center gap-8 mt-12"
+          >
+            <div class="text-center md:text-right">
+              <span
+                class="font-serif-accent text-5xl md:text-6xl font-bold block"
+                >03.04.05</span
+              >
+              <span class="font-display text-2xl block tracking-widest"
+                >JUILLET 2026</span
+              >
+            </div>
+
+            <div class="h-16 w-1 bg-[#1A1A1A] hidden md:block rotate-12"></div>
+
+            <button
+              onclick="switchView('programme')"
+              class="btn-brut px-8 py-4 text-xl font-bold font-display tracking-wider uppercase inline-block bg-[#c14c43]"
+            >
+              Voir le Programme
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Marquee Section -->
+      <div
+        class="bg-[#1A1A1A] text-[#F9F7F2] py-4 border-y-4 border-[#F9F7F2] rotate-1 scale-105 z-20 relative"
+      >
+        <div
+          class="marquee-container font-display text-4xl md:text-6xl tracking-wider"
+        >
+          <div class="marquee-content">
+            OUVERTURE DE LA BILLETTERIE — NE MANQUEZ PAS LE RYTHME — TRADITION &
+            MODERNITÉ — OUVERTURE DE LA BILLETTERIE — NE MANQUEZ PAS LE RYTHME —
+            TRADITION & MODERNITÉ —
+          </div>
+        </div>
+      </div>
+
+      <!-- Intro Text -->
+      <section class="py-24 px-6 relative max-w-4xl mx-auto">
+        <div
+          class="bg-[#F9F7F2] p-8 md:p-12 border-brut shadow-[8px_8px_0px_0px_rgba(26,26,26,1)] rotate-[-1deg]"
+        >
+          <h2 class="text-4xl md:text-6xl mb-6">
+            L'Âme du Poitou, <br /><span
+              class="text-[#c14c43] italic font-serif-accent"
+              >Remixée.</span
+            >
+          </h2>
+          <p
+            class="font-sans text-xl md:text-2xl leading-relaxed text-gray-800"
+          >
+            Oubliez tout ce que vous savez sur le folklore. Ici, la vielle à
+            roue rencontre les synthétiseurs modulaires. Les danses
+            traditionnelles se fondent dans la performance contemporaine.
+            <strong class="bg-[#F6D365] px-1"
+              >Le passé n'est pas une relique, c'est un sample.</strong
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Preview Grid (Home version) -->
+      <section
+        class="py-20 px-4 md:px-12 bg-[#F9F7F2] relative clip-path-jagged"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex justify-between items-end mb-16 border-b-4 border-black pb-4"
+          >
+            <h2 class="text-6xl md:text-8xl text-[#1A1A1A]">A L'AFFICHE</h2>
+            <button
+              onclick="switchView('programme')"
+              class="font-serif-accent text-2xl italic hover:text-[#c14c43]"
+            >
+              Voir tout ->
+            </button>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+          >
+            <!-- Artist Card 1 -->
+            <article class="card-hover group cursor-pointer">
+              <div class="relative mb-4 border-brut bg-black h-[400px]">
+                <!-- Image with Halftone -->
+                <div class="halftone-wrapper w-full h-full">
+                  <img
+                    src="https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?q=80&w=800&auto=format&fit=crop"
+                    alt="Artist"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+
+                <!-- Floating Label -->
+                <div
+                  class="absolute -top-4 -right-4 bg-white border-2 border-black px-4 py-1 font-display text-xl rotate-3 group-hover:bg-[#F6D365] transition-colors"
+                >
+                  SAM 04
+                </div>
+              </div>
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3
+                    class="font-display text-4xl mb-1 group-hover:text-[#c14c43] transition-colors"
+                  >
+                    ELECTRO-VIELLE
+                  </h3>
+                  <p class="font-serif-accent text-lg text-gray-600">
+                    Fusion expérimentale
+                  </p>
+                </div>
+                <i
+                  data-lucide="arrow-up-right"
+                  class="w-8 h-8 group-hover:rotate-45 transition-transform duration-300"
+                ></i>
+              </div>
+            </article>
+            <!-- ... (keeping limited cards for home) ... -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PROGRAMME VIEW (Initially Hidden) -->
+    <main
+      id="programme-view"
+      class="view-section hidden pt-24 bg-[#c14c43] min-h-screen"
+    >
+      <!-- Filter Header (Style requested: Filter like reference image) -->
+      <!-- Modified: Removed sticky top-20 to prevent scrolling over text -->
+      <section class="relative z-30 pb-12 px-4">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-6">
+            <h2
+              class="font-display text-6xl md:text-8xl text-[#F9F7F2] mb-2 drop-shadow-lg"
+              style="-webkit-text-stroke: 2px #1a1a1a"
+            >
+              PROGRAMMATION
+            </h2>
+            <p
+              class="font-serif-accent text-[#F9F7F2] text-xl italic opacity-90"
+            >
+              3 Jours de transe & de tradition
+            </p>
+          </div>
+
+          <!-- Custom Filter Bar -->
+          <div class="flex justify-center items-center relative">
+            <!-- The white line -->
+            <div
+              class="absolute top-1/2 left-0 w-full h-1 bg-[#F9F7F2] opacity-50 z-0"
+            ></div>
+
+            <div
+              class="flex gap-4 md:gap-8 overflow-x-auto py-4 px-4 z-10 max-w-full"
+            >
+              <!-- Added bg-[#c14c43] to inactive buttons to hide the line behind text -->
+              <button
+                class="filter-btn active px-6 py-2 bg-[#c14c43] text-[#F9F7F2] font-display text-xl md:text-2xl uppercase tracking-wider hover:bg-[#F9F7F2] hover:text-[#c14c43] transition-all border-2 border-transparent hover:border-[#1A1A1A]"
+              >
+                TOUS
+              </button>
+              <button
+                class="filter-btn px-6 py-2 bg-[#c14c43] text-[#F9F7F2] font-display text-xl md:text-2xl uppercase tracking-wider hover:bg-[#F9F7F2] hover:text-[#c14c43] transition-all border-2 border-transparent hover:border-[#1A1A1A]"
+              >
+                03/07
+              </button>
+              <button
+                class="filter-btn px-6 py-2 bg-[#c14c43] text-[#F9F7F2] font-display text-xl md:text-2xl uppercase tracking-wider hover:bg-[#F9F7F2] hover:text-[#c14c43] transition-all border-2 border-transparent hover:border-[#1A1A1A]"
+              >
+                04/07
+              </button>
+              <button
+                class="filter-btn px-6 py-2 bg-[#c14c43] text-[#F9F7F2] font-display text-xl md:text-2xl uppercase tracking-wider hover:bg-[#F9F7F2] hover:text-[#c14c43] transition-all border-2 border-transparent hover:border-[#1A1A1A]"
+              >
+                05/07
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Programme Content Grid -->
+      <section class="px-4 md:px-12 pb-24">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 gap-4">
+          <!-- Day 1 Header -->
+          <div class="flex items-center gap-4 py-8">
+            <h3
+              class="text-4xl font-display text-[#1A1A1A] bg-[#F9F7F2] px-4 py-1 -rotate-1 border-2 border-black inline-block shadow-[4px_4px_0px_black]"
+            >
+              VENDREDI 03
+            </h3>
+            <div class="h-1 bg-[#1A1A1A] flex-grow"></div>
+          </div>
+
+          <!-- Event Row 1 -->
+          <div
+            class="group bg-[#F9F7F2] p-4 border-brut hover:translate-x-2 transition-transform duration-300 flex flex-col md:flex-row gap-6 items-center"
+          >
+            <div
+              class="w-full md:w-1/3 h-48 border-2 border-black overflow-hidden relative"
+            >
+              <div class="halftone-wrapper w-full h-full absolute inset-0">
+                <img
+                  src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="flex-1 text-center md:text-left">
+              <div
+                class="flex flex-col md:flex-row justify-between items-baseline mb-2"
+              >
+                <h4
+                  class="font-display text-5xl text-[#1A1A1A] group-hover:text-[#c14c43] transition-colors"
+                >
+                  LES GÉANTS
+                </h4>
+                <span class="font-mono text-lg bg-black text-white px-2"
+                  >20:30 - SCÈNE MARAIS</span
+                >
+              </div>
+              <p
+                class="font-serif-accent text-xl text-gray-700 italic border-l-4 border-[#c14c43] pl-4"
+              >
+                Une fanfare de 15 musiciens revisite les classiques du Poitou
+                version Post-Punk.
+              </p>
+              <div class="mt-4 flex gap-2 justify-center md:justify-start">
+                <span
+                  class="text-xs font-bold border border-black px-2 py-1 rounded-full"
+                  >FANFARE</span
+                >
+                <span
+                  class="text-xs font-bold border border-black px-2 py-1 rounded-full"
+                  >TRAD</span
+                >
+              </div>
+            </div>
+            <div class="p-4">
+              <button
+                class="w-12 h-12 bg-[#1A1A1A] text-white rounded-full flex items-center justify-center hover:bg-[#c14c43] transition-colors"
+              >
+                <i data-lucide="plus" class="w-6 h-6"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Event Row 2 -->
+          <div
+            class="group bg-[#F9F7F2] p-4 border-brut hover:translate-x-2 transition-transform duration-300 flex flex-col md:flex-row gap-6 items-center"
+          >
+            <div
+              class="w-full md:w-1/3 h-48 border-2 border-black overflow-hidden relative"
+            >
+              <div class="halftone-wrapper w-full h-full absolute inset-0">
+                <img
+                  src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=800&auto=format&fit=crop"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="flex-1 text-center md:text-left">
+              <div
+                class="flex flex-col md:flex-row justify-between items-baseline mb-2"
+              >
+                <h4
+                  class="font-display text-5xl text-[#1A1A1A] group-hover:text-[#c14c43] transition-colors"
+                >
+                  SYNTH-POITOU
+                </h4>
+                <span class="font-mono text-lg bg-black text-white px-2"
+                  >22:00 - GRANDE SCÈNE</span
+                >
+              </div>
+              <p
+                class="font-serif-accent text-xl text-gray-700 italic border-l-4 border-[#c14c43] pl-4"
+              >
+                Quand Jean-Michel Jarre rencontre la cornemuse. Show laser et
+                bourrées à 2 temps.
+              </p>
+              <div class="mt-4 flex gap-2 justify-center md:justify-start">
+                <span
+                  class="text-xs font-bold border border-black px-2 py-1 rounded-full"
+                  >ELECTRO</span
+                >
+                <span
+                  class="text-xs font-bold border border-black px-2 py-1 rounded-full"
+                  >VISUAL</span
+                >
+              </div>
+            </div>
+            <div class="p-4">
+              <button
+                class="w-12 h-12 bg-[#1A1A1A] text-white rounded-full flex items-center justify-center hover:bg-[#c14c43] transition-colors"
+              >
+                <i data-lucide="plus" class="w-6 h-6"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Day 2 Header -->
+          <div class="flex items-center gap-4 py-8 mt-8">
+            <h3
+              class="text-4xl font-display text-[#1A1A1A] bg-[#F9F7F2] px-4 py-1 rotate-1 border-2 border-black inline-block shadow-[4px_4px_0px_black]"
+            >
+              SAMEDI 04
+            </h3>
+            <div class="h-1 bg-[#1A1A1A] flex-grow"></div>
+          </div>
+
+          <!-- Event Row 3 -->
+          <div
+            class="group bg-[#F9F7F2] p-4 border-brut hover:translate-x-2 transition-transform duration-300 flex flex-col md:flex-row gap-6 items-center"
+          >
+            <div
+              class="w-full md:w-1/3 h-48 border-2 border-black overflow-hidden relative"
+            >
+              <div class="halftone-wrapper w-full h-full absolute inset-0">
+                <img
+                  src="https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?q=80&w=800&auto=format&fit=crop"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="flex-1 text-center md:text-left">
+              <div
+                class="flex flex-col md:flex-row justify-between items-baseline mb-2"
+              >
+                <h4
+                  class="font-display text-5xl text-[#1A1A1A] group-hover:text-[#c14c43] transition-colors"
+                >
+                  ELECTRO-VIELLE
+                </h4>
+                <span class="font-mono text-lg bg-black text-white px-2"
+                  >21:00 - SCÈNE RIVIÈRE</span
+                >
+              </div>
+              <p
+                class="font-serif-accent text-xl text-gray-700 italic border-l-4 border-[#c14c43] pl-4"
+              >
+                Le duo légendaire revient avec un set 100% analogique. Préparez
+                vos sabots.
+              </p>
+            </div>
+            <div class="p-4">
+              <button
+                class="w-12 h-12 bg-[#1A1A1A] text-white rounded-full flex items-center justify-center hover:bg-[#c14c43] transition-colors"
+              >
+                <i data-lucide="plus" class="w-6 h-6"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Back Button -->
+      <div class="text-center pb-20">
+        <button
+          onclick="switchView('home')"
+          class="font-display text-2xl text-[#F9F7F2] border-b-2 border-[#F9F7F2] hover:text-black hover:border-black transition-colors"
+        >
+          <- RETOUR ACCUEIL
+        </button>
+      </div>
+    </main>
+
+    <!-- Footer (Shared) -->
+    <footer
+      class="bg-[#1A1A1A] text-[#F9F7F2] pt-20 pb-10 border-t-8 border-[#F6D365] relative z-20"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 mb-20">
+          <div>
+            <h2 class="text-5xl font-display mb-6">RESTEZ DANS LA BOUCLE</h2>
+            <form class="flex flex-col gap-4">
+              <input
+                type="email"
+                placeholder="VOTRE EMAIL"
+                class="bg-transparent border-b-2 border-[#F9F7F2] py-4 text-xl focus:outline-none focus:border-[#c14c43] font-sans"
+              />
+              <button
+                class="self-start btn-brut bg-[#F9F7F2] text-[#1A1A1A] px-8 py-3 font-bold mt-4 hover:bg-[#c14c43] hover:text-white border-white"
+              >
+                S'INSCRIRE
+              </button>
+            </form>
+          </div>
+          <div class="font-serif-accent text-right flex flex-col justify-end">
+            <p class="text-2xl italic mb-4">"Le futur est un écho du passé."</p>
+            <div class="flex justify-end gap-6 mt-4">
+              <a href="#" class="hover:text-[#c14c43] transition-colors"
+                ><i data-lucide="instagram" class="w-8 h-8"></i
+              ></a>
+              <a href="#" class="hover:text-[#c14c43] transition-colors"
+                ><i data-lucide="facebook" class="w-8 h-8"></i
+              ></a>
+              <a href="#" class="hover:text-[#c14c43] transition-colors"
+                ><i data-lucide="twitter" class="w-8 h-8"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800 opacity-60 text-sm font-sans"
+        >
+          <div class="flex gap-8 mb-4 md:mb-0">
+            <span class="font-bold">GRAND POITIERS</span>
+            <span class="font-bold">RÉGION NOUVELLE-AQUITAINE</span>
+            <span class="font-bold">DRAC</span>
+          </div>
+          <p>&copy; 2026 FESTIVAL POITOU EN SCÈNE. Design Concept.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Icons
+      lucide.createIcons();
+
+      // Menu Toggle Logic
+      const menuBtn = document.getElementById("menu-btn");
+      const menuOverlay = document.getElementById("menu-overlay");
+      const menuLinks = document.querySelectorAll(".nav-link");
+      const nav = document.getElementById("main-nav"); // Reference to nav
+      let isMenuOpen = false;
+
+      function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          menuOverlay.classList.add("active");
+          // Force nav to white when menu is open so it's visible on black overlay
+          nav.classList.remove("text-[#c14c43]");
+          nav.classList.add("text-[#F9F7F2]");
+
+          gsap.fromTo(
+            menuLinks,
+            { y: 100, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, delay: 0.3 }
+          );
+        } else {
+          menuOverlay.classList.remove("active");
+          // Reset color based on current view
+          const currentView = document
+            .getElementById("programme-view")
+            .classList.contains("active")
+            ? "programme"
+            : "home";
+          updateNavColor(currentView);
+        }
+      }
+
+      menuBtn.addEventListener("click", toggleMenu);
+
+      // Function to handle Nav Color based on background
+      function updateNavColor(viewName) {
+        const nav = document.getElementById("main-nav");
+        if (viewName === "programme") {
+          // On Programme (Red Background) -> White Text
+          nav.classList.remove("text-[#c14c43]");
+          nav.classList.add("text-[#F9F7F2]");
+        } else {
+          // On Home (Light Background) -> Red Text
+          nav.classList.remove("text-[#F9F7F2]");
+          nav.classList.add("text-[#c14c43]");
+        }
+      }
+
+      // --- View Switching Logic (Simple SPA Router) ---
+      function switchView(viewName) {
+        // Update Nav Color immediately
+        updateNavColor(viewName);
+
+        // Hide all sections
+        document.querySelectorAll(".view-section").forEach((el) => {
+          el.classList.remove("active");
+          setTimeout(() => {
+            if (!el.classList.contains("active")) el.classList.add("hidden");
+          }, 500); // Match transition duration
+        });
+
+        // Show target section
+        const target = document.getElementById(viewName + "-view");
+        target.classList.remove("hidden");
+        // Small delay to allow display:block to apply before opacity transition
+        setTimeout(() => {
+          target.classList.add("active");
+        }, 50);
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: "smooth" });
+
+        // Re-trigger scroll animations if needed
+        ScrollTrigger.refresh();
+      }
+
+      // --- GSAP Animations ---
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Parallax
+      gsap.utils.toArray(".parallax").forEach((layer) => {
+        const speed = layer.getAttribute("data-speed");
+        gsap.to(layer, {
+          y: (i, target) => ScrollTrigger.maxScroll(window) * speed,
+          ease: "none",
+          scrollTrigger: {
+            trigger: "body",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0,
+          },
+        });
+      });
+
+      // Card Reveal
+      const cards = document.querySelectorAll(".card-hover");
+      cards.forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+          },
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          delay: i * 0.1,
+        });
+      });
+
+      // Filter Buttons Interaction
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
