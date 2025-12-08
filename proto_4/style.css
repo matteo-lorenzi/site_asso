@@ -743,11 +743,223 @@ footer.footer {
   color: #999;
 }
 
+/* Info Grid */
+.info-grid {
+  background-color: #ffffff;
+  border: 3px solid #000;
+  border-radius: 0;
+  margin: 3rem 2rem;
+  padding: 2rem;
+  box-shadow: 8px 8px 0 #000;
+}
+
+.info-grid__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+}
+
+.info-grid__heading h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  color: #000;
+  line-height: 0.9;
+  margin: 0;
+  padding: 0;
+}
+
+.info-grid__subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #d4a574;
+  background-color: #000;
+  padding: 0.4rem 0.8rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  width: fit-content;
+  transform: rotate(-2deg);
+}
+
+.info-cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.info-card {
+  margin: 0;
+}
+
+.info-card__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  height: 100%;
+  min-height: 200px;
+  padding: 1.25rem;
+  border: 3px solid #000;
+  border-radius: 0;
+  color: #000;
+  text-decoration: none;
+  overflow: hidden;
+  background: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Le "rideau" orange qui monte depuis le bas */
+.info-card__link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ff9980 0%, #ffaa88 50%, #ff8866 100%);
+  transform: translateY(100%);
+  transition: transform 0.2s ease-in-out;
+  z-index: 0;
+}
+
+.info-card__link:hover::before,
+.info-card__link:focus-visible::before {
+  transform: translateY(0);
+}
+
+.info-card__link:hover,
+.info-card__link:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: -5px;
+}
+
+/* Header avec code et icône - niveau z-10 */
+.info-card__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.info-card__code {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: #000;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.info-card__link:hover .info-card__code,
+.info-card__link:focus-visible .info-card__code {
+  color: #000;
+  opacity: 1;
+}
+
+.info-card__icon-top {
+  font-size: 1.5rem;
+  color: #000;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.info-card__link:hover .info-card__icon-top,
+.info-card__link:focus-visible .info-card__icon-top {
+  color: #fff;
+  opacity: 1;
+}
+
+/* Contenu central - niveau z-10 */
+.info-card__content {
+  position: relative;
+  z-index: 10;
+}
+
+.info-card__content h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+  color: #000;
+  transition: color 0.3s ease-in-out;
+}
+
+.info-card__link:hover .info-card__content h3,
+.info-card__link:focus-visible .info-card__content h3 {
+  color: #fff;
+}
+
+.info-card__content p {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: #000;
+  transition: color 0.3s ease-in-out;
+}
+
+.info-card__link:hover .info-card__content p,
+.info-card__link:focus-visible .info-card__content p {
+  color: #000;
+}
+
+/* Divider - inversion de couleur */
+.info-card__divider {
+  display: block;
+  width: 30%;
+  height: 2px;
+  background: #000;
+  margin: 0.25rem 0 0.4rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.info-card__link:hover .info-card__divider,
+.info-card__link:focus-visible .info-card__divider {
+  background: #fff;
+}
+
+/* Icône flèche bas droite - niveau z-10 */
+.info-card__icon {
+  position: relative;
+  font-size: 1.2rem;
+  align-self: flex-end;
+  color: #000;
+  z-index: 10;
+  transition: color 0.3s ease-in-out;
+}
+
+.info-card__link:hover .info-card__icon,
+.info-card__link:focus-visible .info-card__icon {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .info-grid__heading h2 {
+    font-size: 1.6rem;
+  }
+
+  .info-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
 .footer-copyright p {
   margin: 0;
 }
 
-  .highlight {
+.highlight {
   color: #c14c43;
   font-weight: 700;
 }

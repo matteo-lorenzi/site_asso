@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <span class="info-card__divider" aria-hidden="true"></span>
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <header>
@@ -13,16 +18,18 @@
           <figure class="logo">
             <img src="assets/logo.png" alt="Logo Poitiers" />
           </figure>
+          <span class="info-card__divider" aria-hidden="true"></span>
           <a
             href="/benevolat"
             class="benevolat-btn"
             aria-label="Devenir bénévole"
             >BENEVOLAT</a
           >
-          <ul class="social-icons" role="list" aria-label="Réseaux sociaux">
+          <ul class="social-icons" aria-label="Réseaux sociaux">
             <li>
               <a href="#" aria-label="Instagram">
                 <img src="assets/instagram.png" alt="" aria-hidden="true" />
+                <span class="info-card__divider" aria-hidden="true"></span>
               </a>
             </li>
             <li>
@@ -33,12 +40,13 @@
             <li>
               <a href="#" aria-label="Email">
                 <img src="assets/mail.png" alt="" aria-hidden="true" />
+                <span class="info-card__divider" aria-hidden="true"></span>
               </a>
             </li>
           </ul>
         </div>
         <nav aria-label="Navigation principale">
-          <ul role="list">
+          <ul>
             <li>
               <a href="/programme">PROGRAMME</a>
             </li>
@@ -57,18 +65,15 @@
             aria-label="Acheter des billets"
             >BILLETERIE</a
           >
-          <div
-            class="language-selector"
-            role="group"
-            aria-label="Sélecteur de langue"
-          >
+          <fieldset class="language-selector">
+            <legend>Sélecteur de langue</legend>
             <button
               aria-label="Changer la langue en anglais"
               aria-pressed="true"
             >
               EN
             </button>
-          </div>
+          </fieldset>
         </div>
       </div>
     </header>
@@ -188,6 +193,134 @@
             </a>
           </div>
         </div>
+      </section>
+      <section class="info-grid" aria-labelledby="info-grid-title">
+        <div class="info-grid__heading">
+          <h2 id="info-grid-title">INFOS</h2>
+          <p class="info-grid__subtitle highlight">LE GUIDE PRATIQUE</p>
+        </div>
+        <ul class="info-cards">
+          <li class="info-card">
+            <a
+              class="info-card__link"
+              href="#"
+              aria-label="Lieu et accès, Parc de Blossac"
+            >
+              <div class="info-card__header">
+                <span class="info-card__code">LOC-01</span>
+                <span class="info-card__icon-top" aria-hidden="true"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+              </div>
+              <div class="info-card__content">
+                <h3>Lieu &amp; Accès</h3>
+                <span class="info-card__divider" aria-hidden="true"></span>
+                <p>Parc de Blossac</p>
+              </div>
+              <span class="info-card__icon" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li class="info-card">
+            <a
+              class="info-card__link"
+              href="#"
+              aria-label="Camping, zone bivouac"
+            >
+              <div class="info-card__header">
+                <span class="info-card__code">HBG-02</span>
+                <span class="info-card__icon-top" aria-hidden="true"
+                  ><i class="fa-solid fa-campground"></i
+                ></span>
+              </div>
+              <div class="info-card__content">
+                <h3>Camping</h3>
+                <span class="info-card__divider" aria-hidden="true"></span>
+                <p>Zone bivouac</p>
+              </div>
+              <span class="info-card__icon" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li class="info-card">
+            <a
+              class="info-card__link"
+              href="#"
+              aria-label="Restauration, produits locaux"
+            >
+              <div class="info-card__header">
+                <span class="info-card__code">FOO-03</span>
+                <span class="info-card__icon-top" aria-hidden="true"
+                  ><i class="fa-solid fa-utensils"></i
+                ></span>
+              </div>
+              <div class="info-card__content">
+                <h3>Restauration</h3>
+                <span class="info-card__divider" aria-hidden="true"></span>
+                <p>Produits locaux</p>
+              </div>
+              <span class="info-card__icon" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li class="info-card">
+            <a
+              class="info-card__link"
+              href="#"
+              aria-label="Accessibilité, 100 pour cent adapté"
+            >
+              <div class="info-card__header">
+                <span class="info-card__code">ACC-04</span>
+                <span class="info-card__icon-top" aria-hidden="true"
+                  ><i class="fa-solid fa-wheelchair-move"></i
+                ></span>
+              </div>
+              <div class="info-card__content">
+                <h3>Accessibilité</h3>
+                <span class="info-card__divider" aria-hidden="true"></span>
+                <p>100% adapté</p>
+              </div>
+              <span class="info-card__icon" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li class="info-card">
+            <a
+              class="info-card__link"
+              href="#"
+              aria-label="Billetterie, tarifs prévente"
+            >
+              <div class="info-card__header">
+                <span class="info-card__code">TKT-05</span>
+                <span class="info-card__icon-top" aria-hidden="true"
+                  ><i class="fa-solid fa-ticket-simple"></i
+                ></span>
+              </div>
+              <div class="info-card__content">
+                <h3>Billetterie</h3>
+                <span class="info-card__divider" aria-hidden="true"></span>
+                <p>Tarifs prévente</p>
+              </div>
+              <span class="info-card__icon" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li class="info-card">
+            <a
+              class="info-card__link"
+              href="#"
+              aria-label="Infos pratiques, foire aux questions et contact"
+            >
+              <div class="info-card__header">
+                <span class="info-card__code">INF-06</span>
+                <span class="info-card__icon-top" aria-hidden="true"
+                  ><i class="fa-solid fa-circle-info"></i
+                ></span>
+              </div>
+              <div class="info-card__content">
+                <h3>Infos pratiques</h3>
+                <span class="info-card__divider" aria-hidden="true"></span>
+                <p>FAQ &amp; contact</p>
+              </div>
+              <span class="info-card__icon" aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
     <footer class="footer">
