@@ -1,0 +1,10 @@
+/* Anti-overflow utility to prevent horizontal scrollbars */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+section, header, main, footer, div {
+  box-sizing: border-box;
+}
