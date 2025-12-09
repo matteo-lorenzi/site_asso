@@ -387,7 +387,7 @@
 /* Item 5: Call to Action */
 .bento-item:nth-child(5) {
   grid-column: span 1;
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-dark);
   color: var(--color-white);
   display: flex;
   flex-direction: column;
