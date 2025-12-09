@@ -1,0 +1,14 @@
+# Ignore doc folder
+doc/
+
+# Common patterns
+node_modules/
+*.log
+.env
+.DS_Store
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+dist/
+build/
