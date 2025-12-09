@@ -122,14 +122,13 @@
   font-size: var(--font-size-xs);
   letter-spacing: 2px;
   color: var(--color-black);
-  opacity: 0.5;
   transition: all var(--transition-base);
 }
 
 .info-card__link:hover .info-card__code,
 .info-card__link:focus-visible .info-card__code {
-  color: var(--color-black);
   opacity: 1;
+  font-size: var(--font-size-xl);
 }
 
 .info-card__icon-top {

@@ -171,7 +171,7 @@
   justify-content: center;
   font-family: var(--font-secondary);
   font-size: 0.75rem;
-  color: #6b7280; /* gray-500 */
+  color: var(--color-white); /* gray-500 */
   text-transform: uppercase;
 }
 
