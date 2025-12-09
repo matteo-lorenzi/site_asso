@@ -149,7 +149,7 @@
 
 .bento-label {
   display: inline-block;
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-dark);
   color: var(--color-white);
   font-size: var(--font-size-lg);
   font-weight: 700;
