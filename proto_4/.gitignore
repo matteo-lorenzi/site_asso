@@ -1,5 +1,5 @@
 # Ignore doc folder
-doc/
+docs/
 
 # Common patterns
 node_modules/
