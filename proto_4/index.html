@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <span class="info-card__divider" aria-hidden="true"></span>
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Poitou en Scène - Festival Poitevine 2025</title>
+    <link rel="stylesheet" href="css/main.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -15,10 +14,7 @@
     <header>
       <div class="header-container">
         <div class="header-left">
-          <figure class="logo">
-            <img src="assets/logo.png" alt="Logo Poitiers" />
-          </figure>
-          <span class="info-card__divider" aria-hidden="true"></span>
+          <img src="assets/logo.png" alt="Logo Poitiers" class="logo" />
           <a
             href="/benevolat"
             class="benevolat-btn"
@@ -29,7 +25,6 @@
             <li>
               <a href="#" aria-label="Instagram">
                 <img src="assets/instagram.png" alt="" aria-hidden="true" />
-                <span class="info-card__divider" aria-hidden="true"></span>
               </a>
             </li>
             <li>
@@ -40,22 +35,15 @@
             <li>
               <a href="#" aria-label="Email">
                 <img src="assets/mail.png" alt="" aria-hidden="true" />
-                <span class="info-card__divider" aria-hidden="true"></span>
               </a>
             </li>
           </ul>
         </div>
         <nav aria-label="Navigation principale">
           <ul>
-            <li>
-              <a href="/programme">PROGRAMME</a>
-            </li>
-            <li>
-              <a href="/le_festival">LE FESTIVAL</a>
-            </li>
-            <li>
-              <a href="/contact">CONTACT</a>
-            </li>
+            <li><a href="/programme">PROGRAMME</a></li>
+            <li><a href="/le_festival">LE FESTIVAL</a></li>
+            <li><a href="/contact">CONTACT</a></li>
           </ul>
         </nav>
         <div class="header-right">
@@ -65,34 +53,20 @@
             aria-label="Acheter des billets"
             >BILLETERIE</a
           >
-          <fieldset class="language-selector">
-            <legend>Sélecteur de langue</legend>
-            <button
-              aria-label="Changer la langue en anglais"
-              aria-pressed="true"
-            >
-              EN
-            </button>
-          </fieldset>
         </div>
       </div>
     </header>
     <main>
       <section class="hero-section">
-        <div class="hero-image-right">
-          <figure>
-            <img src="assets/hero-left.png" alt="Veille roue" />
-          </figure>
-        </div>
-        <section class="hero" aria-label="Présentation du festival">
+        <div class="hero" aria-label="Présentation du festival">
           <div class="hero-content">
             <p class="hero-subtitle">FESTIVAL</p>
-            <figure class="hero-logo">
-              <img src="assets/logo.png" alt="Logo Festival Poitou en Scène" />
-            </figure>
-            <figcaption class="hero-date">
-              Du 3 au 5 Juillet 2025 - Parc Blossac
-            </figcaption>
+            <img
+              src="assets/logo.png"
+              alt="Logo Festival Poitou en Scène"
+              class="hero-logo"
+            />
+            <p class="hero-date">Du 3 au 5 Juillet 2025 - Parc Blossac</p>
           </div>
           <div class="hero-decorations" aria-hidden="true">
             <img
@@ -106,91 +80,161 @@
               class="decoration-right"
             />
           </div>
-        </section>
-        <div class="hero-image-left">
-          <figure>
-            <img src="assets/hero-right.png" alt="Coiffe poitou" />
-          </figure>
         </div>
       </section>
-      <section class="programme" aria-label="Programme du festival">
-        <div class="programme-container">
-          <!-- Titre vertical gauche -->
-          <div class="programme-header">
-            <h2 class="programme-title">
-              VENEZ DECOUVRIR LA CULTURE POITEVINE :
+      <section class="programme" aria-labelledby="programme-title">
+        <!-- Marquee Top -->
+        <div class="marquee-top">
+          <div class="marquee-content">
+            <span>Programmation 2025</span>
+            <span>•</span>
+            <span>Poitiers</span>
+            <span>•</span>
+            <span>Culture</span>
+            <span>•</span>
+            <span>Musique</span>
+            <span>•</span>
+            <span>Danse</span>
+            <span>•</span>
+            <span>Gastronomie</span>
+            <span>•</span>
+            <span>Programmation 2025</span>
+            <span>•</span>
+            <span>Poitiers</span>
+            <span>•</span>
+            <span>Culture</span>
+            <span>•</span>
+            <span>Musique</span>
+          </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="programme-grid">
+          <!-- Vertical Title Column -->
+          <div class="programme-title-col">
+            <h2 id="programme-title" class="programme-title-vertical">
+              Line-Up
             </h2>
           </div>
 
-          <!-- Grille d'ateliers -->
-          <div class="workshops-grid">
-            <!-- Image grande (colonne 1, 2 lignes) -->
-            <article class="workshop-card workshop-card--large">
-              <div class="workshop-image">
-                <img
-                  src="https://picsum.photos/400/400?random=1"
-                  alt="Ateliers danse traditionnelle"
-                />
+          <!-- Bento Grid -->
+          <div class="bento-grid">
+            <!-- Item 1: Concerts (Large) -->
+            <div class="bento-item">
+              <img
+                src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=800"
+                alt="Concerts sur la grande scène"
+              />
+              <div class="bento-content">
+                <span class="bento-label">MAIN STAGE</span>
+                <h3 class="bento-title">Concerts</h3>
+                <p class="bento-description">Rock • Folk • Electro-Trad</p>
               </div>
-              <h3 class="workshop-label">ATELIERS DANSE TRAD</h3>
-            </article>
+              <span class="bento-arrow">↗</span>
+            </div>
 
-            <!-- Atelier 2 (haut droit) -->
-            <article class="workshop-card">
-              <div class="workshop-image">
-                <img
-                  src="https://picsum.photos/300/200?random=2"
-                  alt="Concerts sur la grande scène"
-                />
+            <!-- Item 2: Danse Trad -->
+            <div class="bento-item">
+              <div class="bento-icon-spinner">
+                <i class="fa-solid fa-music"></i>
               </div>
-              <h3 class="workshop-label">CONCERTS SUR LA GRANDE SCENE</h3>
-            </article>
+              <div>
+                <h3 class="bento-title">Danse Trad'</h3>
+                <p class="bento-description">
+                  Initiation aux bourrées et cercles circassiens. Venez user vos
+                  semelles.
+                </p>
+              </div>
+            </div>
 
-            <!-- Atelier 3 (bas droit haut) -->
-            <article class="workshop-card">
-              <div class="workshop-image">
-                <img
-                  src="https://picsum.photos/300/200?random=3"
-                  alt="Ateliers chant au kiosque"
-                />
+            <!-- Item 3: Workshops -->
+            <div class="bento-item">
+              <h3 class="bento-workshops-text">ATLIER<br />FESTIVAL</h3>
+              <div class="workshop-cta-overlay">
+                <button class="workshop-cta-btn">S'INSCRIRE</button>
               </div>
-              <h3 class="workshop-label">ATELIERS CHANT AU KIOSK</h3>
-            </article>
+            </div>
 
-            <!-- Atelier 4 (bas droit) -->
-            <article class="workshop-card">
-              <div class="workshop-image">
-                <img
-                  src="https://picsum.photos/300/200?random=4"
-                  alt="Ateliers musique traditionnelle"
-                />
+            <!-- Item 4: Food Court -->
+            <div class="bento-item">
+              <img
+                src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=400"
+                alt="Gastronomie - Food Court"
+              />
+              <div class="food-court-content">
+                <h3 class="food-court-title"><span>Food</span> Court</h3>
+                <div class="food-court-underline"></div>
               </div>
-              <h3 class="workshop-label">ATELIERS MUSIQUE TRAD</h3>
-            </article>
+            </div>
 
-            <!-- Atelier 5 (bas droit) -->
-            <article class="workshop-card">
-              <div class="workshop-image">
-                <img
-                  src="https://picsum.photos/300/200?random=5"
-                  alt="Démonstrations de savoir-faire locaux"
-                />
+            <!-- Item 5: CTA -->
+            <div class="bento-item">
+              <div class="cta-content">
+                <span class="cta-label">Accès Complet</span>
+                <h3 class="cta-title">Voir Tout<br />Le Programme</h3>
+                <button class="cta-btn">Télécharger PDF <span>⬇</span></button>
               </div>
-              <h3 class="workshop-label">
-                DEMONSTRATIONS DE SAVOIR-FAIRE LOCAUX
-              </h3>
-            </article>
+            </div>
           </div>
+        </div>
 
-          <!-- CTA -->
-          <div class="programme-cta">
-            <a
-              href="programme.html"
-              class="cta-button"
-              aria-label="Voir le programme complet du festival"
-            >
-              <span>VOIR LE PROGRAMME</span>
-            </a>
+        <!-- Marquee Bottom -->
+        <div class="marquee-bottom">
+          <div class="marquee-bottom-content">
+            <span>@FESTIVALPOITOU</span>
+            <span>#POITOU2025</span>
+            <span>@FESTIVALPOITOU</span>
+            <span>#POITOU2025</span>
+            <span>@FESTIVALPOITOU</span>
+            <span>#POITOU2025</span>
+            <span>@FESTIVALPOITOU</span>
+            <span>#POITOU2025</span>
+          </div>
+        </div>
+      </section>
+      <section class="a-propos" aria-labelledby="a-propos-title">
+        <div class="a-propos__container">
+          <div class="a-propos__spotlight" aria-hidden="true"></div>
+          <div class="a-propos__content">
+            <div class="a-propos__text">
+              <h2 id="a-propos-title" class="a-propos__title">
+                Back<br />Stage
+              </h2>
+              <p class="a-propos__label">
+                ACCÈS RESTREINT — ZONE 51<br />
+                Là où la magie opère vraiment.
+              </p>
+              <p class="a-propos__description">
+                Plongez dans les coulisses. Entre les câbles, les amplis qui
+                fument et les répétitions de dernière minute. C'est ici que bat
+                le cœur du festival.
+              </p>
+            </div>
+            <div class="a-propos__photos">
+              <figure class="a-propos__photo a-propos__photo--1">
+                <div class="a-propos__photo-frame">
+                  <img
+                    src="https://images.unsplash.com/photo-1598387993441-a364f854c3e1?q=80&w=400"
+                    alt="Soundcheck en coulisses"
+                  />
+                  <div class="a-propos__photo-overlay" aria-hidden="true"></div>
+                </div>
+                <figcaption class="a-propos__photo-caption">
+                  Soundcheck
+                </figcaption>
+                <div class="a-propos__gaffer-tape" aria-hidden="true"></div>
+              </figure>
+              <figure class="a-propos__photo a-propos__photo--2">
+                <div class="a-propos__photo-frame">
+                  <img
+                    src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=400"
+                    alt="L'équipe technique du festival"
+                  />
+                </div>
+                <figcaption class="a-propos__photo-caption">Le Crew</figcaption>
+                <div class="a-propos__gaffer-tape" aria-hidden="true"></div>
+              </figure>
+            </div>
           </div>
         </div>
       </section>
@@ -208,13 +252,13 @@
             >
               <div class="info-card__header">
                 <span class="info-card__code">LOC-01</span>
-                <span class="info-card__icon-top" aria-hidden="true"
-                  ><i class="fa-solid fa-location-dot"></i
-                ></span>
+                <i
+                  class="fa-solid fa-location-dot info-card__icon-top"
+                  aria-hidden="true"
+                ></i>
               </div>
               <div class="info-card__content">
                 <h3>Lieu &amp; Accès</h3>
-                <span class="info-card__divider" aria-hidden="true"></span>
                 <p>Parc de Blossac</p>
               </div>
               <span class="info-card__icon" aria-hidden="true">→</span>
@@ -228,13 +272,13 @@
             >
               <div class="info-card__header">
                 <span class="info-card__code">HBG-02</span>
-                <span class="info-card__icon-top" aria-hidden="true"
-                  ><i class="fa-solid fa-campground"></i
-                ></span>
+                <i
+                  class="fa-solid fa-campground info-card__icon-top"
+                  aria-hidden="true"
+                ></i>
               </div>
               <div class="info-card__content">
                 <h3>Camping</h3>
-                <span class="info-card__divider" aria-hidden="true"></span>
                 <p>Zone bivouac</p>
               </div>
               <span class="info-card__icon" aria-hidden="true">→</span>
@@ -248,13 +292,13 @@
             >
               <div class="info-card__header">
                 <span class="info-card__code">FOO-03</span>
-                <span class="info-card__icon-top" aria-hidden="true"
-                  ><i class="fa-solid fa-utensils"></i
-                ></span>
+                <i
+                  class="fa-solid fa-utensils info-card__icon-top"
+                  aria-hidden="true"
+                ></i>
               </div>
               <div class="info-card__content">
                 <h3>Restauration</h3>
-                <span class="info-card__divider" aria-hidden="true"></span>
                 <p>Produits locaux</p>
               </div>
               <span class="info-card__icon" aria-hidden="true">→</span>
@@ -268,13 +312,13 @@
             >
               <div class="info-card__header">
                 <span class="info-card__code">ACC-04</span>
-                <span class="info-card__icon-top" aria-hidden="true"
-                  ><i class="fa-solid fa-wheelchair-move"></i
-                ></span>
+                <i
+                  class="fa-solid fa-wheelchair-move info-card__icon-top"
+                  aria-hidden="true"
+                ></i>
               </div>
               <div class="info-card__content">
                 <h3>Accessibilité</h3>
-                <span class="info-card__divider" aria-hidden="true"></span>
                 <p>100% adapté</p>
               </div>
               <span class="info-card__icon" aria-hidden="true">→</span>
@@ -288,13 +332,13 @@
             >
               <div class="info-card__header">
                 <span class="info-card__code">TKT-05</span>
-                <span class="info-card__icon-top" aria-hidden="true"
-                  ><i class="fa-solid fa-ticket-simple"></i
-                ></span>
+                <i
+                  class="fa-solid fa-ticket-simple info-card__icon-top"
+                  aria-hidden="true"
+                ></i>
               </div>
               <div class="info-card__content">
                 <h3>Billetterie</h3>
-                <span class="info-card__divider" aria-hidden="true"></span>
                 <p>Tarifs prévente</p>
               </div>
               <span class="info-card__icon" aria-hidden="true">→</span>
@@ -308,13 +352,13 @@
             >
               <div class="info-card__header">
                 <span class="info-card__code">INF-06</span>
-                <span class="info-card__icon-top" aria-hidden="true"
-                  ><i class="fa-solid fa-circle-info"></i
-                ></span>
+                <i
+                  class="fa-solid fa-circle-info info-card__icon-top"
+                  aria-hidden="true"
+                ></i>
               </div>
               <div class="info-card__content">
                 <h3>Infos pratiques</h3>
-                <span class="info-card__divider" aria-hidden="true"></span>
                 <p>FAQ &amp; contact</p>
               </div>
               <span class="info-card__icon" aria-hidden="true">→</span>
@@ -325,28 +369,23 @@
     </main>
     <footer class="footer">
       <div class="footer-container">
-        <!-- Nous trouver -->
-        <div class="footer-section footer-contact">
+        <address class="footer-section footer-contact">
           <h3 class="footer-title">Nous trouver</h3>
-          <address class="footer-address">
-            <p>39 rue Michel Hugo</p>
-            <p>86000 Poitiers</p>
-            <p class="highlight">
-              <a href="mailto:contact@poitou-en-scene.fr"
-                >contact@poitou-en-scene.fr</a
-              >
-            </p>
-          </address>
-        </div>
-
-        <!-- Logo central -->
+          <p>39 rue Michel Hugo</p>
+          <p>86000 Poitiers</p>
+          <p class="highlight">
+            <a href="mailto:contact@poitou-en-scene.fr"
+              >contact@poitou-en-scene.fr</a
+            >
+          </p>
+        </address>
         <div class="footer-section footer-logo">
-          <figure class="footer-logo-image">
-            <img src="assets/logo_blanc.png" alt="Logo Poitou en Scène" />
-          </figure>
+          <img
+            src="assets/logo_blanc.png"
+            alt="Logo Poitou en Scène"
+            class="footer-logo-image"
+          />
         </div>
-
-        <!-- À propos -->
         <div class="footer-section footer-about">
           <h3 class="footer-title">Poitou en Scène</h3>
           <p class="footer-description">
@@ -358,8 +397,6 @@
           </p>
         </div>
       </div>
-
-      <!-- Copyright -->
       <div class="footer-copyright">
         <p>
           &copy; 2025 Association <span class="highlight">261 × 228</span> Tous

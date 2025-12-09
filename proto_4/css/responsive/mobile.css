@@ -1,0 +1,389 @@
+/* Responsive - Mobile Styles (max-width: 768px) */
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-3xl: 2rem;
+    --spacing-2xl: 1.5rem;
+    --font-size-5xl: 2rem;
+    --font-size-4xl: 1.5rem;
+    --font-size-3xl: 1.2rem;
+  }
+
+  /* Header */
+  header {
+    padding: var(--spacing-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+  }
+
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    flex-direction: row;
+  }
+
+  .logo img {
+    height: 50px;
+    width: auto;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav ul {
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .benevolat-btn,
+  .billeterie-btn {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .social-icons {
+    gap: 0.5rem;
+  }
+
+  .social-icons img {
+    height: 18px;
+    width: 18px;
+  }
+
+  /* Main */
+  main {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Hero */
+  .hero-section {
+    height: 70vh;
+    margin-bottom: var(--spacing-2xl);
+    background-attachment: scroll;
+  }
+
+  .hero {
+    min-height: 300px;
+  }
+
+  .hero-content {
+    gap: var(--spacing-sm);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-2xl);
+    letter-spacing: 1px;
+  }
+
+  .hero-logo img {
+    max-width: 200px;
+  }
+
+  .hero-date {
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.5px;
+  }
+
+  .decoration-left,
+  .decoration-right {
+    max-width: 80px;
+    opacity: 0.3;
+  }
+
+  .hero-image-right,
+  .hero-image-left {
+    display: none !important;
+  }
+
+  /* Programme */
+  .programme {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--color-black);
+  }
+
+  .programme-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+    min-height: auto;
+  }
+
+  .programme-header {
+    display: none;
+  }
+
+  .programme-title {
+    display: none;
+  }
+
+  .workshops-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: var(--spacing-sm);
+  }
+
+  .workshop-card {
+    aspect-ratio: 4 / 3;
+  }
+
+  .workshop-card--large {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .workshop-label {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm);
+  }
+
+  .programme-cta {
+    min-height: 120px;
+    margin-top: var(--spacing-lg);
+  }
+
+  .cta-button {
+    width: 120px;
+    height: 120px;
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-sm);
+  }
+
+  /* A-Propos */
+  .a-propos {
+    padding: var(--spacing-lg) var(--spacing-md);
+    border: 1px solid var(--color-black);
+  }
+
+  .a-propos__container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .a-propos__title {
+    font-size: 1.875rem;
+    line-height: 1.1;
+  }
+
+  .a-propos__label {
+    font-size: var(--font-size-xs);
+    padding-left: var(--spacing-sm);
+  }
+
+  .a-propos__description {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+  }
+
+  .a-propos__photos {
+    height: 240px;
+  }
+
+  .a-propos__photo {
+    width: 150px;
+  }
+
+  .a-propos__photo--1 {
+    left: 10px;
+    top: -10px;
+  }
+
+  .a-propos__photo--2 {
+    right: 10px;
+    bottom: -10px;
+  }
+
+  .a-propos__photo-frame {
+    height: 120px;
+  }
+
+  .a-propos__photo-caption {
+    height: 40px;
+    font-size: 0.65rem;
+  }
+
+  .a-propos__spotlight {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Info Grid */
+  .info-grid {
+    margin: var(--spacing-lg) var(--spacing-sm);
+    padding: var(--spacing-md);
+    border: var(--border-width) solid var(--color-black);
+  }
+
+  .info-grid__heading {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .info-grid__heading h2 {
+    font-size: var(--font-size-3xl);
+    letter-spacing: -1px;
+  }
+
+  .info-grid__subtitle {
+    font-size: var(--font-size-sm);
+    padding: 0.3rem 0.6rem;
+  }
+
+  .info-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .info-card__link {
+    min-height: 160px;
+    padding: var(--spacing-sm);
+    border: var(--border-width) solid var(--color-black);
+  }
+
+  .info-card__header {
+    gap: var(--spacing-xs);
+  }
+
+  .info-card__code {
+    font-size: var(--font-size-xs);
+  }
+
+  .info-card__icon-top {
+    font-size: var(--font-size-lg);
+  }
+
+  .info-card__content h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: 0.25rem;
+  }
+
+  .info-card__content p {
+    font-size: var(--font-size-xs);
+  }
+
+  .info-card__icon {
+    font-size: var(--font-size-base);
+  }
+
+  /* Footer */
+  footer.footer {
+    padding: 1.5rem var(--spacing-md);
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-about {
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .footer-address {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+  }
+
+  .footer-description {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .footer-logo-image {
+    max-width: 120px;
+  }
+
+  .footer-location {
+    font-size: var(--font-size-xs);
+    margin-top: var(--spacing-sm);
+  }
+
+  .footer-copyright {
+    padding-top: var(--spacing-md);
+    font-size: var(--font-size-xs);
+  }
+
+  /* Body adjustments */
+  body {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Buttons */
+  button,
+  a.cta-button,
+  a.benevolat-btn,
+  a.billeterie-btn {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-2xl: 1rem;
+    --spacing-lg: 1rem;
+    --font-size-4xl: 1.2rem;
+    --font-size-3xl: 1rem;
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header-left {
+    flex-direction: column;
+  }
+
+  .programme-container {
+    gap: var(--spacing-md);
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .a-propos__title {
+    font-size: 1.5rem;
+  }
+
+  .footer-container {
+    gap: var(--spacing-md);
+  }
+
+  .cta-button {
+    width: 100px;
+    height: 100px;
+    font-size: var(--font-size-xs);
+  }
+}

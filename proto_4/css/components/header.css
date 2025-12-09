@@ -1,0 +1,257 @@
+/* ==========================================
+   COMPOSANT - HEADER & NAVIGATION
+   ========================================== */
+
+/* ========== HEADER CONTAINER ==========
+   Wrapper principal du header */
+
+header {
+  padding: var(--spacing-md) var(--spacing-xl);
+  top: 0;
+  z-index: var(--z-sticky);
+  backdrop-filter: blur(10px);
+  border-bottom: var(--border-width) solid var(--color-gray-lighter);
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: var(--spacing-xl);
+  font-size: var(--font-size-xl);
+}
+
+/* ========== LOGO ==========
+   Identité visuelle */
+
+.logo {
+  margin: 0;
+  max-width: 80px;
+}
+
+.logo img {
+  height: 120px;
+  width: auto;
+  display: block;
+}
+
+/* ========== NAVIGATION ==========
+   Menu principal */
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: var(--spacing-sm) 0.8rem;
+  position: relative;
+  transition: opacity var(--transition-feedback);
+}
+
+/* Animation underline au hover */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: var(--border-width);
+  background-color: var(--color-text-primary);
+  transition: width var(--transition-feedback);
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+/* ========== HEADER-LEFT ==========
+   Section gauche (logo + nav secondaire) */
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex: 1;
+}
+
+/* ========== BOUTON BÉNÉVOLAT ==========
+   CTA secondaire */
+
+.benevolat-btn {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: var(--border-width) solid var(--color-black);
+  border-radius: var(--border-radius-xl);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  letter-spacing: 0.5px;
+  transition: all var(--transition-feedback);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.benevolat-btn:hover,
+.benevolat-btn:focus-visible {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+/* ========== ICÔNES SOCIALES ==========
+   Réseaux sociaux */
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons li {
+  margin: 0;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-feedback);
+}
+
+.social-icons a:hover,
+.social-icons a:focus-visible {
+  opacity: 0.7;
+}
+
+.social-icons img {
+  height: 24px;
+  width: 24px;
+  display: block;
+}
+
+/* ========== HEADER-RIGHT ==========
+   Section droite (CTA + sélecteur langue) */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+/* ========== BOUTON BILLETERIE ==========
+   CTA primaire */
+
+.billeterie-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 0.6rem 1.8rem;
+  border-radius: var(--border-radius-xl);
+  border: var(--border-width) solid var(--color-primary);
+  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--font-size-base);
+  letter-spacing: 0.5px;
+  transition: all var(--transition-feedback);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.billeterie-btn:hover,
+.billeterie-btn:focus-visible {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: scale(1.05);
+}
+
+/* ========== LANGUAGE SELECTOR ==========
+   Sélecteur de langue */
+
+.language-selector {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: flex-start;
+}
+
+/* ========== RESPONSIVE - TABLET ==========
+   Media query pour tablette */
+
+@media (max-width: var(--breakpoint-desktop)) {
+  .header-container {
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+
+  nav {
+    order: 3;
+    flex-basis: 100%;
+    margin-top: var(--spacing-md);
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: var(--spacing-lg);
+  }
+}
+
+/* ========== RESPONSIVE - MOBILE ==========
+   Media query pour mobile */
+
+@media (max-width: var(--breakpoint-tablet)) {
+  header {
+    padding: var(--spacing-md);
+  }
+
+  .header-left {
+    gap: var(--spacing-md);
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  nav ul {
+    gap: var(--spacing-md);
+  }
+
+  nav a,
+  .benevolat-btn,
+  .billeterie-btn {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-md);
+  }
+
+  .social-icons img {
+    height: 20px;
+    width: 20px;
+  }
+}

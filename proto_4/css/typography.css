@@ -1,0 +1,153 @@
+/* ==========================================
+   TYPOGRAPHIE GLOBALE
+   ========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap");
+
+/* ========== BODY ==========
+   Styles par défaut pour tout le site */
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-light);
+}
+
+/* ========== HEADINGS ==========
+   Hiérarchie typographique */
+
+h1 {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-black);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extra-bold);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+h5 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+h6 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+/* ========== PARAGRAPHES ==========
+   Texte courant */
+
+p {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.75;
+}
+
+small {
+  font-size: var(--font-size-sm);
+}
+
+/* ========== LIENS ==========
+   États de liens */
+
+a {
+  color: var(--color-accent);
+  transition: color var(--transition-feedback);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-primary);
+}
+
+/* ========== LISTES ==========
+   Styles pour listes */
+
+ul,
+ol {
+  font-family: var(--font-secondary);
+}
+
+/* ========== CODE ==========
+   Monospace pour contenu technique */
+
+code,
+pre {
+  font-family: "Courier New", monospace;
+  background: var(--color-gray);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+/* ========== CITATION ==========
+   Blockquotes */
+
+blockquote {
+  border-left: var(--border-width-thick) solid var(--color-accent);
+  padding-left: var(--spacing-lg);
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+/* ========== TEXTE UTILITAIRE ==========
+   Classes inline pour texte */
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+.text-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.highlight {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+}

@@ -1,0 +1,99 @@
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  background-image: url(../assets/fond.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: var(--font-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ========== LISTES ==========
+   Énumérations de base */
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+}
+
+/* ========== IMAGES ==========
+   Responsive par défaut */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== LIENS ==========
+   Styles de base */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========== FIGURES ==========
+   Cleanup pour sémantique HTML */
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin: 0;
+}
+
+/* ========== ADRESSES ==========
+   Semantic markup */
+
+address {
+  font-style: normal;
+}
+
+/* ========== HEADING ==========
+   Normalisation */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== PARAGRAPHES ==========
+   Espacement cohérent */
+
+p {
+  margin: 0;
+  padding: 0;
+}

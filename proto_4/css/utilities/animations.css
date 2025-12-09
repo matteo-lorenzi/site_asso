@@ -1,0 +1,213 @@
+/* ==========================================
+   UTILITAIRES - ANIMATIONS & TRANSITIONS
+   ========================================== */
+
+/* ========== TRANSITIONS DE BASE ==========
+   Utilities pour animations communes */
+
+.transition-opacity {
+  transition: opacity var(--transition-feedback);
+}
+
+.transition-color {
+  transition: color var(--transition-feedback);
+}
+
+.transition-bg {
+  transition: background-color var(--transition-feedback);
+}
+
+.transition-transform {
+  transition: transform var(--transition-feedback);
+}
+
+.transition-all {
+  transition: all var(--transition-feedback);
+}
+
+/* Variantes rapides */
+.transition-fast {
+  transition-duration: var(--transition-fast);
+}
+
+/* Variantes lentes */
+.transition-slow {
+  transition-duration: var(--transition-slow);
+}
+
+/* ========== HOVER STATES ==========
+   Pseudo-éléments hover réutilisables */
+
+.hover-opacity {
+  transition: opacity var(--transition-feedback);
+}
+
+.hover-opacity:hover,
+.hover-opacity:focus-visible {
+  opacity: 0.8;
+}
+
+.hover-brightness {
+  transition: filter var(--transition-feedback);
+}
+
+.hover-brightness:hover,
+.hover-brightness:focus-visible {
+  filter: brightness(0.9);
+}
+
+.hover-scale {
+  transition: transform var(--transition-feedback);
+}
+
+.hover-scale:hover,
+.hover-scale:focus-visible {
+  transform: scale(1.02);
+}
+
+/* ========== UNDERLINE ANIMATION ==========
+   Animation pseudo-élément ::after */
+
+.underline-animate {
+  position: relative;
+}
+
+.underline-animate::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: var(--border-width);
+  background-color: currentColor;
+  transition: width var(--transition-feedback);
+}
+
+.underline-animate:hover::after,
+.underline-animate:focus-visible::after {
+  width: 100%;
+}
+
+/* ========== SLIDE UP OVERLAY ==========
+   Effet de rideau pour cartes */
+
+.overlay-slideup {
+  position: absolute;
+  inset: 0;
+  background: var(--color-card-overlay-light);
+  transform: translateY(100%);
+  transition: transform var(--transition-fast);
+  z-index: var(--z-below);
+}
+
+.overlay-slideup-parent:hover .overlay-slideup,
+.overlay-slideup-parent:focus-visible .overlay-slideup {
+  transform: translateY(0);
+}
+
+/* ========== FADE IN / FADE OUT ==========
+   Opacité graduée */
+
+.fade-in {
+  animation: fadeIn var(--transition-slow) ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut var(--transition-slow) ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* ========== PULSE ==========
+   Clignotement subtil */
+
+.pulse {
+  animation: pulse var(--transition-base) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ========== SHAKE ==========
+   Tremblement */
+
+.shake {
+  animation: shake var(--transition-fast);
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(2px);
+  }
+}
+
+/* ========== GLOW EFFECT ==========
+   Effet de brillance */
+
+.glow {
+  animation: glow var(--transition-slow) infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(255, 108, 15, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(255, 108, 15, 0.3));
+  }
+}
+
+/* ========== BOUNCE ==========
+   Rebond */
+
+.bounce {
+  animation: bounce var(--transition-base);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}

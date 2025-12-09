@@ -1,0 +1,129 @@
+/* ==========================================
+   VARIABLES GLOBALES - Design Tokens
+   ========================================== */
+
+:root {
+  /* ========== COULEURS ==========
+     Organisation : Primary, Accent, Neutrals, Thematic */
+
+  --color-primary: #8b6f47;
+  --color-primary-dark: #6f5838;
+
+  --color-accent: #c14c43;
+
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-gray: #2c2c2c;
+  --color-gray-light: #999;
+  --color-gray-lighter: #ccc;
+
+  /* Couleurs spécifiques Info-Grid */
+  --color-info-bg-start: #ffb3a3;
+  --color-info-bg-end: #ffc4b8;
+  --color-info-subtitle: #d4a574;
+  --color-card-overlay-light: #ff9980;
+  --color-card-overlay-mid: #ffaa88;
+  --color-card-overlay-dark: #ff8866;
+
+  /* Alias pour lecture facile */
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-gray-light);
+  --color-text-light: var(--color-white);
+  --color-text-accent: var(--color-accent);
+
+  --color-bg-light: var(--color-white);
+  --color-bg-dark: #18181b; /* zinc-900 */
+  --color-border: var(--color-black);
+
+  /* ========== ESPACEMENT (Système de 0.25rem) ==========
+     Progression : xs → sm → md → lg → xl → 2xl → 3xl */
+
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+  --spacing-3xl: 4rem; /* 64px */
+
+  /* Alias pour contexte */
+  --spacing-gutter: var(--spacing-xl);
+  --spacing-component: var(--spacing-lg);
+
+  /* ========== TYPOGRAPHIE ==========
+     Font families, sizes, weights */
+
+  --font-primary: "Big Shoulders", sans-serif;
+  --font-secondary: sans-serif;
+
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.85rem; /* 13.6px */
+  --font-size-base: 0.9rem; /* 14.4px */
+  --font-size-md: 0.95rem; /* 15.2px */
+  --font-size-lg: 1rem; /* 16px */
+  --font-size-xl: 1.1rem; /* 17.6px */
+  --font-size-2xl: 1.3rem; /* 20.8px */
+  --font-size-3xl: 1.5rem; /* 24px */
+  --font-size-4xl: 2rem; /* 32px */
+  --font-size-5xl: 4rem; /* 64px */
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+
+  /* ========== BORDURES ==========
+     Width, radius */
+
+  --border-width: 2px;
+  --border-width-thick: 3px;
+
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 15px;
+  --border-radius-xl: 25px;
+
+  /* ========== TRANSITIONS & ANIMATIONS ==========
+     Durées, easing */
+
+  --transition-fast: 0.2s ease-in-out;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.4s ease;
+
+  /* Alias pour intentions */
+  --transition-interaction: var(--transition-fast);
+  --transition-feedback: var(--transition-base);
+  --transition-reveal: var(--transition-slow);
+
+  /* ========== OMBRES ==========
+     Depth & elevation */
+
+  --shadow-card: 8px 8px 0 var(--color-black);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 30px 60px rgba(0, 0, 0, 0.4);
+
+  /* ========== Z-INDEX ==========
+     Stacking context scale */
+
+  --z-base: 0;
+  --z-below: 0;
+  --z-content: 10;
+  --z-dropdown: 20;
+  --z-sticky: 100;
+  --z-modal: 1000;
+  --z-tooltip: 1100;
+
+  /* ========== BREAKPOINTS (Mobile-First) ==========
+     Utilisés dans media queries */
+
+  --breakpoint-mobile: 576px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1440px;
+}
