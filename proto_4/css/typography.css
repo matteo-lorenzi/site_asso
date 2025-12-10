@@ -72,11 +72,6 @@ a {
   transition: color var(--transition-feedback);
 }
 
-a:hover,
-a:focus-visible {
-  color: var(--color-primary);
-}
-
 /* ========== LISTES ==========
    Styles pour listes */
 
