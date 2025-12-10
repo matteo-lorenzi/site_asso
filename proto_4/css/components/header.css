@@ -10,7 +10,7 @@ header {
   padding: var(--spacing-md) var(--spacing-xl);
   top: 0;
   z-index: var(--z-sticky);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px) contrast(0.85);
   border-bottom: var(--border-width) solid var(--color-gray-lighter);
   width: 100%;
   margin: 0;
