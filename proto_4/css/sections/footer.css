@@ -44,6 +44,10 @@ footer.footer {
   text-align: right;
 }
 
+.footer-contact p {
+  color: var(--color-gray-light);
+}
+
 /* About Section */
 .footer-about {
   text-align: left;
@@ -111,7 +115,7 @@ address a:hover {
   padding-top: var(--spacing-lg);
   text-align: center;
   font-size: var(--font-size-xs);
-  color: var(--color-gray-light);
+  color: var(--color-gray-lighter);
 }
 
 .footer-copyright p {
