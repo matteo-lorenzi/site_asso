@@ -1,0 +1,33 @@
+# robots.txt - Poitou en Scène Festival
+# Configuration pour les moteurs de recherche
+
+# Groupe pour tous les robots
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /css/
+Disallow: /docs/
+Disallow: /js/
+
+# Sitemap location
+Sitemap: https://matteo-lorenzi.github.io/site_asso/proto_4/sitemap.xml
+
+# Règles spécifiques pour Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Règles spécifiques pour Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bloquer les mauvais bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
