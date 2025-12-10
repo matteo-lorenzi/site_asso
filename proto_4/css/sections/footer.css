@@ -5,7 +5,6 @@ footer.footer {
   background-size: cover;
   background-position: center;
   color: var(--color-white);
-  border-top: var(--border-width) solid var(--color-accent);
   padding: var(--spacing-3xl) var(--spacing-xl) var(--spacing-xl);
   display: flex;
   justify-content: center;
@@ -66,7 +65,6 @@ address {
 
 .footer-address a,
 address a {
-  color: var(--color-accent);
   text-decoration: none;
   transition: color var(--transition-base);
 }
@@ -105,7 +103,6 @@ address a:hover {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 0;
-  color: var(--color-accent);
 }
 
 /* Copyright Section */
@@ -120,13 +117,6 @@ address a:hover {
 .footer-copyright p {
   margin: 0;
 }
-
-/* Highlight Text */
-.highlight {
-  color: var(--color-accent);
-  font-weight: 700;
-}
-
 /* ==========================================
    RESPONSIVE FOOTER
    ========================================== */

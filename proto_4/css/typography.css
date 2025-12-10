@@ -148,6 +148,6 @@ blockquote {
 }
 
 .highlight {
-  color: var(--color-accent);
+  color: var(--color-accent-dark);
   font-weight: var(--font-weight-bold);
 }
