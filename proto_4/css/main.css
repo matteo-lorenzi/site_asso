@@ -30,6 +30,7 @@
 @import "./sections/a-propos.css";
 @import "./sections/info-grid.css";
 @import "./sections/footer.css";
+@import "./sections/artistes.css";
 
 /* ========== RESPONSIVE ==========
    Media queries consolidées */

@@ -3,23 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programme</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Programme - Festival Poitou en Scène</title>
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <header>
       <div class="header-container">
         <div class="header-left">
-          <figure class="logo">
-            <img src="assets/logo.png" alt="Logo Poitiers" />
-          </figure>
+          <a href="index.html"
+            ><img
+              src="assets/logo.png"
+              alt="Festival Poitou en Scène"
+              class="logo"
+          /></a>
           <a
             href="/benevolat"
             class="benevolat-btn"
             aria-label="Devenir bénévole"
             >BENEVOLAT</a
           >
-          <ul class="social-icons" role="list" aria-label="Réseaux sociaux">
+          <ul class="social-icons" aria-label="Réseaux sociaux">
             <li>
               <a href="#" aria-label="Instagram">
                 <img src="assets/instagram.png" alt="" aria-hidden="true" />
@@ -38,16 +41,10 @@
           </ul>
         </div>
         <nav aria-label="Navigation principale">
-          <ul role="list">
-            <li>
-              <a href="/programme">PROGRAMME</a>
-            </li>
-            <li>
-              <a href="/le_festival">LE FESTIVAL</a>
-            </li>
-            <li>
-              <a href="/contact">CONTACT</a>
-            </li>
+          <ul>
+            <li><a href="/programme">PROGRAMME</a></li>
+            <li><a href="/le_festival">LE FESTIVAL</a></li>
+            <li><a href="/contact">CONTACT</a></li>
           </ul>
         </nav>
         <div class="header-right">
@@ -57,20 +54,118 @@
             aria-label="Acheter des billets"
             >BILLETERIE</a
           >
-          <div
-            class="language-selector"
-            role="group"
-            aria-label="Sélecteur de langue"
-          >
-            <button
-              aria-label="Changer la langue en anglais"
-              aria-pressed="true"
-            >
-              EN
-            </button>
-          </div>
         </div>
       </div>
     </header>
+    <main>
+      <h2>Programme</h2>
+      <div class="date-filters">
+        <button date="all" class="date-btn active">Tous</button>
+        <button date="03/07" class="date-btn">03/07</button>
+        <button date="04/07" class="date-btn">04/07</button>
+        <button date="05/07" class="date-btn">05/07</button>
+      </div>
+      <!-- <hr /> -->
+      <section class="artists">
+        <h3>Artistes</h3>
+        <div class="artist-grid">
+          <figure date="03/07">
+            <img src="https://picsum.photos/300/300" alt="" />
+            <figcaption>
+              <strong>Artiste 1</strong>
+              <p>Musique traditionnelle</p>
+            </figcaption>
+          </figure>
+          <figure date="04/07">
+            <img src="https://picsum.photos/300/300" alt="" />
+            <figcaption>
+              <strong>Artiste 2</strong>
+              <p>Danse traditionnelle</p>
+            </figcaption>
+          </figure>
+          <figure date="05/07">
+            <img src="https://picsum.photos/300/300" alt="" />
+            <figcaption>
+              <strong>Artiste 3</strong>
+              <p>DJ</p>
+            </figcaption>
+          </figure>
+          <figure date="03/07">
+            <img src="https://picsum.photos/300/300" alt="" />
+            <figcaption>
+              <strong>Artiste 1</strong>
+              <p>Musique traditionnelle</p>
+            </figcaption>
+          </figure>
+          <figure date="04/07">
+            <img src="https://picsum.photos/300/300" alt="" />
+            <figcaption>
+              <strong>Artiste 2</strong>
+              <p>Danse traditionnelle</p>
+            </figcaption>
+          </figure>
+          <figure date="05/07">
+            <img src="https://picsum.photos/300/300" alt="" />
+            <figcaption>
+              <strong>Artiste 3</strong>
+              <p>DJ</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="activities">
+        <h3>Ateliers</h3>
+        <div class="artist-grid">
+          <figure date="03/07">
+            <img src="https://picsum.photos/300/200" alt="" />
+            <figcaption>
+              <strong>Atelier de danse</strong>
+              <p>Apprenez les danses traditionnelles avec nos experts.</p>
+            </figcaption>
+          </figure>
+          <figure date="04/07">
+            <img src="https://picsum.photos/300/200" alt="" />
+            <figcaption>
+              <strong>Atelier de musique</strong>
+              <p>Initiez-vous aux instruments traditionnels.</p>
+            </figcaption>
+          </figure>
+          <figure date="05/07">
+            <img src="https://picsum.photos/300/200" alt="" />
+            <figcaption>
+              <strong>Atelier de cuisine</strong>
+              <p>Découvrez les saveurs locales avec nos chefs.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Filtrage des artistes par date
+      const dateButtons = document.querySelectorAll(".date-btn");
+      const artistsActivities = document.querySelectorAll(
+        ".artists figure, .activities figure"
+      );
+
+      dateButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          dateButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          const selectedDate = button.getAttribute("date");
+
+          artistsActivities.forEach((a) => {
+            const artistDate = a.getAttribute("date");
+            if (selectedDate === "all" || artistDate === selectedDate) {
+              a.style.display = "block";
+            } else {
+              a.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

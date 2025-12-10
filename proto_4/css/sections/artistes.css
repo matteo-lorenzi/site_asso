@@ -1,0 +1,90 @@
+h2,
+h3 {
+  color: white;
+  text-align: center;
+}
+
+/* Filtre artistes */
+.date-filters {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.date-btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-secondary);
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.date-btn:hover {
+  color: var(--color-accent);
+}
+
+.active {
+  color: var(--color-accent);
+  background-color: white;
+}
+
+/* Artistes */
+.artists,
+.activities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.artist-grid {
+  width: 100%;
+  max-width: 950px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.artist-grid figure {
+  max-width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.artist-grid figure figcaption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: calc(100% - 1rem);
+}
+
+.artist-grid p {
+  font-weight: normal;
+}
+
+.artists img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.activities img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}

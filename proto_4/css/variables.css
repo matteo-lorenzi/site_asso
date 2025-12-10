@@ -56,7 +56,7 @@
      Font families, sizes, weights */
 
   --font-primary: "Big Shoulders", sans-serif;
-  --font-secondary: sans-serif;
+  --font-secondary: "Inter", sans-serif;
 
   --font-size-xs: 0.75rem; /* 12px */
   --font-size-sm: 0.85rem; /* 13.6px */
