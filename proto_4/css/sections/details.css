@@ -11,6 +11,7 @@
   display: flex;
   gap: var(--spacing-lg);
   align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
 .artist-image {
@@ -28,6 +29,11 @@
   display: block;
 }
 
+.artist-info a {
+  color: black;
+  text-decoration: underline
+}
+
 .artist-socials {
   display: flex;
   gap: 8px;
@@ -39,6 +45,10 @@
   height: 48px;
   padding: 8px;
   margin-right: var(--spacing-sm);
+}
+
+.artist-description {
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 767px) {

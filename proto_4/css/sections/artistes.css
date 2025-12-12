@@ -2,7 +2,16 @@ h2,
 h3 {
   color: var(--color-white);
   text-align: center;
-  margin: 1rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
 div.divider {
@@ -34,6 +43,7 @@ div.divider {
 
 .date-btn:hover {
   color: var(--color-accent);
+  background: var(--color-white);
 }
 
 .active {
@@ -58,15 +68,11 @@ div.divider {
   justify-items: center;
 }
 
-h3 {
-  font-size: 1.5rem;
-  font-weight: normal;
-}
-
 .artist-grid figure {
   max-width: 300px;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 
 .artist-grid figure figcaption {
@@ -80,6 +86,12 @@ h3 {
   font-size: 1.5rem;
   font-weight: bold;
   width: calc(100% - 1rem);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.artist-grid figure:hover figcaption {
+  background-color: var(--color-accent-dark);
+  color: var(--color-white);
 }
 
 .artist-grid p {
@@ -97,3 +109,4 @@ h3 {
   height: 200px;
   object-fit: cover;
 }
+

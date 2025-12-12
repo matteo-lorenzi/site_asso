@@ -50,4 +50,20 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Page Détail Artiste -->
+  <url>
+    <loc>https://matteo-lorenzi.github.io/site_asso/proto_4/detail-artiste.html</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Page Détail Atelier -->
+  <url>
+    <loc>https://matteo-lorenzi.github.io/site_asso/proto_4/detail-atelier.html</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
