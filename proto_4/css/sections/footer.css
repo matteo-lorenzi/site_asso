@@ -38,6 +38,11 @@ footer.footer {
   letter-spacing: 1px;
   margin: var(--spacing-lg) 0;
   color: var(--color-white);
+  text-align: end;
+}
+
+.footer-about .footer-title {
+  text-align: start;
 }
 
 /* Contact Section */
@@ -172,6 +177,7 @@ address a:hover {
 
   .footer-title {
     font-size: var(--font-size-lg);
+    text-align: center !important;
   }
 
   .footer-address {
