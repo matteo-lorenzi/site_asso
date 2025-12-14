@@ -1,0 +1,11 @@
+.festival {
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.festival a {
+    color: black;
+    text-decoration: underline;
+}

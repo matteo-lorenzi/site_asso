@@ -32,6 +32,8 @@
 @import "./sections/footer.css";
 @import "./sections/artistes.css";
 @import "./sections/details.css";
+@import "./sections/le-festival.css";
+@import "./sections/contact.css";
 
 /* ========== RESPONSIVE ==========
    Media queries consolidées */
