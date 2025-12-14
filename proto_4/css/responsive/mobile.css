@@ -1,5 +1,27 @@
 /* Responsive - Mobile Styles (max-width: 768px) */
 
+/* ==========================================
+   STRATÉGIE HEADER MOBILE
+   ==========================================
+   
+   OBJECTIF : Réduire la hauteur du header de 50% 
+   sur petits écrans tout en préservant les 
+   fonctionnalités essentielles.
+   
+   HIÉRARCHIE DES BESOINS :
+   1. Logo (Identité) - VISIBLE
+   2. Billeterie (Conversion) - VISIBLE
+   3. Navigation principale - VISIBLE (compacte)
+   4. Bénévolat - MASQUÉ (accessible via footer)
+   5. Réseaux sociaux - MASQUÉS (accessibles via footer)
+   
+   LAYOUT :
+   - Ligne 1 : Logo + Billeterie (flex, space-between)
+   - Ligne 2 : Navigation principale (3 liens compacts)
+   
+   RÉSULTAT : Header de ~70px au lieu de ~150px
+   ========================================== */
+
 @media (max-width: 768px) {
   :root {
     --spacing-3xl: 2rem;
@@ -11,66 +33,118 @@
 
   /* Header */
   header {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
     position: sticky;
     top: 0;
     z-index: 100;
+    backdrop-filter: blur(15px) saturate(180%);
   }
 
   .header-container {
     flex-direction: column;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-sm);
+    gap: var(--spacing-xs);
+    padding: 0;
+    max-width: 100%;
   }
 
+  /* Ligne 1 : Logo + Billeterie */
   .header-left {
     width: 100%;
     justify-content: space-between;
+    align-items: center;
     gap: var(--spacing-sm);
     flex-direction: row;
+    order: 1;
+  }
+
+  .logo {
+    flex-shrink: 0;
   }
 
   .logo img {
-    height: 50px;
+    height: 42px;
     width: auto;
   }
 
+  /* Masquer bénévolat et réseaux sociaux sur mobile */
+  .benevolat-btn {
+    display: none;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  /* Header Right : Billeterie prioritaire */
+  .header-right {
+    order: 2;
+  }
+
+  .billeterie-btn {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    white-space: nowrap;
+    border-radius: var(--border-radius-lg);
+    font-weight: 600;
+  }
+
+  /* Ligne 2 : Navigation principale uniquement */
   nav {
     order: 3;
     width: 100%;
     justify-content: center;
+    padding: var(--spacing-2xs) 0 var(--spacing-xs) 0;
   }
 
   nav ul {
     gap: var(--spacing-sm);
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  nav li {
+    flex: 1;
+    text-align: center;
   }
 
   nav a {
-    font-size: var(--font-size-sm);
-    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.7rem;
+    padding: var(--spacing-2xs) var(--spacing-xs);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    display: block;
   }
 
-  .benevolat-btn,
-  .billeterie-btn {
-    font-size: var(--font-size-xs);
-    padding: var(--spacing-xs) var(--spacing-sm);
-  }
-
-  .social-icons {
-    gap: 0.5rem;
-  }
-
-  .social-icons img {
-    height: 18px;
-    width: 18px;
+  nav a::after {
+    display: none;
   }
 
   /* Main */
   main {
     width: 100%;
     overflow-x: hidden;
+    flex: 1 0 auto;
+  }
+
+  /* Ajustement pour écrans très petits */
+  @media (max-width: 480px) {
+    header {
+      padding: var(--spacing-2xs) var(--spacing-xs);
+    }
+
+    .logo img {
+      height: 36px;
+    }
+
+    .billeterie-btn {
+      font-size: 0.65rem;
+      padding: 0.35rem 0.7rem;
+    }
+
+    nav a {
+      font-size: 0.65rem;
+      padding: var(--spacing-2xs) 0.25rem;
+    }
   }
 
   /* Hero */
@@ -356,14 +430,7 @@
     --font-size-3xl: 1rem;
   }
 
-  .header-container {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .header-left {
-    flex-direction: column;
-  }
+  /* Header d\u00e9j\u00e0 g\u00e9r\u00e9 dans le media query principal */
 
   .programme-container {
     gap: var(--spacing-md);

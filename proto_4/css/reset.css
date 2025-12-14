@@ -9,12 +9,10 @@
 }
 
 html {
-  height: 100%;
   overflow-x: hidden;
 }
 
 body {
-  height: 100%;
   background-image: url(../assets/fond.png);
   background-attachment: fixed;
   background-size: cover;

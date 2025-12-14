@@ -10,8 +10,8 @@
   --color-primary-dark: #D68A85;
 
   --color-accent-dark: #c14c43;
-   --color-accent: #D68A85;
-   
+  --color-accent: #d68a85;
+
   --color-black: #000;
   --color-white: #fff;
 
@@ -40,6 +40,7 @@
   /* ========== ESPACEMENT (Système de 0.25rem) ==========
      Progression : xs → sm → md → lg → xl → 2xl → 3xl */
 
+  --spacing-2xs: 0.125rem; /* 2px - ultra compact pour mobile */
   --spacing-xs: 0.25rem; /* 4px */
   --spacing-sm: 0.5rem; /* 8px */
   --spacing-md: 1rem; /* 16px */
