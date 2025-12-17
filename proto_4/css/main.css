@@ -34,6 +34,7 @@
 @import "./sections/details.css";
 @import "./sections/le-festival.css";
 @import "./sections/contact.css";
+@import "./sections/billetterie.css";
 
 /* ========== RESPONSIVE ==========
    Media queries consolidées */
