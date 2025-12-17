@@ -1,11 +1,26 @@
-.festival {
-    max-width: 950px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.festival,
+.festival-contact,
+.soutien {
+  max-width: 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-lg);
 }
 
-.festival a {
-    color: black;
-    text-decoration: underline;
+.festival-contact a {
+  color: black;
+  text-decoration: underline;
+}
+
+.festival img {
+  max-width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  .festival,
+  .festival img {
+    width: 90vw;
+  }
 }
